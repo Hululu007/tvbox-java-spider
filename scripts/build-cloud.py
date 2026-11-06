@@ -15,7 +15,9 @@ import pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 GH = "tlwj01/tvbox-java-spider"
 CDN = "https://cdn.jsdelivr.net/gh/" + GH + "@main/"
-JS_URL = CDN + "spider/cloud_spider.js"
+# jsDelivr 动态压缩地址（仓库里只有 .js，.min.js 由 CDN 用 Terser 实时生成）：
+# 73KB -> 45KB，国内网下载更稳，也绕开 @main 的 7 天旧缓存。
+JS_URL = CDN + "spider/cloud_spider.min.js"
 SUB_URL = CDN + "output/cloud-subscription.json"
 HOST = "http://107.173.211.148"          # PanSou 免登实例，/api/search 返回 merged_by_type
 JAR = "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"  # 原 download1 配置的 JS 引擎 jar

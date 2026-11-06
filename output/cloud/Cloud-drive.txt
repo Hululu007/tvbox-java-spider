@@ -3,7 +3,7 @@
 # 订阅: https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
 # ==========================================================
 config_center=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud/
-spider=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/spider/cloud_spider.js
+spider=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/spider/cloud_spider.min.js
 subscription=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
 backend=http://107.173.211.148
 quark_cookie=未配置（夸克播放请在订阅 ext.cookies.quark_cookie 填本人 Cookie）
