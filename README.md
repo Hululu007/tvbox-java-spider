@@ -27,13 +27,13 @@ https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/safe-subscripti
 云端版把「服务端」整个移到 TVBox 客户端，链路里没有这台电脑：
 
 ```
-TVBox ──jsDelivr──> 订阅 JSON + cloud_spider.js（国内直连 200）
+TVBox ──jsDelivr──> 订阅 JSON + cloud_spider_v2.js（国内直连 200）
     ──直连────────> PanSou 免登实例 /api/search（国内直连 200）
     ──直连────────> UC / 夸克 官方接口取真实直链
     ──直连播放────> 网盘 OSS（play 返回带 header 的直链，无需流代理）
 ```
 
-- 订阅里 **27 个站点全部 `type:3`**，`api` 指向 `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/spider/cloud_spider.min.js`（仓库里只存 `cloud_spider.js`，`.min.js` 由 jsDelivr 用 Terser 实时压缩：73KB → 45KB，国内下载更稳，也绕开 `@main` 的 7 天缓存）。零 `127.0.0.1`、零本机 8898、零 `play_proxy`。备用未压缩地址把 `.min.js` 换回 `.js` 即可。
+- 订阅里 **27 个站点全部 `type:3`**，`api` 指向 `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/spider/cloud_spider_v2.min.js`（仓库里只存 `cloud_spider.js`，`.min.js` 由 jsDelivr 用 Terser 实时压缩：73KB → 45KB，国内下载更稳，也绕开 `@main` 的 7 天缓存）。零 `127.0.0.1`、零本机 8898、零 `play_proxy`。备用未压缩地址把 `.min.js` 换回 `.js` 即可。
 - 插件 = `lab/quanpan/quanpan_spider.js` + `spider/cloud-overlay.js`。覆盖层把默认后端从需要令牌且国内返回 403 的 `quanpan.xyz` 换成免登 PanSou 实例，并让首页用热门词聚合；取链逻辑原样保留，`play()` 直接返回 `{parse:0, url:直链, header:{...}}`。
 - UC 免登可播；夸克/百度/115 需 Cookie。填法：在订阅 JSON 里把对应站点的 `ext` 改成
   `{"host":"http://107.173.211.148","site":"HuaJuan4K","cookies":{"quark_cookie":"你的 Cookie"}}`（`ext` 是 JSON 字符串）。**不要提交带 Cookie 的订阅**，`scripts/sanitize.py` 会清空会话值。

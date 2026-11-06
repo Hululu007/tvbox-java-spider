@@ -22,7 +22,7 @@ import re
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 GH = "tlwj01/tvbox-java-spider"
 CDN = "https://cdn.jsdelivr.net/gh/" + GH + "@main/"
-JS_URL = CDN + "spider/cloud_spider.min.js"
+JS_URL = CDN + "spider/cloud_spider_v2.min.js"  # 新文件名，绕开 @main 旧缓存
 HOST = "http://107.173.211.148"
 
 

@@ -25,7 +25,11 @@ GH = "tlwj01/tvbox-java-spider"
 CDN = "https://cdn.jsdelivr.net/gh/" + GH + "@main/"
 # jsDelivr 动态压缩地址（仓库里只有 .js，.min.js 由 CDN 用 Terser 实时生成）：
 # 73KB -> 45KB，国内网下载更稳，也绕开 @main 的 7 天旧缓存。
-JS_URL = CDN + "spider/cloud_spider.min.js"
+# 插件也用全新文件名：jsDelivr 对 @main 旧路径缓存 7 天，purge.jsdelivr.net
+# 只允许 GET 且对旧路径无效，实测 cloud_spider.min.js 仍返回旧代码。
+# 新文件名首次请求必然拉仓库最新版；.min.js 由 CDN 对同名 .js 实时压缩生成。
+JS_NAME = "cloud_spider_v2.js"
+JS_URL = CDN + "spider/" + JS_NAME.replace(".js", ".min.js")
 SAFE_NAME = "safe-subscription.json"
 SAFE_URL = CDN + "output/" + SAFE_NAME
 HOST = "http://107.173.211.148"          # PanSou 免登实例，/api/search 返回 merged_by_type
@@ -39,9 +43,10 @@ def build_spider():
             " * 源：lab/quanpan/quanpan_spider.js + spider/cloud-overlay.js\n"
             " * 说明：TVBox 客户端直跑，零本机依赖，国内网可用。\n"
             " * ============================================================ */\n")
-    out = ROOT / "spider/cloud_spider.js"
-    out.write_text(head + src + "\n" + overlay, encoding="utf-8")
-    return out, len(head + src + overlay)
+    text = head + src + "\n" + overlay
+    for name in ("cloud_spider.js", JS_NAME):
+        (ROOT / "spider" / name).write_text(text, encoding="utf-8")
+    return ROOT / "spider" / JS_NAME, len(text)
 
 
 def ext_for(key):
