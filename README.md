@@ -78,6 +78,8 @@ mkdir -p .github/workflows && cp workflows/auto-update.yml .github/workflows/
 
 默认不放进 `.github/workflows/`，避免首次推送因令牌缺少 workflow 权限被 GitHub 拒绝。
 
+首次发布或凭据过期时：运行 `bash scripts/gh-device-poll.sh`（需先有 `.gh-device.json`），在 <https://github.com/login/device> 输入终端给出的 user_code 完成授权，令牌自动保存到 `.gh-token`；随后 `bash scripts/gh-publish.sh` 会创建仓库、把凭据写入 Git Credential Manager 并推送 `main`。之后定时同步即可无人值守运行。
+
 ## 安全与脱敏
 
 - 仓库内所有 `cookie` 字段中的会话值（`bbs_sid` / `bbs_token` / `__pugs`）已清空，`DEFAULT_KFZY_COOKIE` 改为空串。
