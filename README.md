@@ -79,7 +79,7 @@ cp output/pan/cookies.example.json output/pan/cookies.json
 
 两层机制，默认启用第一层：
 
-1. **本地定时任务**（WorkBuddy 自动化，每 6 小时）：执行 `bash scripts/sync-github.sh` —— ECJ 编译 → 运行 `ReplicaSites` 重新生成订阅 → 推送前 `scripts/sanitize.py` 脱敏 → 有变更才 commit/push 到 `main`。日志在 `logs/sync.log`（不入库）。
+1. **本地定时任务**（WorkBuddy 自动化，每 6 小时）：执行 `bash scripts/sync-github.sh` —— ECJ 编译 → 运行 `ReplicaSites` 重新生成订阅 → 推送前 `scripts/sanitize.py` 脱敏 → 有变更才 commit，再由 `scripts/gh-api-sync.py` 经 `api.github.com` 的 Git Data API 增量同步到 `main`（本机 `github.com` 的 git 通道被代理拦成 502，所以不走 `git push`）。日志在 `logs/sync.log`（不入库）。
 2. **云端 GitHub Actions（可选）**：`workflows/auto-update.yml` 是模板，需要令牌具备 `workflow` 权限时再复制到 `.github/workflows/`：
 
 ```bash
