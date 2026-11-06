@@ -1,0 +1,19 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/1.1 200 OK
+Date: Fri, 06 Nov 2026 09:33:04 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Server: cloudflare
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Vary: Accept-Encoding
+X-Frame-Options: SAMEORIGIN
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=dXCmMnN2mgys4d9JH2PObHZKW4nLl%2FNUA78w52J5hbhOb9FvlP92Z%2FNtTo33i85AM5rcdhbKutTmuc4GAsflMMjT4nH1GaO6%2F4Vncyd2WZnIXk4%2F%2FL9%2BDuI51Q%3D%3D"}]}
+last-modified: Fri, 06 Nov 2026 09:33:04 GMT
+Cache-Control: no-store
+cf-cache-status: MISS
+Speculation-Rules: "/cdn-cgi/speculation"
+CF-RAY: a56318356a110725-HKG
+alt-svc: h3=":443"; ma=86400
+

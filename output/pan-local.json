@@ -1,0 +1,39 @@
+{
+  "spider": "",
+  "wallpaper": "",
+  "logo": "",
+  "warningText": "网盘配置中心（填夸克 Cookie / 扫码）：http://127.0.0.1:8898/  ｜搜索后端 quanpan.xyz｜播放经本地流代理，无需壳支持 Cookie",
+  "sites": [
+    {
+      "key": "QuanPan4K",
+      "name": "🌸全盘搜｜夸克4K",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/pan/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "QuanPanJs",
+      "name": "🌸全盘搜｜JS原版(需壳JS引擎)",
+      "type": 3,
+      "api": "http://127.0.0.1:8898/quanpan_spider.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0
+    }
+  ],
+  "parses": [
+    {
+      "name": "全盘搜直链",
+      "type": 1,
+      "url": "http://127.0.0.1:8898/api/parse?url="
+    }
+  ],
+  "lives": [],
+  "rules": [],
+  "doh": [],
+  "ads": [],
+  "flags": []
+}

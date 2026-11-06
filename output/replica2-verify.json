@@ -1,0 +1,133 @@
+{
+  "generatedAt": "2026-11-06T18:16:52",
+  "subscription": "http://127.0.0.1:8898/api/replica2/config",
+  "fullSubscription": "http://127.0.0.1:8898/api/replica/config",
+  "configCenter": "http://127.0.0.1:8898/",
+  "verify": {
+    "ok": 4,
+    "total": 4,
+    "sites": [
+      {
+        "key": "SoAiHaiYin",
+        "status": "ok",
+        "results": 22,
+        "playableResults": 22,
+        "ms": 14255
+      },
+      {
+        "key": "SoAiPanSoo",
+        "status": "ok",
+        "results": 23,
+        "playableResults": 23,
+        "ms": 30029
+      },
+      {
+        "key": "SoAiAiPanSo",
+        "status": "ok",
+        "results": 5,
+        "playableResults": 5,
+        "ms": 15453
+      },
+      {
+        "key": "AiNewPianKu",
+        "status": "ok",
+        "results": 28,
+        "playableResults": 25,
+        "ms": 34638
+      }
+    ]
+  },
+  "chains": {
+    "SoAiHaiYin": {
+      "playable": true,
+      "detail": {
+        "status": 206,
+        "contentType": "video/mp4",
+        "contentRange": "bytes 0-2047/1705099146",
+        "magic": "b'\\x00\\x00\\x00\\x1cftypisom'",
+        "episodes": 19,
+        "title": "凡人修仙传之瀚海迷踪 4K 活跃UC 免登可播"
+      },
+      "listCount": 22,
+      "providers": {
+        "夸克网盘": 21,
+        "UC网盘": 1
+      }
+    },
+    "SoAiPanSoo": {
+      "playable": true,
+      "detail": {
+        "status": 206,
+        "contentType": "video/mp4",
+        "contentRange": "bytes 0-2047/1705099146",
+        "magic": "b'\\x00\\x00\\x00\\x1cftypisom'",
+        "episodes": 19,
+        "title": "凡人修仙传之瀚海迷踪 4K 活跃UC 免登可播"
+      },
+      "listCount": 23,
+      "providers": {
+        "夸克网盘": 2,
+        "UC网盘": 21
+      }
+    },
+    "SoAiAiPanSo": {
+      "playable": true,
+      "detail": {
+        "status": 206,
+        "contentType": "video/mp4",
+        "contentRange": "bytes 0-2047/1705099146",
+        "magic": "b'\\x00\\x00\\x00\\x1cftypisom'",
+        "episodes": 19,
+        "title": "凡人修仙传之瀚海迷踪 4K 活跃UC 免登可播"
+      },
+      "listCount": 5,
+      "providers": {
+        "UC网盘": 3,
+        "夸克网盘": 2
+      }
+    },
+    "AiNewPianKu": {
+      "playable": true,
+      "detail": {
+        "status": 206,
+        "contentType": "video/mp4",
+        "contentRange": "bytes 0-2047/1705099146",
+        "magic": "b'\\x00\\x00\\x00\\x1cftypisom'",
+        "episodes": 19,
+        "title": "凡人修仙传之瀚海迷踪 4K 活跃UC 免登可播"
+      },
+      "listCount": 28,
+      "providers": {
+        "夸克网盘": 15,
+        "UC网盘": 10,
+        "百度网盘": 2,
+        "迅雷云盘": 1
+      }
+    }
+  },
+  "configCenterLoop": {
+    "saved": 1,
+    "readBackVerified": true,
+    "configuredAfterSave": true,
+    "jsInjected": true,
+    "testCookieCleared": true,
+    "clearSaved": 1
+  },
+  "subscriptionSites": 5,
+  "fullSubscriptionSites": 10,
+  "spiderJarRequired": false,
+  "playableChainCount": 4,
+  "notes": [
+    "download3.json 的 spider 是 wexguard 加固壳（md5 86cb2cdcd99e29334004b80e48007e9a）：classes.dex 只含类名，真实实现加密在 assets/wexshinidie.guard，故按实测公开后端复刻，原始 ext 为空。",
+    "pansou.top /api/other/web_search 返回 SSE 四线路；data.url 为加密串，需 POST /api/other/save_url 解密成真实分享链接。is_type=2 百度 / 3 UC(免登可播) / 4 迅雷。",
+    "爱盘搜 aipanso.com 用 AES-CBC(key=iv=1234567812345678) 把首页 start_load 密文再加密成 ck_ml_sea_ Cookie；/cv/ 真实取链需公众号动态码，本轮 Cloudflare 挑战返回反爬首页，该站点列表以兜底库为主（5 条，首条实测可播）。",
+    "聚合索引里大量 UC 分享已被取消（404 好友已取消分享）；服务用 PanSouClient.catalog 逐条实测展开目录，把当前活跃分享前置到各站点列表前 3 条。",
+    "夸克播放需配置中心填 Cookie 或扫码，UC 免登即可播；测试 Cookie 已清空。",
+    "自检端点已改为 4 站点并发，耗时从 >300s 超时降到 34.6s。"
+  ],
+  "residualGaps": [
+    "爱盘搜 /cv/ 公众号动态码门槛未绕过",
+    "夸克/百度/115 真实播放验证需用户 Cookie",
+    "加固壳 wexshinidie.guard 未脱壳（本轮改走公开后端，功能不受影响）"
+  ]
+}

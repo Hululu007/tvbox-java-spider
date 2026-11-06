@@ -1,0 +1,140 @@
+{
+    "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a",
+    "wallpaper": "https://www.loliapi.com/acg/",
+    "logo": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaFile/3CEAE9E_773_wexfnw_20250911190012684newMediaFile.gif",
+    "sites": [
+        {
+            "key": "Demo",
+            "name": "教学┃DemoSpider",
+            "type": 3,
+            "api": "csp_DemoSpider",
+            "searchable": 1,
+            "quickSearch": 1,
+            "ext": "{}"
+        }, {
+            "key": "Douban",
+            "name": "🐮【免费分享】🐮",
+            "type": 3,
+            "api": "csp_NewDouBanGuard",
+            "indexs": 1,
+            "searchable": 0,
+            "ext": "https://cdn.waimaimingtang.com/file/images/bwc/20260414181247-ae51abfbfe.txt"
+        }, {
+            "key": "花卷",
+            "name": "💓花卷┃4K💓",
+            "type": 3,
+            "api": "csp_AiNewHuaJuanGuard",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 0
+        }, {
+            "key": "AppV7 | 大师兄",
+            "name": "💥师兄┃秒播💥",
+            "type": 3,
+ "api": "csp_WexAppV7Guard",
+            "searchable": 1,
+            "ext": {
+                "config": "AppV7Dsx",
+                "proxyImg": false
+            },
+            "timeout": 120
+        }, {
+            "key": "bilibili",
+            "name": "🅱哔哩┃合集🅱",
+            "type": 3,
+            "api": "csp_BiliGuard",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": {
+                "json": "https://example.com/bili001.txt"
+            }
+        }, {
+            "key": "webdav",
+            "name": "👁️WebDav┃DIY👁️",
+            "type": 3,
+            "api": "csp_WebDAVGuard",
+            "searchable": 1
+        }, {
+            "key": "push_agent",
+            "name": "推送",
+            "type": 3,
+            "api": "csp_PushGuard",
+            "searchable": 1
+        }
+    ],
+    "parses": [{
+            "name": "王",
+            "type": 1,
+            "url": "http://122.228.84.103:7777/api/?key=4Dk5tdayvY6NZufEMG&url="
+        }, {
+            "name": "二",
+            "type": 1,
+            "url": "http://110.42.7.182:880/api/?key=7e84f07dc78fbb3406d64a1ab7d966b3&url="
+        }, {
+            "name": "小",
+            "type": 1,
+            "url": "http://43.136.176.188:91/api/?key=4ef232e96172b0bda78d393c695fe7c4&url="
+        }, {
+            "name": "帅",
+            "type": 1,
+            "url": "http://pan.qiaoji8.com/tvbox/neibu.php?url="
+        }
+    ],
+    "doh": [{
+            "name": "Google",
+            "url": "https://dns.google/dns-query",
+            "ips": ["8.8.4.4", "8.8.8.8"]
+        }, {
+            "name": "Cloudflare",
+            "url": "https://cloudflare-dns.com/dns-query",
+            "ips": ["1.1.1.1", "1.0.0.1"]
+        }, {
+            "name": "AdGuard",
+            "url": "https://dns.adguard.com/dns-query",
+            "ips": ["94.140.14.140"]
+        }, {
+            "name": "Quad9",
+            "url": "https://dns.quad9.net/dns-quer",
+            "ips": ["9.9.9.9", "149.112.112.112"]
+        }
+    ],
+    "rules": [{
+            "name": "proxy",
+            "hosts": ["hlsztemgsplive.miguvideo.com=hlsztemgsplive.188766.xyz", "raw.githubusercontent.com", "youtube.com", ".*nivod.*"]
+        }, {
+            "name": "火山嗅探",
+            "hosts": ["huoshan.com"],
+            "regex": ["item_id="]
+        }, {
+            "name": "抖音嗅探",
+            "hosts": ["douyin.com"],
+            "regex": ["is_play_url="]
+        }, {
+            "name": "夜市點擊",
+            "hosts": ["yeslivetv.com"],
+            "script": ["document.getElementsByClassName('vjs-big-play-button')[0].click()"]
+        }
+    ],
+    "ads": ["mozai.4gtv.tv", "pv.vipwm.cc", "static-mozai.4gtv.tv"],
+    "lives": [{
+            "name": "Kimentanm",
+            "type": 0,
+            "url": "https://down.nigx.cn/raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+            "playerType": 2
+        }, {
+            "name": "综合直播",
+            "type": 0,
+            "playerType": 2,
+            "url": "http://193.123.86.190:14888/TV/iptv.php",
+            "ua": "bingcha/1.1 (mianfeifenxiang) "
+        }
+    ],
+    "headers": [{
+            "host": "hlsztemgsplive.miguvideo.com",
+            "header": {
+                "User-Agent": "bingcha/1.1 (mianfeifenxiang) "
+            }
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8"> 
+    <title>随机图片接口</title> 
+</head> 
+<body> 
+    <script> 
+        (function () {
+            // 获取当前北京时间（UTC+8）
+            const now = new Date();
+            const utc = now.getTime()  + (now.getTimezoneOffset()  * 60000);
+            const beijingTime = new Date(utc + (3600000 * 8));
+            const currentHour = beijingTime.getHours(); 
+            
+            // 判断是否在18:00-05:00时间段（不显示遮罩）
+            const isNightMode = currentHour >= 18 || currentHour < 5;
+            
+            if (!isNightMode) {
+                // 创建遮罩层
+                const overlayDiv = document.createElement('div'); 
+                overlayDiv.style.cssText  = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 99998;
+                    background-color: #fff;
+                `;
+                document.documentElement.appendChild(overlayDiv); 
+                
+                // 创建图片元素
+                const overlayImage = new Image();
+                overlayImage.style.cssText  = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 99999;
+                `;
+                
+                // 响应式图片路径
+                const width = window.innerWidth  || document.documentElement.clientWidth; 
+                overlayImage.src  = width <= 1080 ? 
+                    'https://api.suxun.site/api/img?s=mobile&k=meizi'  : 
+                    'https://3650000.xyz/view/api.php?p=1747637389'; 
+                
+                // 图片加载处理
+                overlayImage.onload  = () => overlayDiv.appendChild(overlayImage); 
+                overlayImage.onerror  = () => {
+                    overlayImage.src  = 'https://s21.ax1x.com/2025/03/21/pE0FEtS.jpg'; 
+                    overlayImage.onerror  = null;
+                    overlayDiv.appendChild(overlayImage); 
+                };
+            }
+        })();
+    </script>
+<!DOCTYPE html>
+<html lang="zh-cn">
+ <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+     <title>搜索结果凡人-多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。</title>
+     <meta name="keywords" content="凡人-多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。" />
+     <meta name="description" content="凡人-多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。" />
+     
+<link rel="icon" href="/template/DYXS2/static/picture/logo.png" type="image/png" />
+<link href="/template/DYXS2/static/css/style.css" rel="stylesheet" type="text/css">
+<link href="/template/DYXS2/static/css/ali.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/template/DYXS2/static/css/swiper-bundle.min.css" type="text/css">
+<script>var maccms={"path":"","mid":"1","url":"pan.yydsys.de","wapurl":"tv.yydsys.cc","mob_status":"2"};</script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/jquery.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/jquery.lazyload.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/template/DYXS2/static/js/jquery.cookie.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/home.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/jquery.clipboard.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/swiper-bundle.min.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/script.js"></script>
+
+ </head>
+<body class="search page">
+<header id="header" class="wrapper">
+  <div class="nav content">
+     <div class="brand"><a href="/" class="logo" title="多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。"><img src="/template/DYXS2/static/image/logo.png" alt="多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。"></a></div>
+    <div class="n

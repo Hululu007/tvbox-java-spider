@@ -1,0 +1,136 @@
+{
+  "spider": "",
+  "wallpaper": "",
+  "logo": "",
+  "sites": [
+    {
+      "key": "lzi",
+      "name": "🎬量子┃JSON采集",
+      "type": 1,
+      "api": "http://127.0.0.1:8899/api/cms/lzi/",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "changeable": 0,
+      "ext": {
+        "site": "lzi"
+      }
+    },
+    {
+      "key": "liangzi",
+      "name": "🎬量子┃liangzi",
+      "type": 1,
+      "api": "http://127.0.0.1:8899/api/cms/liangzi/",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "changeable": 0,
+      "ext": {
+        "site": "liangzi"
+      }
+    },
+    {
+      "key": "lzm3u8",
+      "name": "🎬量子┃lzm3u8",
+      "type": 1,
+      "api": "http://127.0.0.1:8899/api/cms/lzm3u8/",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "changeable": 0,
+      "ext": {
+        "site": "lzm3u8"
+      }
+    },
+    {
+      "key": "lziroot",
+      "name": "🌐量子资源网┃HTML",
+      "type": 1,
+      "api": "http://127.0.0.1:8899/api/cms/lziroot/",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1,
+      "changeable": 0,
+      "ext": {
+        "site": "lziroot"
+      }
+    },
+    {
+      "key": "seedhub",
+      "name": "🌐SeedHub┃影视",
+      "type": 1,
+      "api": "http://127.0.0.1:8899/api/cms/seedhub/",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "changeable": 0,
+      "ext": {
+        "site": "seedhub"
+      }
+    },
+    {
+      "key": "wuye",
+      "name": "🌐午夜┃影视",
+      "type": 1,
+      "api": "http://127.0.0.1:8899/api/cms/wuye/",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "changeable": 0,
+      "ext": {
+        "site": "wuye"
+      }
+    },
+    {
+      "key": "quanpan",
+      "name": "🌐全盘搜┃SPA",
+      "type": 1,
+      "api": "http://127.0.0.1:8899/api/cms/quanpan/",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1,
+      "changeable": 0,
+      "ext": {
+        "site": "quanpan"
+      }
+    },
+    {
+      "key": "libvio",
+      "name": "🌐Libvio",
+      "type": 1,
+      "api": "http://127.0.0.1:8899/api/cms/libvio/",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1,
+      "changeable": 0,
+      "ext": {
+        "site": "libvio"
+      }
+    }
+  ],
+  "parses": [
+    {
+      "name": "lzm3u8解析",
+      "type": 1,
+      "url": "https://lziplayer.com/?url="
+    },
+    {
+      "name": "本地聚合",
+      "type": 0,
+      "url": "http://127.0.0.1:8899/api/play?site="
+    }
+  ],
+  "flags": [
+    "lzm3u8",
+    "liangzi",
+    "量子"
+  ],
+  "lives": [],
+  "ads": [],
+  "_meta": {
+    "api_base": "http://127.0.0.1:8899",
+    "generated_by": "com.github.catvod.api.JsonApiServer",
+    "probe_report": "output/probe-report.json",
+    "cms_source": "https://cj.lziapi.com/api.php/provide/vod/"
+  }
+}

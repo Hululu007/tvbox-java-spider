@@ -1,0 +1,890 @@
+{
+  "list-default": {
+    "url": "https://cj.lziapi.com/api.php/provide/vod/?ac=list&pg=1",
+    "status": 200,
+    "ctype": "application/json; charset=utf-8",
+    "bytes": 16175,
+    "elapsed": 1.07,
+    "head": "{\"code\":1,\"msg\":\"数据列表\",\"page\":1,\"pagecount\":8142,\"limit\":20,\"total\":162833,\"list\":[{\"vod_id\":158436,\"vod_name\":\"反恐特警组：放逐者\",\"type_id\":16,\"type_name\":\"欧美剧\",\"vod_e",
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list",
+      "class"
+    ],
+    "page": 1,
+    "pagecount": 8142,
+    "total": 162833,
+    "limit": 20,
+    "list_len": 20,
+    "item_keys": [
+      "vod_id",
+      "vod_name",
+      "type_id",
+      "type_name",
+      "vod_en",
+      "vod_time",
+      "vod_remarks",
+      "vod_play_from",
+      "vod_pic",
+      "vod_area",
+      "vod_lang",
+      "vod_year",
+      "vod_letter",
+      "vod_actor",
+      "vod_director",
+      "vod_class",
+      "vod_score",
+      "vod_state",
+      "vod_serial"
+    ],
+    "sample": {
+      "vod_id": "158436",
+      "vod_name": "反恐特警组：放逐者",
+      "type_id": "16",
+      "type_name": "欧美剧",
+      "vod_en": "fankongtejingzufangzhuzhe",
+      "vod_time": "2026-11-06 16:11:32",
+      "vod_remarks": "更新至第07集",
+      "vod_play_from": "liangzi,lzm3u8",
+      "vod_pic": "https://p.lztutu.com/upload/vod/20260925-1/d1c3b0fb73aa7e4577773eea297447f7.webp"
+    },
+    "first_id": 158436,
+    "classes": [
+      {
+        "type_id": 1,
+        "type_pid": 0,
+        "type_name": "电影片"
+      },
+      {
+        "type_id": 2,
+        "type_pid": 0,
+        "type_name": "连续剧"
+      },
+      {
+        "type_id": 3,
+        "type_pid": 0,
+        "type_name": "综艺片"
+      },
+      {
+        "type_id": 4,
+        "type_pid": 0,
+        "type_name": "动漫片"
+      },
+      {
+        "type_id": 6,
+        "type_pid": 1,
+        "type_name": "动作片"
+      },
+      {
+        "type_id": 7,
+        "type_pid": 1,
+        "type_name": "喜剧片"
+      },
+      {
+        "type_id": 8,
+        "type_pid": 1,
+        "type_name": "爱情片"
+      },
+      {
+        "type_id": 9,
+        "type_pid": 1,
+        "type_name": "科幻片"
+      }
+    ]
+  },
+  "list-t1-pg2": {
+    "url": "https://cj.lziapi.com/api.php/provide/vod/?ac=list&t=1&pg=2",
+    "status": 200,
+    "ctype": "application/json; charset=utf-8",
+    "bytes": 2185,
+    "elapsed": 1.08,
+    "head": "{\"code\":1,\"msg\":\"数据列表\",\"page\":2,\"pagecount\":1,\"limit\":20,\"total\":1,\"list\":[],\"class\":[{\"type_id\":1,\"type_pid\":0,\"type_name\":\"电影片\"},{\"type_id\":2,\"type_pid\":0,\"ty",
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list",
+      "class"
+    ],
+    "page": 2,
+    "pagecount": 1,
+    "total": 1,
+    "limit": 20,
+    "list_len": 0,
+    "classes": [
+      {
+        "type_id": 1,
+        "type_pid": 0,
+        "type_name": "电影片"
+      },
+      {
+        "type_id": 2,
+        "type_pid": 0,
+        "type_name": "连续剧"
+      },
+      {
+        "type_id": 3,
+        "type_pid": 0,
+        "type_name": "综艺片"
+      },
+      {
+        "type_id": 4,
+        "type_pid": 0,
+        "type_name": "动漫片"
+      },
+      {
+        "type_id": 6,
+        "type_pid": 1,
+        "type_name": "动作片"
+      },
+      {
+        "type_id": 7,
+        "type_pid": 1,
+        "type_name": "喜剧片"
+      },
+      {
+        "type_id": 8,
+        "type_pid": 1,
+        "type_name": "爱情片"
+      },
+      {
+        "type_id": 9,
+        "type_pid": 1,
+        "type_name": "科幻片"
+      }
+    ]
+  },
+  "list-at-json": {
+    "url": "https://cj.lziapi.com/api.php/provide/vod/?ac=list&at=json&pg=1",
+    "status": 200,
+    "ctype": "application/json; charset=utf-8",
+    "bytes": 16175,
+    "elapsed": 1.15,
+    "head": "{\"code\":1,\"msg\":\"数据列表\",\"page\":1,\"pagecount\":8142,\"limit\":20,\"total\":162833,\"list\":[{\"vod_id\":158436,\"vod_name\":\"反恐特警组：放逐者\",\"type_id\":16,\"type_name\":\"欧美剧\",\"vod_e",
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list",
+      "class"
+    ],
+    "page": 1,
+    "pagecount": 8142,
+    "total": 162833,
+    "limit": 20,
+    "list_len": 20,
+    "item_keys": [
+      "vod_id",
+      "vod_name",
+      "type_id",
+      "type_name",
+      "vod_en",
+      "vod_time",
+      "vod_remarks",
+      "vod_play_from",
+      "vod_pic",
+      "vod_area",
+      "vod_lang",
+      "vod_year",
+      "vod_letter",
+      "vod_actor",
+      "vod_director",
+      "vod_class",
+      "vod_score",
+      "vod_state",
+      "vod_serial"
+    ],
+    "sample": {
+      "vod_id": "158436",
+      "vod_name": "反恐特警组：放逐者",
+      "type_id": "16",
+      "type_name": "欧美剧",
+      "vod_en": "fankongtejingzufangzhuzhe",
+      "vod_time": "2026-11-06 16:11:32",
+      "vod_remarks": "更新至第07集",
+      "vod_play_from": "liangzi,lzm3u8",
+      "vod_pic": "https://p.lztutu.com/upload/vod/20260925-1/d1c3b0fb73aa7e4577773eea297447f7.webp"
+    },
+    "first_id": 158436,
+    "classes": [
+      {
+        "type_id": 1,
+        "type_pid": 0,
+        "type_name": "电影片"
+      },
+      {
+        "type_id": 2,
+        "type_pid": 0,
+        "type_name": "连续剧"
+      },
+      {
+        "type_id": 3,
+        "type_pid": 0,
+        "type_name": "综艺片"
+      },
+      {
+        "type_id": 4,
+        "type_pid": 0,
+        "type_name": "动漫片"
+      },
+      {
+        "type_id": 6,
+        "type_pid": 1,
+        "type_name": "动作片"
+      },
+      {
+        "type_id": 7,
+        "type_pid": 1,
+        "type_name": "喜剧片"
+      },
+      {
+        "type_id": 8,
+        "type_pid": 1,
+        "type_name": "爱情片"
+      },
+      {
+        "type_id": 9,
+        "type_pid": 1,
+        "type_name": "科幻片"
+      }
+    ]
+  },
+  "search-wd": {
+    "url": "https://cj.lziapi.com/api.php/provide/vod/?ac=list&wd=%E5%87%A1%E4%BA%BA&pg=1",
+    "status": 200,
+    "ctype": "application/json; charset=utf-8",
+    "bytes": 14649,
+    "elapsed": 1.08,
+    "head": "{\"code\":1,\"msg\":\"数据列表\",\"page\":1,\"pagecount\":14,\"limit\":20,\"total\":261,\"list\":[{\"vod_id\":397,\"vod_name\":\"凡人修仙传2020\",\"type_id\":29,\"type_name\":\"国产动漫\",\"vod_en\":\"fan",
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list",
+      "class"
+    ],
+    "page": 1,
+    "pagecount": 14,
+    "total": 261,
+    "limit": 20,
+    "list_len": 20,
+    "item_keys": [
+      "vod_id",
+      "vod_name",
+      "type_id",
+      "type_name",
+      "vod_en",
+      "vod_time",
+      "vod_remarks",
+      "vod_play_from",
+      "vod_pic",
+      "vod_area",
+      "vod_lang",
+      "vod_year",
+      "vod_letter",
+      "vod_actor",
+      "vod_director",
+      "vod_class",
+      "vod_score",
+      "vod_state",
+      "vod_serial"
+    ],
+    "sample": {
+      "vod_id": "397",
+      "vod_name": "凡人修仙传2020",
+      "type_id": "29",
+      "type_name": "国产动漫",
+      "vod_en": "fanrenxiuxianchuan",
+      "vod_time": "2026-10-31 11:05:10",
+      "vod_remarks": "更新至第198集",
+      "vod_play_from": "liangzi,lzm3u8",
+      "vod_pic": "https://p.lztutu.com/upload/vod/20250208-1/90752e4ad2b9b095b14783a0e1df7e91.jpg"
+    },
+    "first_id": 397,
+    "classes": [
+      {
+        "type_id": 1,
+        "type_pid": 0,
+        "type_name": "电影片"
+      },
+      {
+        "type_id": 2,
+        "type_pid": 0,
+        "type_name": "连续剧"
+      },
+      {
+        "type_id": 3,
+        "type_pid": 0,
+        "type_name": "综艺片"
+      },
+      {
+        "type_id": 4,
+        "type_pid": 0,
+        "type_name": "动漫片"
+      },
+      {
+        "type_id": 6,
+        "type_pid": 1,
+        "type_name": "动作片"
+      },
+      {
+        "type_id": 7,
+        "type_pid": 1,
+        "type_name": "喜剧片"
+      },
+      {
+        "type_id": 8,
+        "type_pid": 1,
+        "type_name": "爱情片"
+      },
+      {
+        "type_id": 9,
+        "type_pid": 1,
+        "type_name": "科幻片"
+      }
+    ]
+  },
+  "hours": {
+    "url": "https://cj.lziapi.com/api.php/provide/vod/?ac=list&h=24&pg=1",
+    "status": 200,
+    "ctype": "application/json; charset=utf-8",
+    "bytes": 16170,
+    "elapsed": 1.07,
+    "head": "{\"code\":1,\"msg\":\"数据列表\",\"page\":1,\"pagecount\":16,\"limit\":20,\"total\":302,\"list\":[{\"vod_id\":158436,\"vod_name\":\"反恐特警组：放逐者\",\"type_id\":16,\"type_name\":\"欧美剧\",\"vod_en\":\"f",
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list",
+      "class"
+    ],
+    "page": 1,
+    "pagecount": 16,
+    "total": 302,
+    "limit": 20,
+    "list_len": 20,
+    "item_keys": [
+      "vod_id",
+      "vod_name",
+      "type_id",
+      "type_name",
+      "vod_en",
+      "vod_time",
+      "vod_remarks",
+      "vod_play_from",
+      "vod_pic",
+      "vod_area",
+      "vod_lang",
+      "vod_year",
+      "vod_letter",
+      "vod_actor",
+      "vod_director",
+      "vod_class",
+      "vod_score",
+      "vod_state",
+      "vod_serial"
+    ],
+    "sample": {
+      "vod_id": "158436",
+      "vod_name": "反恐特警组：放逐者",
+      "type_id": "16",
+      "type_name": "欧美剧",
+      "vod_en": "fankongtejingzufangzhuzhe",
+      "vod_time": "2026-11-06 16:11:32",
+      "vod_remarks": "更新至第07集",
+      "vod_play_from": "liangzi,lzm3u8",
+      "vod_pic": "https://p.lztutu.com/upload/vod/20260925-1/d1c3b0fb73aa7e4577773eea297447f7.webp"
+    },
+    "first_id": 158436,
+    "classes": [
+      {
+        "type_id": 1,
+        "type_pid": 0,
+        "type_name": "电影片"
+      },
+      {
+        "type_id": 2,
+        "type_pid": 0,
+        "type_name": "连续剧"
+      },
+      {
+        "type_id": 3,
+        "type_pid": 0,
+        "type_name": "综艺片"
+      },
+      {
+        "type_id": 4,
+        "type_pid": 0,
+        "type_name": "动漫片"
+      },
+      {
+        "type_id": 6,
+        "type_pid": 1,
+        "type_name": "动作片"
+      },
+      {
+        "type_id": 7,
+        "type_pid": 1,
+        "type_name": "喜剧片"
+      },
+      {
+        "type_id": 8,
+        "type_pid": 1,
+        "type_name": "爱情片"
+      },
+      {
+        "type_id": 9,
+        "type_pid": 1,
+        "type_name": "科幻片"
+      }
+    ]
+  },
+  "xml-liangzi": {
+    "url": "https://cj.lziapi.com/api.php/provide/vod/from/liangzi/at/xml/",
+    "status": 200,
+    "ctype": "text/xml; charset=utf-8",
+    "bytes": 5302,
+    "elapsed": 1.08,
+    "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <rss version=\"5.1\"><list page=\"1\" pagecount=\"8142\" pagesize=\"20\" recordcount=\"162823\"><video><last>2026-11-06 16:11:32</l",
+    "root": "rss",
+    "item_tag": "",
+    "video_count": 20,
+    "xml_fields": [
+      "video",
+      "last",
+      "id",
+      "tid",
+      "name",
+      "type",
+      "dt",
+      "note"
+    ]
+  },
+  "xml-lzm3u8": {
+    "url": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/at/xml/",
+    "status": 200,
+    "ctype": "text/xml; charset=utf-8",
+    "bytes": 5282,
+    "elapsed": 1.02,
+    "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <rss version=\"5.1\"><list page=\"1\" pagecount=\"8142\" pagesize=\"20\" recordcount=\"162824\"><video><last>2026-11-06 16:11:32</l",
+    "root": "rss",
+    "item_tag": "",
+    "video_count": 20,
+    "xml_fields": [
+      "video",
+      "last",
+      "id",
+      "tid",
+      "name",
+      "type",
+      "dt",
+      "note"
+    ]
+  },
+  "xml-down": {
+    "url": "https://cj.lziapi.com/api.php/providedown/vod/at/xml/",
+    "status": 200,
+    "ctype": "text/xml; charset=utf-8",
+    "bytes": 5242,
+    "elapsed": 1.1,
+    "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <rss version=\"5.1\"><list page=\"1\" pagecount=\"8142\" pagesize=\"20\" recordcount=\"162833\"><video><last>2026-11-06 16:11:32</l",
+    "root": "rss",
+    "item_tag": "",
+    "video_count": 20,
+    "xml_fields": [
+      "video",
+      "last",
+      "id",
+      "tid",
+      "name",
+      "type",
+      "dt",
+      "note"
+    ]
+  },
+  "art": {
+    "url": "https://cj.lziapi.com/api.php/provide/art/?ac=list&pg=1",
+    "status": 200,
+    "ctype": "application/json; charset=utf-8",
+    "bytes": 9304,
+    "elapsed": 1.0,
+    "head": "{\"code\":1,\"msg\":\"数据列表\",\"page\":1,\"pagecount\":328,\"limit\":20,\"total\":6548,\"list\":[{\"art_id\":81433,\"art_name\":\"尺度还挺大的五部韩国犯罪片，每一部都是限制级，你是否都看过？\",\"type_id\":43,\"type_n",
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list",
+      "class"
+    ],
+    "page": 1,
+    "pagecount": 328,
+    "total": 6548,
+    "limit": 20,
+    "list_len": 20,
+    "item_keys": [
+      "art_id",
+      "art_name",
+      "type_id",
+      "type_name",
+      "art_en",
+      "art_time",
+      "art_author",
+      "art_from",
+      "art_remarks",
+      "art_pic",
+      "type_is_vip_exclusive"
+    ],
+    "sample": {
+      "art_id": "81433",
+      "art_name": "尺度还挺大的五部韩国犯罪片，每一部都是限制级，你是否都看过？",
+      "type_id": "43",
+      "type_name": "电影资讯",
+      "art_en": "chiduhuantingdadewubuhanguofanzuipianmeiyibudushixianzhijinishifoudukanguo",
+      "art_time": "2026-10-26 09:23:50",
+      "art_author": "",
+      "art_from": "",
+      "art_remarks": ""
+    },
+    "first_id": null,
+    "classes": [
+      {
+        "type_id": 42,
+        "type_pid": 0,
+        "type_name": "新闻资讯"
+      },
+      {
+        "type_id": 43,
+        "type_pid": 42,
+        "type_name": "电影资讯"
+      },
+      {
+        "type_id": 44,
+        "type_pid": 42,
+        "type_name": "娱乐新闻"
+      }
+    ]
+  },
+  "actor": {
+    "url": "https://cj.lziapi.com/api.php/provide/actor/?ac=list&pg=1",
+    "status": 200,
+    "ctype": "application/json; charset=utf-8",
+    "bytes": 5801,
+    "elapsed": 0.97,
+    "head": "{\"code\":1,\"msg\":\"数据列表\",\"page\":1,\"pagecount\":222,\"limit\":20,\"total\":4436,\"list\":[{\"actor_id\":45444,\"actor_name\":\"赵丽颖\",\"type_id\":41,\"type_name\":\"演员\",\"actor_en\":\"z",
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list",
+      "class"
+    ],
+    "page": 1,
+    "pagecount": 222,
+    "total": 4436,
+    "limit": 20,
+    "list_len": 20,
+    "item_keys": [
+      "actor_id",
+      "actor_name",
+      "type_id",
+      "type_name",
+      "actor_en",
+      "actor_area",
+      "actor_time",
+      "actor_alias",
+      "actor_sex",
+      "actor_pic"
+    ],
+    "sample": {
+      "actor_id": "45444",
+      "actor_name": "赵丽颖",
+      "type_id": "41",
+      "type_name": "演员",
+      "actor_en": "zhaoliying",
+      "actor_area": "内地",
+      "actor_time": "2025-08-25 16:35:11",
+      "actor_alias": "",
+      "actor_sex": "女"
+    },
+    "first_id": null,
+    "classes": [
+      {
+        "type_id": 41,
+        "type_pid": 0,
+        "type_name": "演员"
+      }
+    ]
+  },
+  "html-seedhub": {
+    "url": "https://sidhub.cc/",
+    "status": 200,
+    "ctype": "text/html; charset=utf-8",
+    "bytes": 41518,
+    "elapsed": 1.85,
+    "head": "<!DOCTYPE html> <html lang=\"zh-CN\">  <head>   <!-- Global site tag (gtag.js) - Google Analytics -->   <script async src=\"https://www.googletagmanager.com/gtag/j",
+    "html": true,
+    "title": "SeedHub | 影视&动漫分享",
+    "vod_links": [
+      {
+        "href": "/categories/1/movies/",
+        "text": "电影"
+      },
+      {
+        "href": "/categories/2/movies/",
+        "text": "动漫"
+      },
+      {
+        "href": "/categories/3/movies/",
+        "text": "剧集"
+      },
+      {
+        "href": "/categories/1/movies/",
+        "text": "电影"
+      },
+      {
+        "href": "/categories/1/types/7/movies/",
+        "text": "剧情"
+      },
+      {
+        "href": "/categories/1/types/8/movies/",
+        "text": "喜剧"
+      }
+    ],
+    "a_count": 213
+  },
+  "html-wuye": {
+    "url": "https://xu--5us88dtla.wuye.mom/",
+    "status": 200,
+    "ctype": "text/html; charset=utf-8",
+    "bytes": 63194,
+    "elapsed": 1.57,
+    "head": "<!DOCTYPE html><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=EmulateIE10\"><meta ",
+    "html": true,
+    "title": "&#21320;&#22812;&#24433;&#35270;",
+    "vod_links": [
+      {
+        "href": "/vodtype/4.html",
+        "text": "新电影"
+      },
+      {
+        "href": "/vodshow/78-----------.html",
+        "text": "动漫电影"
+      },
+      {
+        "href": "/vodshow/38-----------.html",
+        "text": "动作片"
+      },
+      {
+        "href": "/vodshow/39-----------.html",
+        "text": "爱情片"
+      },
+      {
+        "href": "/vodshow/40-----------.html",
+        "text": "喜剧片"
+      },
+      {
+        "href": "/vodshow/41-----------.html",
+        "text": "科幻片"
+      }
+    ],
+    "a_count": 256
+  },
+  "html-quanpan": {
+    "url": "https://quanpan.xyz/",
+    "status": 200,
+    "ctype": "text/html",
+    "bytes": 8973,
+    "elapsed": 0.29,
+    "head": "<!DOCTYPE html> <html lang=\"zh-CN\"> <head>     <meta charset=\"UTF-8\">          <link rel=\"canonical\" href=\"https://quanpan.xyz/\">     <meta http-equiv=\"X-UA-Com",
+    "html": true,
+    "title": "全盘搜索 - 找网盘资源，全盘搜索帮你搞定！",
+    "vod_links": [],
+    "a_count": 1
+  },
+  "html-libvio": {
+    "url": "https://libvio.cam/",
+    "error": "URLError: <urlopen error _ssl.c:1015: The handshake operation timed out>"
+  },
+  "html-lzi": {
+    "url": "https://cj.lziapi.com/",
+    "status": 200,
+    "ctype": "text/html; charset=utf-8",
+    "bytes": 36497,
+    "elapsed": 1.31,
+    "head": "<!doctype html> <html> <head> <meta charset=\"utf-8\"> <meta name=\"renderer\" content=\"webkit\"> <link rel=\"shortcut icon\" href=\"/favicon.ico?v=20261023\" type=\"imag",
+    "html": true,
+    "title": "量子资源网",
+    "vod_links": [
+      {
+        "href": "https://lziplayer.com/?url=https://vip.lz-cdn14.com/20220827/9100_31da5344/index.m3u8",
+        "text": "https://lziplayer.com/?url="
+      },
+      {
+        "href": "/index.php/vod/type/id/52.html",
+        "text": "AI漫剧"
+      },
+      {
+        "href": "/index.php/vod/type/id/1.html",
+        "text": "电影片"
+      },
+      {
+        "href": "/index.php/vod/type/id/6.html",
+        "text": "动作片"
+      },
+      {
+        "href": "/index.php/vod/type/id/7.html",
+        "text": "喜剧片"
+      },
+      {
+        "href": "/index.php/vod/type/id/9.html",
+        "text": "科幻片"
+      }
+    ],
+    "a_count": 167
+  },
+  "detail": {
+    "url": "https://cj.lziapi.com/api.php/provide/vod/?ac=detail&ids=158436",
+    "status": 200,
+    "ctype": "application/json; charset=utf-8",
+    "bytes": 4150,
+    "elapsed": 1.01,
+    "head": "{\"code\":1,\"msg\":\"数据列表\",\"page\":1,\"pagecount\":1,\"limit\":20,\"total\":1,\"list\":[{\"vod_id\":158436,\"type_id\":16,\"type_id_1\":2,\"group_id\":0,\"vod_name\":\"反恐特警组：放逐者\",\"vod_",
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list"
+    ],
+    "page": 1,
+    "pagecount": 1,
+    "total": 1,
+    "limit": 20,
+    "list_len": 1,
+    "item_keys": [
+      "vod_id",
+      "type_id",
+      "type_id_1",
+      "group_id",
+      "vod_name",
+      "vod_sub",
+      "vod_en",
+      "vod_status",
+      "vod_letter",
+      "vod_color",
+      "vod_tag",
+      "vod_class",
+      "vod_pic",
+      "vod_pic_thumb",
+      "vod_pic_slide",
+      "vod_pic_original",
+      "vod_pic_thumb_original",
+      "vod_pic_screenshot",
+      "vod_actor",
+      "vod_director",
+      "vod_writer",
+      "vod_behind",
+      "vod_blurb",
+      "vod_remarks",
+      "vod_pubdate",
+      "vod_total",
+      "vod_serial",
+      "vod_tv",
+      "vod_weekday",
+      "vod_area",
+      "vod_lang",
+      "vod_year",
+      "vod_version",
+      "vod_state",
+      "vod_author",
+      "vod_jumpurl",
+      "vod_tpl",
+      "vod_tpl_play",
+      "vod_tpl_down",
+      "vod_isend",
+      "vod_lock",
+      "vod_level",
+      "vod_copyright",
+      "vod_points",
+      "vod_points_play",
+      "vod_points_down",
+      "vod_hits",
+      "vod_hits_day",
+      "vod_hits_week",
+      "vod_hits_month",
+      "vod_duration",
+      "vod_up",
+      "vod_down",
+      "vod_score",
+      "vod_score_all",
+      "vod_score_num",
+      "vod_time",
+      "vod_time_add",
+      "vod_time_hits",
+      "vod_time_make",
+      "vod_trysee",
+      "vod_douban_id",
+      "vod_douban_score",
+      "vod_reurl",
+      "vod_rel_vod",
+      "vod_rel_art",
+      "vod_pwd",
+      "vod_pwd_url",
+      "vod_pwd_play",
+      "vod_pwd_play_url",
+      "vod_pwd_down",
+      "vod_pwd_down_url",
+      "vod_content",
+      "vod_play_from",
+      "vod_play_server",
+      "vod_play_note",
+      "vod_play_url",
+      "vod_down_from",
+      "vod_down_server",
+      "vod_down_note",
+      "vod_down_url",
+      "vod_plot",
+      "vod_plot_name",
+      "vod_plot_detail",
+      "type_name"
+    ],
+    "sample": {
+      "vod_id": "158436",
+      "type_id": "16",
+      "type_id_1": "2",
+      "group_id": "0",
+      "vod_name": "反恐特警组：放逐者",
+      "vod_sub": "反恐特警组 衍生剧 / SWAT Exiles",
+      "vod_en": "fankongtejingzufangzhuzhe",
+      "vod_status": "1",
+      "vod_letter": "F"
+    },
+    "first_id": 158436,
+    "classes": "None"
+  }
+}

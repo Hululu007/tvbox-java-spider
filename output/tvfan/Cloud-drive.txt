@@ -1,0 +1,5 @@
+# 子规则文件示例：由主配置的 ext 用相对路径引用
+# 壳会按主配置 URL 所在目录解析这个路径
+site=quotes.toscrape.com
+type=demo
+pages=3

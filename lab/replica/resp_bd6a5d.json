@@ -1,0 +1,105 @@
+{
+  "spider": "",
+  "wallpaper": "",
+  "logo": "",
+  "warningText": "5 站点复刻版（无需 spider jar）｜网盘配置中心/填夸克 Cookie/扫码：http://127.0.0.1:8898/ ｜播放经本地流代理自动补鉴权头",
+  "sites": [
+    {
+      "key": "MDrive",
+      "name": "🗂我的云盘┃配置",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/MDrive/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_MyDriveGuard",
+        "backend": "本地配置中心 + tvfan/Cloud-drive.txt 自建分享库",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "seed",
+      "name": "💡聚剧┃四盘",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/seed/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_SeedhubGuard",
+        "backend": "seedog.cc /s/<kw>/ → /movies/<id>/ → /link_start/",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "ZPan",
+      "name": "🎈盘搜┃四盘",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/ZPan/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_S_zpsGuard",
+        "backend": "PanSou 免登实例 107.173.211.148（8 盘）",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "JPan",
+      "name": "🦋易搜┃四盘",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/JPan/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_S_zpsGuard",
+        "backend": "PanSou 免登实例 so.252035.xyz（10 盘）",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "YpanSo",
+      "name": "🐌盘她┃夸父",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/YpanSo/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_YpanSoGuard",
+        "backend": "kfzy.net search.htm → thread-<id>.htm（带论坛 Cookie）",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "QuanPan4K",
+      "name": "🌸全盘搜｜夸克4K",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/pan/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    }
+  ],
+  "parses": [
+    {
+      "name": "全盘搜直链",
+      "type": 1,
+      "url": "http://127.0.0.1:8898/api/parse?url="
+    }
+  ],
+  "lives": [],
+  "rules": [],
+  "doh": [],
+  "ads": [],
+  "flags": []
+}

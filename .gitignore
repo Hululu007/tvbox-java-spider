@@ -1,0 +1,18 @@
+# 编译产物与日志
+out/
+*.class
+logs/
+*.log
+
+# 本地凭据 / 授权临时文件（绝不入库）
+output/pan/cookies.json
+lab/replica/aipanso-cookie.txt
+.gh-device.json
+.gh-token
+*.tmp
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

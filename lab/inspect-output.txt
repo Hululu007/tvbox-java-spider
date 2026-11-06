@@ -1,0 +1,94 @@
+===== 第 2 课 · 真实订阅配置与 spider jar 静态分析 =====
+
+【1】配置结构概览
+spider   : http://xhztv.top/xhz/Yoursmile.jar;md5;69DADB9A99A618EA9E2F4E2B92968E41
+sites    : 54 个（type=3 且 api 以 csp_ 开头：50 个）
+csp 类名 : [csp_DouDou, csp_Czsapp, csp_YQKan, csp_NanGua, csp_Kkys, csp_AppLd] ... 共 50 个
+parses   : 6 个  [Web聚合, Json聚合, 777, jsonplayer, xmflv, 剖云]
+rules    : 0 组  []
+lives    : 1 | doh: 0 | ads: 0 | headers: 0
+
+parses 形态 : {0=4, 3=2}  [Web聚合, Json聚合, 777, jsonplayer, xmflv, 剖云]
+flags      : 51 个播放标识
+lives 扩展 : [name, type, url, playerType, ua, epg, logo]
+
+【2】sites.api 的形态
+  jar 插件 (csp_) : 50 个站点，38 个不同类
+  JS 插件 (.js)   : 4 个站点
+  其它           : 0
+  JS 引擎地址     : http://xhztv.top/xhz/js/lib/drpy2.min.js
+
+【3】同一个类被多个站点复用（靠 extend 区分）
+  Bili  ×7
+  XBPQ  ×6
+  AppMao  ×2
+
+【4】sites.ext 的四种形态
+  无 : 18 个
+  远程 URL / 子配置 : 21 个
+  加密串 : 3 个
+  本地代理 token : 8 个
+  规则对象(10 字段) : 2 个
+  规则对象(24 字段) : 1 个
+  规则对象(11 字段) : 1 个
+
+【5】加密串的 base64 特征
+  明文长 128 -> 解码 96 字节, 16 倍数=true, 首字节 15 b8 d2 67 51 5a a6 8b cd af 44 05
+  明文长 140 -> 解码 103 字节, 16 倍数=false, 首字节 15 b8 c3 71 4c 4f aa 97 cd af 44 05
+  明文长 496 -> 解码 372 字节, 16 倍数=false, 首字节 15 b8 c3 71 4c 4f aa 97 cd af 44 05
+  -> 长度是 16 的倍数且首字节无明显 magic，符合 AES/DES 分组密文特征；
+     密钥通常在 jar 的常量里，下一步反编译找它。
+
+【6】spider 包完整性校验
+下载地址 : http://xhztv.top/xhz/Yoursmile.jar
+校验算法 : md5
+期望摘要 : 69DADB9A99A618EA9E2F4E2B92968E41
+伪装后缀 : 否
+  本地大小 : 909588 字节
+  本地 md5 : 69dadb9a99a618ea9e2f4e2b92968e41
+  摘要匹配 : true
+
+【7】jar 内 class 清单与 csp_ 名称对照
+  class 总数      : 0
+  包分布 (前 8)   :
+  spider 实现类   : 0 个
+  []
+    [缺失] Anime1
+    [缺失] AppLd
+    [缺失] AppMao
+    [缺失] Auete
+    [缺失] Bili
+    [缺失] Bttwoo
+    [缺失] Czsapp
+    [缺失] Ddrk
+    [缺失] Dm84
+    [缺失] DouDou
+    [缺失] Dovx
+    [缺失] Duanju
+    [缺失] FirstAid
+    [缺失] Jianpian
+    [缺失] Kanqiu
+    [缺失] Kkys
+    [缺失] Kuaikan
+    [缺失] Kunyu77
+    [缺失] Libvio
+    [缺失] MLYS
+    [缺失] NanGua
+    [缺失] NiNi
+    [缺失] PanSearch
+    [缺失] PanSou
+    [缺失] Push
+    [缺失] SP33
+    [缺失] SixV
+    [缺失] Tangrenjie
+    [缺失] UpYun
+    [缺失] WoGG
+    [缺失] XBPQ
+    [缺失] Xinsj
+    [缺失] YQKan
+    [缺失] YiSo
+    [缺失] Ying
+    [缺失] Yj1211
+    [缺失] Ysj
+    [缺失] Zhaozy
+  对照结果        : 命中 0 / 缺失 38（共 38 个不同类）

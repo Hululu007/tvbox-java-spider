@@ -1,0 +1,90 @@
+{
+  "spider": "",
+  "wallpaper": "",
+  "logo": "",
+  "warningText": "4 站点复刻版（无需 spider jar）｜网盘配置中心/填夸克 Cookie/扫码：http://127.0.0.1:8898/ ｜播放经本地流代理自动补鉴权头",
+  "sites": [
+    {
+      "key": "SoAiHaiYin",
+      "name": "🎠盘搜┃综合🎠",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/SoAiHaiYin/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_SoAiHaiYinGuard",
+        "backend": "pansou.top /api/other/web_search SSE 四线路 + /api/other/save_url 解密",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "SoAiPanSoo",
+      "name": "🎠九七┃综合🎠",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/SoAiPanSoo/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_SoAiPanSooGuard",
+        "backend": "pansou.top is_type=3（UC 免登线路）+ PanSou 免登实例 so.252035.xyz",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "SoAiAiPanSo",
+      "name": "🎠爱盘┃综合🎠",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/SoAiAiPanSo/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_SoAiAiPanSoGuard",
+        "backend": "aipanso.com AES-CBC 反爬 Cookie → /search?k= 列表 + 免登实例取链",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "AiNewPianKu",
+      "name": "💓盘库┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/AiNewPianKu/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewPianKuGuard",
+        "backend": "tvfan/Cloud-drive.txt 自建 4K 库 + 夸父 4K 帖子 + 盘搜 4K 条目",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "QuanPan4K",
+      "name": "🌸全盘搜｜夸克4K",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/pan/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    }
+  ],
+  "parses": [
+    {
+      "name": "全盘搜直链",
+      "type": 1,
+      "url": "http://127.0.0.1:8898/api/parse?url="
+    }
+  ],
+  "lives": [],
+  "rules": [],
+  "doh": [],
+  "ads": [],
+  "flags": []
+}

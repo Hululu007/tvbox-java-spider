@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8"> 
+    <title>随机图片接口</title> 
+</head> 
+<body> 
+    <script type="8eb3d034fc6171649a490642-text/javascript"> 
+        (function () {
+            // 获取当前北京时间（UTC+8）
+            const now = new Date();
+            const utc = now.getTime()  + (now.getTimezoneOffset()  * 60000);
+            const beijingTime = new Date(utc + (3600000 * 8));
+            const currentHour = beijingTime.getHours(); 
+            
+            // 判断是否在18:00-05:00时间段（不显示遮罩）
+            const isNightMode = currentHour >= 18 || currentHour < 5;
+            
+            if (!isNightMode) {
+                // 创建遮罩层
+                const overlayDiv = document.createElement('div'); 
+                overlayDiv.style.cssText  = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 99998;
+                    background-color: #fff;
+                `;
+                document.documentElement.appendChild(overlayDiv); 
+                
+                // 创建图片元素
+                const overlayImage = new Image();
+                overlayImage.style.cssText  = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 99999;
+                `;
+                
+                // 响应式图片路径
+                const width = window.innerWidth  || document.documentElement.clientWidth; 
+                overlayImage.src  = width <= 1080 ? 
+                    'https://api.suxun.site/api/img?s=mobile&k=meizi'  : 
+                    'https://3650000.xyz/view/api.php?p=1747637389'; 
+                
+                // 图片加载处理
+                overlayImage.onload  = () => overlayDiv.appendChild(overlayImage); 
+                overlayImage.onerror  = () => {
+                    overlayImage.src  = 'https://s21.ax1x.com/2025/03/21/pE0FEtS.jpg'; 
+                    overlayImage.onerror  = null;
+                    overlayDiv.appendChild(overlayImage); 
+                };
+            }
+        })();
+    </script>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。</title>
+    <meta name="keywords" content="阿里云盘,夸克云盘,资源分享站,UC网盘,多多影音,短视频,搞笑视频,视频分享,免费视频,在线视频,预告片" />
+    <meta name="description" content="多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。" />
+     
+<link rel="icon" href="/template/DYXS2/static/picture/logo.png" type="image/png" />
+<link href="/template/DYXS2/static/css/style.css" rel="stylesheet" type="text/css">
+<link href="/template/DYXS2/static/css/ali.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/template/DYXS2/static/css/swiper-bundle.min.css" type="text/css">
+<script type="8eb3d034fc6171649a490642-text/javascript">var maccms={"path":"","mid":"","url":"pan.yydsys.de","wapurl":"tv.yydsys.cc","mob_status":"2"};</script>
+<script type="8eb3d034fc6171649a490642-text/javascript" src="/template/DYXS2/static/js/jquery.js"></script>
+<script type="8eb3d034fc6171649a490642-text/javascript" src="/template/DYXS2/static/js/jquery.lazyload.js"></script>
+<script type="8eb3d034fc6171649a490642-text/javascript" src="/template/DYXS2/static/js/jquery.autocomplete.js"></script>
+<script type="8eb3d034fc6171649a490642-text/javascript" src="/template/DYXS2/static/js/jquery.cookie.js"></script>
+<script type="8eb3d034fc6171649a490642-text/javascript" src="/template/DYXS2/static/js/home.js"></script>
+<script type="8eb3d034fc6171649a490642-text/javascript" src="/template/DYXS2/static/js/jquery.clipboard.js"></script>
+<script type="8eb3d034fc6171649a490642-text/javascript" src="/template/DYXS2/static/js/swiper-bundle.min.js"></script>
+<script type="8eb3d034fc6171649a490642-text/javascript" src="/template/DYXS2/static/js/script.js"></script>
+
+</head>
+<body class="homepage" >
+ <header id="header" class="wrapper">
+	<div class="nav">
+		<h1 class="slogan black">最热的云盘资源分享站，多多影音只有免费分享，无APP无在线播放。</h1>
+		<div id="index-nav">
+			<ul class="nav-menu-items">
+				<li class="nav-menu-item selected">
+					<a href="/" class="black " title="多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。首页"><i class="icon-home"></i>首页</a>
+				</li>
+				 			
+				<li class="nav-menu-item ">
+					<a class="nav-link black" href="/index.php/vod/type/id/1.html">
+								                        <i class="icon-cate-dy"></i>
+	                        					多多电影 </a>
+				</li>
+							
+				<li class="nav-menu-item ">
+					<a class="nav-link black" href="/index.php/vod/type/id/2.html">
+								                        <i class="icon-cate-ds"></i>
+	                        					多多剧集 </a>
+				</li>
+							
+				<li class="nav-menu-item ">
+					<a class="nav-link black" href="/index.php/vod/type/id/4.html">
+								                        <i class="icon-cate-dm"></i>
+	                        					动漫 </a>
+				</li>
+							
+				<li class="nav-menu-item ">
+					<a class="nav-link black" href="/index.php/vod/type/id/5.html">
+								                        <i class="iconfont icon-zixun"></i>
+	                        					短剧 </a>
+				</li>
+							
+				<li class="nav-menu-item ">
+					<a class="nav-link black" href="/index.php/vod/type/id/3.html">
+								                        <i class="icon-cate-zy"></i>
+	                        					综艺 </a>
+				</li>
+							
+				<li class="nav-menu-item ">
+					<a class="nav-link black" href="/index.php/vod/type/id/20.html">
+								                        <i class="iconfont icon-zixun"></i>
+	                        					纪录 </a>
+				</li>
+								
+
+				<li class="space-line-bold black "></li>
+				<li class="nav-menu-item drop">
+					<span class="nav-menu-icon">
+                        <i class="icon-watch-history  black "></i>
+                    </span>
+					<div class="drop-content drop-history">
+						<div class="drop-content-box">
+							<ul class="drop-content-items" id="history">
+								<li class="list-item list-item-title">
+									<a href="" class="playlist historyclean">
+										<i class="icon-clear"></i>
+									</a>
+									<strong>我的观影记录</strong>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="shortcuts-mobile-overlay"></div>
+				</li>
+				<li class="space-line-bold"></li>
+				<li class="nav-menu-item drop">
+					<span class="nav-menu-icon">
+                        <i class="icon-all" style="color: #000;"></i>
+                    </span>
+					<div class="drop-content sub-block">
+						<div class="drop-content-box grid-box">
+							<ul class="drop-content-items grid-items">
+																
+								<li class="grid-item">
+									<a href="/">
+										<i class="icon-home"></i>
+										<div class="grid-item-name" title="多多影音-最热的网盘资源分享站">首页</div>
+									</a>
+								</li>
+							 			
+								<li  class="grid-item">
+								<a href="/index.php/vod/type/id/1.html" title="多多电影">
+														<i class="icon-cate-dy"></i>									<div class="grid-item-name">多多电影</div>
+									</a>
+								</li>
+											
+								<li  class="grid-item">
+								<a href="/index.php/vod/type/id/2.html" title="多多剧集">
+														<i class="icon-cate-ds"></i>									<div class="grid-item-name">多多剧集</div>
+									</a>
+								</li>
+											
+								<li  class="grid-item">
+								<a href="/index.php/vod/type/id/5.html" title="短剧">
+														<i class="icon-cate-dm"></i>									<div class="grid-item-name">短剧</div>
+									</a>
+								</li>
+											
+								<li  class="grid-item">
+								<a href="/index.php/vod/type/id/3.html" title="综艺">
+														<i class="icon-cate-zy"></i>									<div class="grid-item-name">综艺</div>
+									</a>
+								</li>
+											
+								<li  class="grid-item">
+								<a href="/index.php/vod/type/id/4.html" title="动漫">
+														<i class="icon-cate-dm"></i>									<div class="grid-item-name">动漫</div>
+									</a>
+								</li>
+											
+								<li  class="grid-item">
+								<a href="/index.php/vod/type/id/20.html" title="纪录">
+														<i class="iconfont icon-zixun"></i>									<div class="grid-item-name">纪录</div>
+									</a>
+								</li>
+																<li class="grid-item">
+								<a href="/index.php/label/web.html"><i class="icon-domain"></i>
+								<div class="grid-item-name" title="网址">网址</div>
+								</a>
+								</li>
+																						<li class="grid-item">
+								<a href="/index.php/topic/index.html"><i class="iconfont icon-zhuanxiangxinxi"></i>
+								<div class="grid-item-name" title="专题">专题</div>
+								</a>
+								</li>
+																
+								<li class="grid-item grid-more">
+									<a class="grid-more-link"  href="/index.php/vod/show/id/1.html" title="查看全部影片">
+										<div class="grid-item-name">全部影片</div>
+									</a>
+								</li>
+															</ul>
+						</div>
+					</div>
+					<div class="shortcuts-mobile-overlay"></div>
+				</li>
+								
+				<li class="space-line-bold"></li>
+				<li class="nav-menu-item drop">
+								<a href="/index.php/user/login.html" class=" black " title="用户登录"><i class="iconfont icon-yonghu"></i></a>
+							</ul>
+		</div>
+	</div>
+	  <div id="search-content">
+	<div class="index-logo"><span class="logo-s"><img src="/template/DYXS2/static/picture/index_logo.png" title="多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。"></span></div>
+	<form action="/index.php/vod/search.html">
+		<div class="search-box">
+			<input class="search-input ac_wd" id="txtKeywords" type="text" name="wd" autocomplete="off" placeholder="搜索电影、电视剧、综艺、动漫">
+			<div class="search-drop">
+				<div class="drop-content-items ac_hot none">
+					<div class="list-item list-item-title"><strong>大家都在搜这些影片</strong></div>
+					<div class="search-tag">
+												<a href="/index.php/vod/search/wd/%E5%8F%98%E5%BD%A2%E9%87%91%E5%88%9A.html" class="hot "><i class="icon-hot"></i>变形金刚</a>
+												<a href="/index.php/vod/search/wd/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85.html" class="hot "><i class="icon-hot"></i>火影忍者</a>
+												<a href="/index.php/vod/search/wd/%E5%A4%8D%E4%BB%87%E8%80%85%E8%81%94%E7%9B%9F.html" class="hot "><i class="icon-hot"></i>复仇者联盟</a>
+												<a href="/index.php/vod/search/wd/%E6%88%98%E7%8B%BC.html" class="hot "><i class="icon-hot"></i>战狼</a>
+												<a href="/index.php/vod/search/wd/%E7%BA%A2%E6%B5%B7%E8%A1%8C%E5%8A%A8.html" class=""><i class="icon-hot"></i>红海行动</a>
+											</div>
+				</div>
+			</div>
+			<button class="search-btn search-go" type="submit"><i class="icon-search"></i></button>
+			<button class="cancel-btn" type="button">取消</button>
+		</div>
+	</form>
+</div>
+</header>       
+	     
+<main id="index-main" class="wrapper">
+	<div class="content">
+	    	<script type="8eb3d034fc6171649a490642-text/javascript" src="/template/DYXS2/static/js/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="/template/DYXS2/static/css/swiper-bundle.min.css" type="text/css">
+   <div class="swiper-container" style="margin-bottom: 20px;">
+      <div class="swiper-wrapper">
+                   <div class="swiper-slide">
+        <a class="dymr banner" href="/index.php/vod/detail/id/95.html" style="background: url(https://tv.puui.qpic.cn/tv/0/mz_tv_image_frontend_1f0e95-5_1251110547_1730855402595803_pic_1920x800/0) center no-repeat;  background-size: cover;">
+          <div class="txt-info">
+            <p class="gate"><span>动漫</span></p>
+            <p class="name">遮天</p>
+            <p class="info">更新至188集 </p>
+          </div>
+          </a>
+        </div>
+           	         <div class="swiper-slide">
+        <a class="dymr banner" href="/index.php/vod/detail/id/28.html" style="background: url(https://puui.qpic.cn/tv/0/1250295022_1920800/0) center no-repeat;  background-size: cover;">
+          <div class="txt-info">
+            <p class="gate"><span>动漫</span></p>
+            <p class="name">仙逆</p>
+            <p class="info">更新至165集 </p>
+          </div>
+          </a>
+        </div>
+           	         <div class="swiper-slide">
+        <a class="dymr banner" href="/index.php/vod/detail/id/38.html" style="background: url(https://wsrv.nl/?url=https://i0.hdslb.com/bfs/bangumi/image/9470463bf23635fa8010828d2b1fd587a2a37112.png) center no-repeat;  background-size: cover;">
+          <div class="txt-info">
+            <p class="gate"><span>动漫</span></p>
+            <p class="name">牧神记</p>
+            <p class="info">更新至107集 </p>
+          </div>
+          </a>
+        </div>
+           	         <div class="swiper-slide">
+        <a class="dymr banner" href="/index.php/vod/detail/id/9726.html" style="background: url(https://hhmage.com/cover/b2b65ca08b269a479fafe4618cf86eee.jpg) center no-repeat;  background-size: cover;">
+          <div class="txt-info">
+            <p class="gate"><span>多多电影</span></p>
+            <p class="name">怒杀2026</p>
+            <p class="info">4K </p>
+          </div>
+          </a>
+        </div>
+           	         <div class="swiper-slide">
+        <a class="dymr banner" href="/index.php/vod/detail/id/9708.html" style="background: url(https://liangcang-material.alicdn.com/prod/upload/90f785c3ce404fc5b95ffd5baa2c65f5.webp) center no-repeat;  background-size: cover;">
+          <div class="txt-info">
+            <p class="gate"><span>多多剧集</span></p>
+            <p class="name">九门2026</p>
+            <p class="info">全30集 </p>
+          </div>
+          </a>
+        </div>
+           	         <div class="swiper-slide">
+        <a class="dymr banner" href="/index.php/vod/detail/id/8468.html" style="background: url(https://liangcang-material.alicdn.com/prod/upload/fc0a133f26ca497f9a691e5982c8ff24.webp.jpg) center no-repeat;  background-size: cover;">
+          <div class="txt-info">
+            <p class="gate"><span>多多剧集</span></p>
+            <p class="name">凡人修仙传真人剧</p>
+            <p class="info">全30集 </p>
+          </div>
+          </a>
+        </div>
+           	         <div class="swiper-slide">
+        <a class="dymr banner" href="/index.php/vod/detail/id/9429.html" style="background: url(https://wsrv.nl/?url=https://pic3.iqiyipic.com/lequ/common/lego/20260508/ba905b48efd844048ac60286c4e06b8e.avif) center no-repeat;  background-size: cover;">
+          <div class="txt-info">
+            <p class="gate"><span>多多剧集</span></p>
+            <p class="name">低智商犯罪</p>
+            <p class="info">全24集 </p>
+          </div>
+          </a>
+        </div>
+           	         <div class="swiper-slide">
+        <a class="dymr banner" href="/index.php/vod/detail/id/7912.html" style="background: url(https://wsrv.nl/?url=https://pic1.iqiyipic.com/lequ/common/lego/20250119/8e247dd459054c8d86497803335f5754.jpg) center no-repeat;  background-size: cover;">
+          <div class="txt-info">
+            <p class="gate"><span>多多剧集</span></p>
+            <p class="name">漂白</p>
+            <p class="info">全14集 </p>
+          </div>
+          </a>
+        </div>
+           	         <div class="swiper-slide">
+        <a class="dymr banner" href="/index.php/vod/detail/id/715.html" style="background: url(https://tv.puui.qpic.cn/tv/0/mz_tv_image_frontend_053c05-1_805068467_1717556647876753_pic_1920x800/0) center no-repeat;  background-size: cover;">
+          <div class="txt-info">
+            <p class="gate"><span>多多剧集</span></p>
+            <p class="name">玫瑰的故事</p>
+            <p class="info">全38集 </p>
+          </div>
+          </a>
+        </div>
+           			  
+        			
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+    
+     <script type="8eb3d034fc6171649a490642-text/javascript">
+       var swiper = new Swiper('.swiper-container', {
+            //direction: 'vertical', // 垂直切换选项
+            direction: 'horizontal',//水平方向
+            loop: true, // 循环模式选项
+
+            autoplay: true,//等同于以下设置
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,//改为false,点击按钮可以继续动
+            },
+
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+				 clickable: true,
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })        
+        
+    </script>
+    <style type="text/css">
+.dymr{display: block; position: relative; padding-top: 150%;  background-size: cover;    border-radius: 8px;}
+	.dymr.banner{ padding-top: 30%;  }
+	@media (max-width:767px){.dymr.banner{ padding-top: 45%;}}
+</style>	 
+	    
+	     		<!-- Module End -->
+		<div class="module">
+			<div class="module-heading">
+				<h2 class="module-title"><i class="icon-happy"></i> 最新影片</h2>
+				<div class="module-tab">
+					<label class="module-tab-name">
+						<span class="module-tab-value">全部</span>
+						<i class="icon-arrow-bottom"></i>
+					</label>
+					<div class="module-tab-items">
+						<div class="module-tab-title">
+							选择类型
+							<span class="close-drop">
+								<i class="icon-close-o"></i>
+							</span>
+						</div>
+						<div>
+							<span class="module-tab-item tab-item selected" data-id="0" data-name="全部">全部</span>
+														<span class="module-tab-item tab-item" data-id="1" data-name="多多电影">多多电影</span>
+														<span class="module-tab-item tab-item" data-id="2" data-name="多多剧集">多多剧集</span>
+														<span class="module-tab-item tab-item" data-id="4" data-name="动漫">动漫</span>
+														<span class="module-tab-item tab-item" data-id="5" data-name="短剧">短剧</span>
+														<span class="module-tab-item tab-item" data-id="3" data-name="综艺">综艺</span>
+														<span class="module-tab-item tab-item" data-id="20" data-name="纪录">纪录</span>
+													</div>
+					</div>
+				</div>
+				<div class="shortcuts-mobile-overlay"></div>
+			</div>
+			
+			<div class="module-list module-line-list tab-list selected" id="tab-list-0">
+				<div class="module-items scroll-box">
+					<div class="scroll-content">
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10014.html" title="谷雨" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://pic.ry-pic.com/upload/vod/20261105-1/d72352052f97761a0ec6c8bc72405955.webp" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="谷雨">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多剧集</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10014.html" title="谷雨">谷雨</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E4%BA%95%E6%9F%8F%E7%84%B6.html" target="_blank">井柏然</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%AD%99%E8%89%BA%E6%B4%B2.html" target="_blank">孙艺洲</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%A0%E9%A2%82%E6%96%87.html" target="_blank">张颂文</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%8B%E9%B8%A5.html" target="_blank">王鸥</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%8B%E5%A5%95%E5%A9%B7.html" target="_blank">王奕婷</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%86%AF%E9%9B%B7.html" target="_blank">冯雷</a>&nbsp;<a href="/index.php/vod/search/actor/%E4%BD%99%E6%96%87%E4%B9%90.html" target="_blank">余文乐</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%8E%E6%B4%AA%E6%B6%9B.html" target="_blank">李洪涛</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%8E%E5%B0%8F%E5%86%89.html" target="_blank">李小冉</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%A0%E9%9B%AA%E8%BF%8E.html" target="_blank">张雪迎</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%B4%AA%E6%B5%9A%E5%98%89.html" target="_blank">洪浚嘉</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%83%AD%E5%B9%BF%E5%B9%B3.html" target="_blank">郭广平</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%9A%8B%E4%BF%8A%E6%B3%A2.html" target="_blank">隋俊波</a>&nbsp;						</div>
+						<div class="module-item-style video-text">1994年，春江市税务局稽查员欧阳旭（井柏然饰）与刑警严平安（孙艺洲饰）、寻妻的周海洋（张颂文饰）三人因一起假发票案识于微时，携手屡破税案，但时代的发展和遭遇的不同，将三人推向不同的命运，三人也因各自</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10014.html" class="module-item-title" title="谷雨">谷雨</a>
+				</div>
+				<div class="module-item-text">更新至06集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/9998.html" title="北境往事" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://tyyswimg2.com/upload/vod/20261030-1/b0743cad46cb358f09c17e90d19a246c.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="北境往事">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">短剧</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/9998.html" title="北境往事">北境往事</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E9%87%91%E7%80%9A.html" target="_blank">金瀚</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%AB%98%E8%87%B3%E9%9C%86.html" target="_blank">高至霆</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%8D%9C%E5%86%A0%E4%BB%8A.html" target="_blank">卜冠今</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%8E%E5%98%89%E9%91%AB.html" target="_blank">李嘉鑫</a>&nbsp;						</div>
+						<div class="module-item-style video-text">改编自孔二狗的作品《黑道悲情》。 北境双雄，陌路相交，亦敌亦友！刘海柱一腔热血闯江湖，冯子文立足刀尖守道义，周萌乱世寻归途，陈白鸽孤身护挚爱。情义与抉择摆在眼前，是低头求生，还是挺身硬扛？</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/9998.html" class="module-item-title" title="北境往事">北境往事</a>
+				</div>
+				<div class="module-item-text">更新至16集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10017.html" title="凤起于渊" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://pic.ry-pic.com/upload/vod/20261105-1/053c76bbb66e199fc86d4c5119123f17.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="凤起于渊">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">短剧</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10017.html" title="凤起于渊">凤起于渊</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E6%9D%8E%E8%89%BA.html" target="_blank">李艺</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%A0%E8%B5%AB.html" target="_blank">张赫</a>&nbsp;						</div>
+						<div class="module-item-style video-text">一次离奇的雷击，导致侯府千金萧清婉与清风寨寨主李慕凡灵魂互换，两人被迫在对方的世界中求生，二人不但卷入了江湖恩怨，还卷入了朝堂纷争，各自在对方的身份里重新认清自己，并在错位中寻找自我与变革之路。</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10017.html" class="module-item-title" title="凤起于渊">凤起于渊</a>
+				</div>
+				<div class="module-item-text">更新至08集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10016.html" title="三十六计杀" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://tyyswimg2.com/upload/vod/20261105-1/5e75d4328b29f7ffd0f7472ca6b4cfa3.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="三十六计杀">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">短剧</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10016.html" title="三十六计杀">三十六计杀</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E6%9D%8E%E6%B5%A9%E8%BD%A9.html" target="_blank">李浩轩</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%97%AB%E4%BD%B3%E9%A2%96.html" target="_blank">闫佳颖</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%A7%A6%E6%9D%89.html" target="_blank">秦杉</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%8D%95%E6%95%AC%E5%B0%A7.html" target="_blank">单敬尧</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%83%AD%E5%98%89%E8%AF%AD.html" target="_blank">郭嘉语</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%AF%85%E8%81%AA.html" target="_blank">寅聪</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%B1%9F%E5%B0%9A%E5%84%92.html" target="_blank">江尚儒</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%88%98%E6%98%8E%E7%93%92.html" target="_blank">刘明瓒</a>&nbsp;						</div>
+						<div class="module-item-style video-text">颜子洲奉命调查海峡指挥塔遭撞事件，却在此时得知妹妹小小意外坠楼。他与宗小权及小小失散多年的双胞胎姐姐黎璃联手协助警方调查，逐步揭开十八年前父母遇害案的真相，并将幕后主使绳之以法。</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10016.html" class="module-item-title" title="三十六计杀">三十六计杀</a>
+				</div>
+				<div class="module-item-text">更新至08集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10006.html" title="贵妃欺人太甚" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://pic.ry-pic.com/upload/vod/20261102-1/afa2a584fdaf030a900e271ca6b7c64f.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="贵妃欺人太甚">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">短剧</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10006.html" title="贵妃欺人太甚">贵妃欺人太甚</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E9%83%91%E6%B9%AB%E6%B3%93.html" target="_blank">郑湫泓</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%B2%88%E8%8A%9D%E5%BC%88.html" target="_blank">沈芝弈</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%A0%E5%A9%89%E8%8E%B9.html" target="_blank">张婉莹</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%8E%E6%98%8E%E5%B3%BB.html" target="_blank">李明峻</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%B1%AA%E4%BD%B3%E8%BE%89.html" target="_blank">汪佳辉</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%90%91%E5%A9%A7%E6%80%A1.html" target="_blank">向婧怡</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%9B%B7%E7%AC%91%E8%AF%AD.html" target="_blank">雷笑语</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%A0%E5%A9%95.html" target="_blank">张婕</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%8E%E6%AC%A3%E9%9B%A8.html" target="_blank">李欣雨</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%91%9B%E4%BA%A6%E5%8F%AF.html" target="_blank">葛亦可</a>&nbsp;						</div>
+						<div class="module-item-style video-text">官女傅容被家人逼迫入宫，诞下哑女，母女深宫相依，唯求苟全性命。不料幼女无意撞破贵妃秘辛，惨遭灭口。这最后一寸软肋既断，温顺母亲骤然化身为刀。她埋葬初心，以身为饵，借昔日恋人太医之手，步步设局，环环诛心</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10006.html" class="module-item-title" title="贵妃欺人太甚">贵妃欺人太甚</a>
+				</div>
+				<div class="module-item-text">更新至14集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/9990.html" title="灿烂如野" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://tyyswimg2.com/upload/vod/20261028-1/afa72f4ae0213606e3670febf1489af8.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="灿烂如野">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">短剧</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/9990.html" title="灿烂如野">灿烂如野</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E5%BB%96%E5%A8%9F.html" target="_blank">廖娟</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%99%88%E4%BF%8A%E6%9D%B0.html" target="_blank">陈俊杰</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%BB%84%E5%B0%8F%E8%95%BE.html" target="_blank">黄小蕾</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%A0%E6%88%88.html" target="_blank">张戈</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%A7%A6%E6%99%93%E8%BD%A9.html" target="_blank">秦晓轩</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%8B%8F%E8%8C%82%E6%B4%8B.html" target="_blank">苏茂洋</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%88%98%E9%9B%A8%E9%91%AB.html" target="_blank">刘雨鑫</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%A7%A6%E6%97%8B.html" target="_blank">秦旋</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%8C%83%E8%AF%97%E7%84%B6.html" target="_blank">范诗然</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%9F%B3%E6%AC%A3%E6%A1%90.html" target="_blank">石欣桐</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%8C%85%E6%B4%81%E4%BB%AA.html" target="_blank">包洁仪</a>&nbsp;						</div>
+						<div class="module-item-style video-text">叛逆女孩江野与母亲江爱华关系紧张，一场车祸，令她意外穿越至 1990 年。机缘邂逅彼时的青年精英陈致远，阴差阳错成为他的临时女友，也寻到了尚且年幼、处境艰难的童年母亲江小花。 &amp;nbsp; 为保护童年</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/9990.html" class="module-item-title" title="灿烂如野">灿烂如野</a>
+				</div>
+				<div class="module-item-text">全24集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/9992.html" title="大哥请赐教" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://pic.ry-pic.com/upload/vod/20261026-1/57214191408b0665106529677baa8ef4.webp" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="大哥请赐教">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">短剧</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/9992.html" title="大哥请赐教">大哥请赐教</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E7%BA%AA%E5%87%8C%E5%B0%98.html" target="_blank">纪凌尘</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%B5%B5%E5%B0%8F%E6%A3%A0.html" target="_blank">赵小棠</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%94%90%E6%8C%AF%E8%B6%85.html" target="_blank">唐振超</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%94%B0%E5%80%9A%E5%87%A1.html" target="_blank">田倚凡</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%88%98%E9%97%AF.html" target="_blank">刘闯</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%88%98%E6%B3%A2.html" target="_blank">刘波</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%99%88%E4%BF%90%E5%90%9B.html" target="_blank">陈俐君</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%82%96%E5%87%AF%E6%96%87.html" target="_blank">肖凯文</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%83%9D%E6%98%8E%E5%A5%87.html" target="_blank">郝明奇</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%B5%B5%E6%AF%85.html" target="_blank">赵毅</a>&nbsp;						</div>
+						<div class="module-item-style video-text">重获新生的陈浩来到兄弟坟前醉酒入梦，重回1998年。为改变亲人兄弟悲剧命运，他决心弃恶从善，带领兄弟们正道谋生。几经波折，他得到资助创业，经营小灵通店、涉足地产，期间遭遇犯罪集团王天龙屡次刁难报复。陈</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/9992.html" class="module-item-title" title="大哥请赐教">大哥请赐教</a>
+				</div>
+				<div class="module-item-text">更新至21集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10009.html" title="天命成凰" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://tyyswimg2.com/upload/vod/20261104-1/92f3e1563a35326b92e9930331161bb7.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="天命成凰">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">短剧</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10009.html" title="天命成凰">天命成凰</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E5%AD%99%E6%99%A8%E7%AB%A3.html" target="_blank">孙晨竣</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9E%97%E6%9F%92%E4%BA%88.html" target="_blank">林柒予</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%8B%E5%AD%90%E7%A6%BE.html" target="_blank">王子禾</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%8B%E6%AC%A2.html" target="_blank">王欢</a>&nbsp;						</div>
+						<div class="module-item-style video-text">西洲云家双生姐妹，妹妹云似自幼随医者学艺，姐姐云姒嫁入楚王府，遭楚王霍临烨与侧妃苏韵柔迫害殒命。云似救下坠崖的九王霍慎之，接获姐姐绝笔，顶替入府复仇。她凭医术智谋搅动王府朝堂，与霍慎之患难生情，共破阴</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10009.html" class="module-item-title" title="天命成凰">天命成凰</a>
+				</div>
+				<div class="module-item-text">更新至10集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10008.html" title="我心安处是桃源" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://tyyswimg2.com/upload/vod/20261103-1/78b680e3111ff8b11157052485326860.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="我心安处是桃源">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">短剧</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10008.html" title="我心安处是桃源">我心安处是桃源</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E6%B2%88%E5%94%AF.html" target="_blank">沈唯</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%87%91%E9%B9%8F%E5%8D%9A.html" target="_blank">金鹏博</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%8E%E4%BD%B3%E9%A6%A8.html" target="_blank">李佳馨</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%8B%E5%98%89%E6%B5%A9.html" target="_blank">王嘉浩</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%A0%E6%B5%B7%E7%87%95.html" target="_blank">张海燕</a>&nbsp;						</div>
+						<div class="module-item-style video-text">打工人白洛如厌倦公司，承受多年心理压力，辞职逃离。到了村里丢了手机狼狈不堪，被韩夕阳和村民们默默帮助。她本想清静几日，却被动卷入村里的人和事，开始重新面对自己的困惑与母亲的关系。她慢慢放下了压得喘不过</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10008.html" class="module-item-title" title="我心安处是桃源">我心安处是桃源</a>
+				</div>
+				<div class="module-item-text">更新至15集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10004.html" title="鉴定" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://tyyswimg2.com/upload/vod/20261101-1/7a6730ae7773018df791f4d7fbd3495f.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="鉴定">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">短剧</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10004.html" title="鉴定">鉴定</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E9%BB%84%E6%AF%85.html" target="_blank">黄毅</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%99%88%E5%88%9B.html" target="_blank">陈创</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%A0%E6%85%A7%E9%9B%AF.html" target="_blank">张慧雯</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%A5%9A%E6%9C%9B.html" target="_blank">奚望</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%AF%87%E6%8C%AF%E6%B5%B7.html" target="_blank">寇振海</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%B2%81%E4%BD%B3%E5%A6%AE.html" target="_blank">鲁佳妮</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%A9%AC%E8%B7%83.html" target="_blank">马跃</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%B4%BA%E9%B9%8F.html" target="_blank">贺鹏</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9B%B9%E8%89%B3%E8%89%B3.html" target="_blank">曹艳艳</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%8B%E5%AA%9B%E5%8F%AF.html" target="_blank">王媛可</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%B2%B3%E4%B8%BD%E5%A8%9C.html" target="_blank">岳丽娜</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%A1%BE%E9%9D%96.html" target="_blank">顾靖</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%89%9B%E5%AE%9D%E5%86%9B.html" target="_blank">牛宝军</a>&nbsp;						</div>
+						<div class="module-item-style video-text">讲述医科大学毕业生徐子淇（张慧雯 饰）入职DNA鉴定机构，与主任莫丽（岳丽娜 饰）、好友朱新辰（贺鹏 饰），开启一宗宗复杂唏嘘的亲子鉴定工作。</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10004.html" class="module-item-title" title="鉴定">鉴定</a>
+				</div>
+				<div class="module-item-text">更新至27集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10005.html" title="走马上任" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://pic.ry-pic.com/upload/vod/20261102-1/51b2af99045a1788106f07b95b57ae56.webp" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="走马上任">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多剧集</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10005.html" title="走马上任">走马上任</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E7%8E%8B%E5%B0%8F%E5%88%A9.html" target="_blank">王小利</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%92%8B%E4%BE%9D%E6%9D%89.html" target="_blank">蒋依杉</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%91%9B%E7%8F%8A%E7%8F%8A.html" target="_blank">葛珊珊</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%A8%8B%E9%87%8E.html" target="_blank">程野</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%B5%B5%E6%9C%AC%E5%B1%B1.html" target="_blank">赵本山</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%B5%B5%E5%A4%A7%E7%89%9B.html" target="_blank">赵大牛</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%AB%98%E5%AD%90%E6%B2%A3.html" target="_blank">高子沣</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%8B%E5%B0%8F%E5%AE%9D.html" target="_blank">王小宝</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%94%B0%E5%A8%83.html" target="_blank">田娃</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BA%9E%E5%A5%95%E6%AC%A3.html" target="_blank">庞奕欣</a>&nbsp;						</div>
+						<div class="module-item-style video-text">该剧讲述了在民国时期，本是兽医的王老五意外成为伏虎县县长，怎知伏虎县诸般势力云集，事情朝着失控的方向不断发展，由此引发了一系列啼笑皆非却又真实动人、别有深意的故事。剧中以小人物为主角，向观众展现了在民</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10005.html" class="module-item-title" title="走马上任">走马上任</a>
+				</div>
+				<div class="module-item-text">更新至13集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/9820.html" title="掌门低调点" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://tyyswimg2.com/upload/vod/20260828-1/468c29ccae85735fe3afba8ad2d45491.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="掌门低调点">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">动漫</span>
+						<span>国产</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/9820.html" title="掌门低调点">掌门低调点</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E9%99%88%E8%80%95.html" target="_blank">陈耕</a>&nbsp;						</div>
+						<div class="module-item-style video-text">穿越天玄界，开局竟是辣鸡门派掌门人！都市氪金人重生游戏异界，拿玩家当走狗，收世界主角做小弟，论装逼我只认天下第一！</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/9820.html" class="module-item-title" title="掌门低调点">掌门低调点</a>
+				</div>
+				<div class="module-item-text">更新至39集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/8755.html" title="启运丹田：开局签到至尊丹田" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://hhmage.com/cover/c6a2493632ad44f5f42d878a22f606e7.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="启运丹田：开局签到至尊丹田">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2025</span>
+						<span class="video-class">动漫</span>
+						<span>国产</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/8755.html" title="启运丹田：开局签到至尊丹田">启运丹田：开局签到至尊丹田</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E6%9C%AA%E7%9F%A5.html" target="_blank">未知</a>&nbsp;						</div>
+						<div class="module-item-style video-text">神王之子秦书身为神子，却天生凡体凡命，受尽天道界众人部夷厌弃甚至要被夺去神子身份，贬入凡间。直到他与主角相遇融为一体，开启万界签到系统，于混沌天绝云峰开启永动丹田。随后从神道界最底层走起，与修罗战、与</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/8755.html" class="module-item-title" title="启运丹田：开局签到至尊丹田">启运丹田：开局签到至尊丹田</a>
+				</div>
+				<div class="module-item-text">更新至37集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/23.html" title="灵武大陆" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://hhmage.com/cover/8638ecfa25ce39663663e90138cd7963.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="灵武大陆">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2024</span>
+						<span class="video-class">动漫</span>
+						<span>国产</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/23.html" title="灵武大陆">灵武大陆</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E6%9D%8E%E7%BF%B0%E6%9E%97.html" target="_blank">李翰林</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E9%92%B1%E7%90%9B.html" target="_blank">钱琛</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E5%80%9A%E6%A0%8F%E6%A1%A1.html" target="_blank">倚栏桡</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%A0%E6%81%A9%E6%B3%BD.html" target="_blank">张恩泽</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E8%B5%B5%E7%86%A0%E5%BD%A4.html" target="_blank">赵熠彤</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E5%B0%8F%E6%B5%A3.html" target="_blank">小浣</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E6%B8%A9%E6%BA%AA.html" target="_blank">温溪</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E8%94%A1%E5%A8%9C.html" target="_blank">蔡娜</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E9%BD%90%E7%92%87.html" target="_blank">齐璇</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%8E%E5%93%8E.html" target="_blank">李哎</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E9%BA%BB%E9%9B%80.html" target="_blank">麻雀</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E9%BB%84%E7%8E%AE.html" target="_blank">黄玮</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E9%98%BF%E7%A6%8F.html" target="_blank">阿福</a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search.html" target="_blank"></a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%A8%E6%98%95%E7%87%83.html" target="_blank">杨昕燃</a>&nbsp;						</div>
+						<div class="module-item-style video-text">灵武大陆，一个灵力和武魂并存的世界，灵修一念动山河，武者徒手撕天地。星辰镇昔日天才辰天，十岁后武魂沉寂、灵海枯竭，自此沦为家族废物，受尽他人冷眼。在一次生死搏斗中，辰天掉下悬崖，误入上古剑帝布置的大阵</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/23.html" class="module-item-title" title="灵武大陆">灵武大陆</a>
+				</div>
+				<div class="module-item-text">更新至230集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/9064.html" title="大主宰 年番2" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://hhmage.com/cover/6c370e6f586be0fe0355f7ef4b6929ca.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="大主宰 年番2">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">动漫</span>
+						<span>国产</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/9064.html" title="大主宰 年番2">大主宰 年番2</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E6%9C%AA%E7%9F%A5.html" target="_blank">未知</a>&nbsp;						</div>
+						<div class="module-item-style video-text">大千世界，北灵境出，踏灵路，伐罗天，剑斩诛邪永定乾坤，万道争锋吾为主率!</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/9064.html" class="module-item-title" title="大主宰 年番2">大主宰 年番2</a>
+				</div>
+				<div class="module-item-text">更新至98集</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/7909.html" title="沧元图" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://hhmage.com/cover/af5604111becd28211b2bc271c8c9b57.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="沧元图">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">动漫</span>
+						<span>国产</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/7909.html" title="沧元图">沧元图</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E4%B8%89%E7%9F%B3.html" target="_blank">三石</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%AE%B5%E8%89%BA%E7%92%87.html" target="_blank">段艺璇</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%A9%AC%E6%AD%A3%E9%98%B3.html" target="_blank">马正阳</a>&nbsp;						</div>
+						<div class="module-item-style video-text">沧元界妖邪作乱，人族饱受摧残，主角孟川自小立下为母复仇的誓言，以镜湖道院为起点，凭借坚毅无畏的心志与利落果决的刀法身手，惩处奸恶，溃灭妖族，登顶四大道院，名满东宁府，拜上元初山，成就一代神魔。…</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/7909.html" class="module-item-title" title="沧元图">沧元图</a>
+				</div>
+				<div class="module-item-text">更新至102集</div>
+			</div>
+	                    					</div>
+				</div>
+			</div>
+			
+						<div class="module-list module-line-list tab-list" id="tab-list-1">
+				<div class="module-items scroll-box">
+					<div class="scroll-content">
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10012.html" title="巨蟒博尤纳" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://tyyswimg2.com/upload/vod/20261012-1/c9790e031e8d9c2714c1221df7e8979f.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="巨蟒博尤纳">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多电影</span>
+						<span>美国</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10012.html" title="巨蟒博尤纳">巨蟒博尤纳</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E6%9D%B0%E8%A5%BF%E5%8D%A1%C2%B7%E7%BD%97%E5%BE%B7.html" target="_blank">杰西卡·罗德</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%83%A1%E5%AE%89%C2%B7%E5%B7%B4%E5%8B%83%E7%BD%97%C2%B7%E8%88%92%E5%85%8B.html" target="_blank">胡安·巴勃罗·舒克</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%B0%E5%85%8B%E9%80%8A%C2%B7%E6%AF%94%E5%B0%A4%E6%96%AF.html" target="_blank">杰克逊·比尤斯</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%BD%97%E6%A0%B9%C2%B7%E9%A9%AC%E6%AD%87%E5%B0%94-%E6%A0%BC%E6%9E%97.html" target="_blank">罗根·马歇尔-格林</a>&nbsp;<a href="/index.php/vod/search/actor/Nelson%C2%B7Camayo.html" target="_blank">Nelson·Camayo</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%90%AA%E4%BA%9A%E5%A8%9C%C2%B7%E7%8E%9B%E9%BB%9B%E6%8B%89.html" target="_blank">琪亚娜·玛黛拉</a>&nbsp;<a href="/index.php/vod/search/actor/Will%C2%B7Close.html" target="_blank">Will·Close</a>&nbsp;<a href="/index.php/vod/search/actor/Vicente%C2%B7Pe%3Fa.html" target="_blank">Vicente·Pe?a</a>&nbsp;<a href="/index.php/vod/search/actor/Mateo%C2%B7Moreno.html" target="_blank">Mateo·Moreno</a>&nbsp;<a href="/index.php/vod/search/actor/Jaime%C2%B7Newball.html" target="_blank">Jaime·Newball</a>&nbsp;<a href="/index.php/vod/search/actor/Christophe%C2%B7de%C2%B7Geest.html" target="_blank">Christophe·de·Geest</a>&nbsp;						</div>
+						<div class="module-item-style video-text">一支医疗小队深入亚马逊雨林执行任务，但他们很快察觉，此地的生灵并不欢迎外来者。一行人贸然闯入，惊动了丛林掠兽 —— 博尤纳。</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10012.html" class="module-item-title" title="巨蟒博尤纳">巨蟒博尤纳</a>
+				</div>
+				<div class="module-item-text">流媒体正式版</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10011.html" title="巨蛇闯体校" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://tyyswimg2.com/upload/vod/20261104-1/e299af64181ee8208b9580626323a4ee.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="巨蛇闯体校">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多电影</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10011.html" title="巨蛇闯体校">巨蛇闯体校</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E4%BA%8E%E6%B3%B3%E6%B4%8B.html" target="_blank">于泳洋</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%83%AD%E7%8E%89%E9%BE%99.html" target="_blank">郭玉龙</a>&nbsp;						</div>
+						<div class="module-item-style video-text">黑市蛇酒厂活剥蛇胆，激起滔天蛇怨。一条变异双头巨蛇破缸而出，血洗为富不仁的权贵后，杀进附近的体育学校！看台变地狱，操场成猎场。曾因反抗不公被陷害退役的教练徐骆，与屡遭霸凌的啦啦队女生安琪联手带领师生绝</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10011.html" class="module-item-title" title="巨蛇闯体校">巨蛇闯体校</a>
+				</div>
+				<div class="module-item-text">4K</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10007.html" title="生化危机：爆发夜" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://pic.ry-pic.com/upload/vod/20260922-1/bbd51cac4b58c65035d4148d72389828.webp" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="生化危机：爆发夜">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多电影</span>
+						<span>美国</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10007.html" title="生化危机：爆发夜">生化危机：爆发夜</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E5%A5%A5%E6%96%AF%E6%B1%80%C2%B7%E8%89%BE%E5%B8%83%E6%8B%89%E5%A7%86%E6%96%AF.html" target="_blank">奥斯汀·艾布拉姆斯</a>&nbsp;<a href="/index.php/vod/search/actor/%E4%BF%9D%E7%BD%97%C2%B7%E6%B2%83%E5%B0%94%E7%89%B9%C2%B7%E8%B1%AA%E6%B3%BD.html" target="_blank">保罗·沃尔特·豪泽</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%89%8E%E5%85%8B%C2%B7%E5%88%87%E5%88%A9.html" target="_blank">扎克·切利</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%8D%A1%E8%8E%89%C2%B7%E7%91%9E%E6%96%AF.html" target="_blank">卡莉·瑞斯</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%BA%A6%E7%BF%B0%E8%AF%BA%C2%B7%E5%A8%81%E5%B0%94%E9%80%8A.html" target="_blank">约翰诺·威尔逊</a>&nbsp;						</div>
+						<div class="module-item-style video-text">故事聚焦奉命奔赴浣熊市的医疗速递员布莱恩（奥斯汀·艾布拉姆斯 饰），意外深陷全城失控的病毒浩劫。浣熊市彻底沦陷，异变怪物横行肆虐、嗜血猎捕，身陷末日绝境的他，能否在这场惊魂噩梦中突围求生，搏出一线生机</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10007.html" class="module-item-title" title="生化危机：爆发夜">生化危机：爆发夜</a>
+				</div>
+				<div class="module-item-text">4K DV&amp;HDR</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/10003.html" title="宝莲灯凡心问天" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://i.imgs.ovh/2026/10/31/b7a00ea854a81cced62aa3cfb61cd334.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="宝莲灯凡心问天">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多电影</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/10003.html" title="宝莲灯凡心问天">宝莲灯凡心问天</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E6%9C%AA%E7%9F%A5.html" target="_blank">未知</a>&nbsp;						</div>
+						<div class="module-item-style video-text">影片以“沉香救母”为核心，围绕沉香持宝莲灯寻母展开。影片对人物关系与冒险空间进行了重新组织。红溪村被二郎神率军一夜倾覆，三圣母失踪。八年后，沉香持熄灭的宝莲灯进入无妄魇市寻母，偶遇红发少年并结伴冒险。</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/10003.html" class="module-item-title" title="宝莲灯凡心问天">宝莲灯凡心问天</a>
+				</div>
+				<div class="module-item-text">4K HDR</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/9999.html" title="天启Z：新世界" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://i.imgs.ovh/2026/10/30/23a25d5fd4645b85f459ebb89ea8ea68.webp" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="天启Z：新世界">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多电影</span>
+						<span>西班牙</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/9999.html" title="天启Z：新世界">天启Z：新世界</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E5%8D%A1%E6%B4%9B%E6%96%AF%C2%B7%E9%98%BF%E5%B0%94%E5%87%AF%E5%BE%B7.html" target="_blank">卡洛斯·阿尔凯德</a>&nbsp;<a href="/index.php/vod/search/actor/Mario+Mayo.html" target="_blank">Mario Mayo</a>&nbsp;<a href="/index.php/vod/search/actor/Kevin+Ramos.html" target="_blank">Kevin Ramos</a>&nbsp;<a href="/index.php/vod/search/actor/Luc%C3%ADa+Moreno.html" target="_blank">Lucía Moreno</a>&nbsp;<a href="/index.php/vod/search/actor/Derrick+%C3%81lvarez.html" target="_blank">Derrick Álvarez</a>&nbsp;<a href="/index.php/vod/search/actor/Florentine+Behrend.html" target="_blank">Florentine Behrend</a>&nbsp;<a href="/index.php/vod/search/actor/Patricia+Benjumea.html" target="_blank">Patricia Benjumea</a>&nbsp;<a href="/index.php/vod/search/actor/Tamara+Casellas.html" target="_blank">Tamara Casellas</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%9B%E5%A1%94%C2%B7%E5%AF%8C%E7%BA%B3%E5%B0%94.html" target="_blank">玛塔·富纳尔</a>&nbsp;<a href="/index.php/vod/search/actor/Sergi+Gibert.html" target="_blank">Sergi Gibert</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%93%88%E7%BB%B4%E5%B0%94%C2%B7%E6%88%88%E8%BF%AA%E8%AF%BA.html" target="_blank">哈维尔·戈迪诺</a>&nbsp;<a href="/index.php/vod/search/actor/Pedro+Hern%C3%A1ndez.html" target="_blank">Pedro Hernández</a>&nbsp;<a href="/index.php/vod/search/actor/Chemi+Hitos.html" target="_blank">Chemi Hitos</a>&nbsp;<a href="/index.php/vod/search/actor/Jes%C3%BAs+Lloveras.html" target="_blank">Jesús Lloveras</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%8E%AB%E5%A6%AE%E5%8D%A1%C2%B7%E6%B4%9B%E4%BD%A9%E6%96%AF.html" target="_blank">莫妮卡·洛佩斯</a>&nbsp;						</div>
+						<div class="module-item-style video-text">致命TSJ病毒摧毁人类文明，加那利群岛侥幸躲过灾难，成为欧洲大陆幸存者最后的庇护所。一支小队受命重返危机四伏的伊比利亚半岛执行补给任务，心存私心的罗伯托加入队伍。任务迅速演变为一场残酷的生存竞速，小队</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/9999.html" class="module-item-title" title="天启Z：新世界">天启Z：新世界</a>
+				</div>
+				<div class="module-item-text">4K HDR10+</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/9997.html" title="敦煌英雄" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://pic.ry-pic.com/upload/vod/20261017-1/4f34f574a97f51ec4783f88f3cd6dd5d.webp" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="敦煌英雄">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多电影</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/9997.html" title="敦煌英雄">敦煌英雄</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E7%AB%A0%E5%AE%87.html" target="_blank">章宇</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%AA%A6%E9%AA%81.html" target="_blank">窦骁</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%90%95%E5%87%89.html" target="_blank">吕凉</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%94%A1%E9%B9%AD.html" target="_blank">蔡鹭</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%B5%B5%E8%95%B4%E5%8D%93.html" target="_blank">赵蕴卓</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%85%AC%E7%A3%8A.html" target="_blank">公磊</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%A8%E6%BA%A2.html" target="_blank">杨溢</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%B5%B5%E9%AD%8F.html" target="_blank">赵魏</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%AB%98%E8%87%B3%E9%9C%86.html" target="_blank">高至霆</a>&nbsp;<a href="/index.php/vod/search/actor/%E4%BD%99%E7%9A%91%E7%A3%8A.html" target="_blank">余皑磊</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%9F%A9%E6%98%8A%E9%9C%96.html" target="_blank">韩昊霖</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%A0%E8%89%BA%E5%87%A1.html" target="_blank">张艺凡</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%9B%B7%E4%BD%B3%E9%9F%B3.html" target="_blank">雷佳音</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9C%B1%E4%BA%9A%E6%96%87.html" target="_blank">朱亚文</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%91%A8%E4%B8%80%E5%9B%B4.html" target="_blank">周一围</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%8E%E5%85%89%E6%B4%81.html" target="_blank">李光洁</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%9F%B3%E5%85%86%E7%90%AA.html" target="_blank">石兆琪</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%86%AF%E5%98%89%E6%80%A1.html" target="_blank">冯嘉怡</a>&nbsp;<a href="/index.php/vod/search/actor/%E4%BF%9E%E7%81%8F%E6%98%8E.html" target="_blank">俞灏明</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%8A%A6%E8%8A%B3%E7%94%9F.html" target="_blank">芦芳生</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%88%98%E4%BD%B3.html" target="_blank">刘佳</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%92%B1%E6%B3%B3%E8%BE%B0.html" target="_blank">钱泳辰</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%91%A8%E5%BE%B7%E5%8D%8E.html" target="_blank">周德华</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%AF%92%E9%9D%92.html" target="_blank">寒青</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%9F%A9%E7%A7%8B%E6%B1%A0.html" target="_blank">韩秋池</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9D%8E%E6%80%9D%E5%8D%9A.html" target="_blank">李思博</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%91%A3%E6%96%87%E5%86%9B.html" target="_blank">董文军</a>&nbsp;<a href="/index.php/vod/search/actor/%E6%9B%B2%E9%AB%98%E4%BD%8D.html" target="_blank">曲高位</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%8B%E6%B2%9B%E7%A6%84.html" target="_blank">王沛禄</a>&nbsp;<a href="/index.php/vod/search/actor/%E4%BD%95%E8%B6%85%E8%8E%B2.html" target="_blank">何超莲</a>&nbsp;						</div>
+						<div class="module-item-style video-text">大唐敦煌，重镇漠州。安史之乱后，漠州陷于河西匪军之手，大唐守军全数殉国。此后六十载，丝路断绝，生灵涂炭。匪军首领任光热凶残暴虐，倒行逆施，妄图“还民为奴”。“狮子吼，唐军归。”这句流传了六十年的传说，</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/9997.html" class="module-item-title" title="敦煌英雄">敦煌英雄</a>
+				</div>
+				<div class="module-item-text">4K HQ</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/9996.html" title="末世行者" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://i.imgs.ovh/2026/10/28/bf52c76a46138501d423308260a8aebb.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="末世行者">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多电影</span>
+						<span>美国</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/9996.html" title="末世行者">末世行者</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E4%B9%94%E4%BB%80%C2%B7%E5%B8%83%E6%B4%9B%E6%9E%97.html" target="_blank">乔什·布洛林</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%9B%85%E5%90%84%E5%B8%83%C2%B7%E8%89%BE%E6%B4%9B%E8%92%82.html" target="_blank">雅各布·艾洛蒂</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%9B%E6%A0%BC%E4%B8%BD%E7%89%B9%C2%B7%E5%BA%93%E9%87%8C.html" target="_blank">玛格丽特·库里</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%9B%96%C2%B7%E7%9A%AE%E5%B0%94%E6%96%AF.html" target="_blank">盖·皮尔斯</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%8E%8B%E6%B1%89%E6%96%8C.html" target="_blank">王汉斌</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%A1%9E%E5%B7%B4%E6%96%AF%E8%92%82%E5%AE%89%C2%B7%E7%BD%97%E5%9F%BA%E6%A3%AE-%E4%BC%8D%E5%BE%B7%E5%B0%94.html" target="_blank">塞巴斯蒂安·罗基森-伍德尔</a>&nbsp;<a href="/index.php/vod/search/actor/%E9%98%BF%E6%8B%89%E6%8B%89-%E6%96%AF%E5%A1%94%E5%B0%94%C2%B7%E6%B1%97.html" target="_blank">阿拉拉-斯塔尔·汗</a>&nbsp;						</div>
+						<div class="module-item-style video-text">一场大流感之后，希格认识的所有人都死了，他的妻子、亲人、朋友，还有这个世界上99.9%的人，全都死了。他与他的狗孤独地居住在一座废弃的飞机场的机棚中，唯一的邻居是一个热爱枪支的反人类者。飞机上的无线电</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/9996.html" class="module-item-title" title="末世行者">末世行者</a>
+				</div>
+				<div class="module-item-text">4K DV.HDR10+</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/9995.html" title="极速：伪装者 Drive - The Pretenders" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://img.remit.ee/i/qiIahAtz4iZ3" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="极速：伪装者 Drive - The Pretenders">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多电影</span>
+						<span>德国</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id/9995.html" title="极速：伪装者 Drive - The Pretenders">极速：伪装者 Drive - The Pretenders</a>
+						</div>
+						<div class="module-item-style video-tag">
+						<a href="/index.php/vod/search/actor/%E4%B8%BD%E8%8E%8E-%E7%8E%9B%E4%B8%BD%C2%B7%E7%A7%91%E7%BD%97%E5%B0%94.html" target="_blank">丽莎-玛丽·科罗尔</a>&nbsp;<a href="/index.php/vod/search/actor/Amin+Baahmed.html" target="_blank">Amin Baahmed</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%8F%A4%E6%96%AF%E5%A1%94%E5%A4%AB%C2%B7%E6%96%BD%E5%AF%86%E7%89%B9.html" target="_blank">古斯塔夫·施密特</a>&nbsp;<a href="/index.php/vod/search/actor/%E7%B1%B3%E8%B0%A2%E5%B0%94%C2%B7%E9%A9%AC%E8%92%82%E5%88%87%E7%BB%B4%E5%A5%87.html" target="_blank">米谢尔·马蒂切维奇</a>&nbsp;<a href="/index.php/vod/search/actor/Lucie+Heinze.html" target="_blank">Lucie Heinze</a>&nbsp;<a href="/index.php/vod/search/actor/%E5%BC%97%E8%8E%B1%E5%BE%B7%E9%9B%B7%E5%85%8B%C2%B7%E6%9E%97%E5%85%8B%E6%9B%BC.html" target="_blank">弗莱德雷克·林克曼</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%8B%B1%E5%8D%A1%C2%B7%E8%8A%99%E5%BE%B7%E7%91%9E.html" target="_blank">英卡·芙德瑞</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%A9%B9%E5%A6%AE%E7%89%B9%C2%B7%E6%B5%B7%E5%9B%A0.html" target="_blank">詹妮特·海因</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%8F%B2%E5%88%A9%E6%B5%A6%C2%B7%E5%B8%83%E5%8C%96%E5%B0%BC%E5%85%8B%E8%BF%88%E8%80%B6.html" target="_blank">菲利浦·布化尼克迈耶</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%90%A8%E6%8B%89%C2%B7%E7%A7%91%E8%B4%9D%E6%B4%9B%E5%A8%83.html" target="_blank">萨拉·科贝洛娃</a>&nbsp;<a href="/index.php/vod/search/actor/%E8%8E%B1%E6%96%AF%E5%88%A9%C2%B7%E9%A9%AC%E5%B0%94%E9%A1%BF.html" target="_blank">莱斯利·马尔顿</a>&nbsp;<a href="/index.php/vod/search/actor/Steven+G%C3%A4tjen.html" target="_blank">Steven Gätjen</a>&nbsp;<a href="/index.php/vod/search/actor/Pati+Valpati.html" target="_blank">Pati Valpati</a>&nbsp;						</div>
+						<div class="module-item-style video-text">一名年轻的赛车修理工假装与赛车界最丑闻的明星订婚——官方是为了他的名誉，暗地里是为了自己的驾驶。但很快，谎言就有可能摧毁一切——包括已经不仅仅是一项协议的事情。</div>
+					</div>
+				</div>
+				<div class="module-item-titlebox">
+					<a href="/index.php/vod/detail/id/9995.html" class="module-item-title" title="极速：伪装者 Drive - The Pretenders">极速：伪装者 Drive - The Pretenders</a>
+				</div>
+				<div class="module-item-text">4K HDR10+</div>
+			</div>
+	                    	                    	                <div class="module-item">
+				<div class="module-item-cover">
+					<div class="module-item-pic">
+						<a href="/index.php/vod/detail/id/9993.html" title="燃烧吧！爸爸" >
+							<i class="icon-play"></i>
+						</a>
+						<img class="lazy lazyloaded"  data-src="https://tyyswimg2.com/upload/vod/20261028-1/7cb9770ae4f0a72b308c9076d78a8e40.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png"  alt="燃烧吧！爸爸">
+						<div class="loading"></div>
+					</div>
+					<div class="module-item-caption">
+						<span>2026</span>
+						<span class="video-class">多多电影</span>
+						<span>大陆</span>
+					</div>
+					<div class="module-item-content">
+						<div class="module-item-style video-name">
+							<a href="/index.php/vod/detail/id

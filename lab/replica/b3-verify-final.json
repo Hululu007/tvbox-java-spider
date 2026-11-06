@@ -1,0 +1,180 @@
+{
+  "service": "复刻站点自检",
+  "subscription": "http://127.0.0.1:8898/api/replica3/config",
+  "playProxy": "http://127.0.0.1:8898/api/stream?ref=",
+  "sites": [
+    {
+      "key": "HuaJuan4K",
+      "name": "💓花卷┃4K💓‍",
+      "originApi": "csp_AiNewHuaJuanGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/HuaJuan4K/",
+      "results": 29,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 25713
+    },
+    {
+      "key": "Wogg4K",
+      "name": "💓‍玩偶┃4K💓‍",
+      "originApi": "csp_AiNewWoggGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/Wogg4K/",
+      "results": 30,
+      "playableResults": 30,
+      "status": "ok",
+      "ms": 40222
+    },
+    {
+      "key": "GuanYing4K",
+      "name": "💓‍观影┃4K💓‍",
+      "originApi": "csp_AiNewGuanYingGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/GuanYing4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 30401
+    },
+    {
+      "key": "Qiwei4K",
+      "name": "💓‍七味┃4K💓‍",
+      "originApi": "csp_AiQwMkvGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/Qiwei4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 39311
+    },
+    {
+      "key": "AiNewPianKu",
+      "name": "💓盘库┃4K💓",
+      "originApi": "csp_AiNewPianKuGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/AiNewPianKu/",
+      "results": 28,
+      "playableResults": 26,
+      "status": "ok",
+      "ms": 49321
+    },
+    {
+      "key": "HuBan4K",
+      "name": "💓虎斑┃4K💓",
+      "originApi": "csp_AiNewHuBanGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/HuBan4K/",
+      "results": 30,
+      "playableResults": 26,
+      "status": "ok",
+      "ms": 35254
+    },
+    {
+      "key": "MuOu4K",
+      "name": "💓木偶┃4K💓",
+      "originApi": "csp_AiNewMuOuGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/MuOu4K/",
+      "results": 28,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 778
+    },
+    {
+      "key": "DuoDuo4K",
+      "name": "💓多多┃4K💓",
+      "originApi": "csp_AiNewDuoDuoGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/DuoDuo4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 4417
+    },
+    {
+      "key": "KuaiYing4K",
+      "name": "💓快影┃4K💓",
+      "originApi": "csp_AiNewKuaiYingGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/KuaiYing4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 0
+    },
+    {
+      "key": "LaBi4K",
+      "name": "💓蜡笔┃4K💓",
+      "originApi": "csp_AiNewLaBiGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/LaBi4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 612
+    },
+    {
+      "key": "ShanDian4K",
+      "name": "💓闪电┃4K💓",
+      "originApi": "csp_AiNewShanDianGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/ShanDian4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 0
+    },
+    {
+      "key": "JuTou4K",
+      "name": "💓剧透┃4K💓",
+      "originApi": "csp_AiNewJuTouGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/JuTou4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 0
+    },
+    {
+      "key": "Libvio4K",
+      "name": "💓立播┃4K💓",
+      "originApi": "csp_AiNewLibvioGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/Libvio4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 8028
+    },
+    {
+      "key": "ZhiNan4K",
+      "name": "💓‍原盘┃4K💓‍",
+      "originApi": "csp_AiNewZhiNan4KGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/ZhiNan4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 0
+    },
+    {
+      "key": "WoNiu4K",
+      "name": "💓‍蜗牛┃4K💓‍",
+      "originApi": "csp_AiNewWoNiu4KGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/WoNiu4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 12016
+    },
+    {
+      "key": "PanMi4K",
+      "name": "💓盘迷┃4K💓",
+      "originApi": "csp_AiPan1MeGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/PanMi4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 4
+    },
+    {
+      "key": "YiDong4K",
+      "name": "💓逸动┃4K💓",
+      "originApi": "csp_AiNewYiDong4KGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/YiDong4K/",
+      "results": 25,
+      "playableResults": 25,
+      "status": "ok",
+      "ms": 0
+    }
+  ],
+  "ok": 17,
+  "total": 17,
+  "quarkCookieConfigured": false
+}

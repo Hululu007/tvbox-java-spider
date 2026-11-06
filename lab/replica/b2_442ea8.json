@@ -1,0 +1,44 @@
+{
+  "source": "config/download3.json（与 wex-20261106.json 同版）",
+  "originSpiderJar": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a（wexguard 加固壳，classes.dex 仅含类名，实现加密在 assets/wexshinidie.guard）",
+  "replicaType": "type:1 苹果 CMS 兼容，spider 留空，零 jar 依赖",
+  "playProxy": "http://127.0.0.1:8898/api/stream?ref=",
+  "sites": [
+    {
+      "key": "SoAiHaiYin",
+      "name": "🎠盘搜┃综合🎠",
+      "kind": "盘搜/网盘搜索",
+      "originApi": "csp_SoAiHaiYinGuard",
+      "originExt": "无 ext（download3 加固 dex 内硬编码）",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/SoAiHaiYin/",
+      "backend": "pansou.top /api/other/web_search SSE 四线路 + /api/other/save_url 解密"
+    },
+    {
+      "key": "SoAiPanSoo",
+      "name": "🎠九七┃综合🎠",
+      "kind": "盘搜/网盘搜索",
+      "originApi": "csp_SoAiPanSooGuard",
+      "originExt": "无 ext（download3 加固 dex 内硬编码）",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/SoAiPanSoo/",
+      "backend": "pansou.top is_type=4 分线路 + PanSou 免登实例 so.252035.xyz"
+    },
+    {
+      "key": "SoAiAiPanSo",
+      "name": "🎠爱盘┃综合🎠",
+      "kind": "盘搜/网盘搜索",
+      "originApi": "csp_SoAiAiPanSoGuard",
+      "originExt": "无 ext（download3 加固 dex 内硬编码）",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/SoAiAiPanSo/",
+      "backend": "aipanso.com AES-CBC 反爬 Cookie → /search?k= 列表 + 免登实例取链"
+    },
+    {
+      "key": "AiNewPianKu",
+      "name": "💓盘库┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewPianKuGuard",
+      "originExt": "无 ext（download3 加固 dex 内硬编码）",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/AiNewPianKu/",
+      "backend": "tvfan/Cloud-drive.txt 自建 4K 库 + 夸父 4K 帖子 + 盘搜 4K 条目"
+    }
+  ]
+}

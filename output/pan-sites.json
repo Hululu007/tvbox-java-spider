@@ -1,0 +1,488 @@
+{
+  "from": "config/download1.json ~ download4.json",
+  "total": 47,
+  "byCategory": {
+    "盘搜/网盘搜索": 18,
+    "网盘资源站": 26,
+    "网盘配置中心": 3
+  },
+  "bySource": {
+    "download1": 26,
+    "download2": 3,
+    "download3": 10,
+    "download4": 11
+  },
+  "distinctCspClasses": 35,
+  "sites": [
+    {
+      "source": "download1",
+      "category": "盘搜/网盘搜索",
+      "key": "QuanPan4K",
+      "name": "🌸全盘搜｜夸克4K",
+      "api": "https://cdn.jsdelivr.net/gh/tlwj01/tvbox-quanpan@main/quanpan_spider.js",
+      "ext": "",
+      "needsJar": false,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "夸克云盘",
+      "name": "📁我的｜夸克",
+      "api": "csp_PanQuark",
+      "ext": "",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "fok",
+      "name": "🌙┃夸克┃影视",
+      "api": "csp_XBPQ",
+      "ext": "{\"分类url\":\"https://www.freeok.vip/vod-show/{cateId}-{area}-------{catePg}---{year}.html\",\"分类\":\"FREE电影&FREE剧集&FREE动漫&FREE综艺&FREE短剧&FREE少儿\",\"分类值\":\"1&2&3&4&12&5\",\"播放请求头\":\"User-Agent$Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\",\"副标...",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "二小",
+      "name": "🌐二小｜4K自扫",
+      "api": "csp_PanWebShare",
+      "ext": "{\"site\":[\"http://www.wexwp.cc\",\"https://www.2xiaopan.one\",\"https://www.wexwp.cc\"]}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "夸父",
+      "name": "🌐夸父｜4K自扫",
+      "api": "csp_PanWebShareKF",
+      "ext": "{\"site\":[\"https://www.kfzy.net\"],\"cookie\":\"\"}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "Wogg",
+      "name": "👽️┆玩偶┆4K",
+      "api": "csp_Wogg",
+      "ext": "{\"site\":[\"https://wogg.xxooo.cf\",\"https://woggpan.888484.xyz\",\"https://www.wogg.live\",\"http://woggpan.xxooo.cf\"],\"filter\":\"https://tc-new.z.wiki/autoupload/iYHTWVx6T8RrCmqdGD6MOdiO_OyvX7mIgxFBfDMDErs/20260320/oOf4/wogg.json\"}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "FishMuou",
+      "name": "🪵┆木偶┆4K",
+      "api": "csp_FishCloud",
+      "ext": "{\"site\":[\"https://www.muoua.top\",\"https://333.333291.xyz\",\"https://666.666291.xyz\"]}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "SeedHub",
+      "name": "🌱┆Seed┆4K",
+      "api": "csp_SeedHub",
+      "ext": "{\"site\":[\"https://sidhub.cc\",\"https://seeduck.cc\",\"https://hubdog.cc\"]}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "PanWebShare123",
+      "name": "😎┆123┆4K",
+      "api": "csp_PanWebShare123",
+      "ext": "{\"site\":[\"https://123panfx.com\",\"https://pan1.me\"],\"cookie\":\"\"}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "PanWebShareGuangYa",
+      "name": "😉┆光鸭┆4K",
+      "api": "csp_PanWebShareGuangYa",
+      "ext": "{\"site\":[\"https://www.guangya.net\"],\"cookie\":\"\"}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "FishDuoduo",
+      "name": "🍀┆多多┆4K",
+      "api": "csp_FishCloud",
+      "ext": "{\"site\":[\"https://tv.yydsys.top\",\"https://tv.yydsys.cc\",\"https://tv.214521.xyz\"]}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "Fishhuajuan",
+      "name": "🌸┆花卷┆4K",
+      "api": "csp_FishCloud",
+      "ext": "{\"site\":[\"https://www.hjzhencai.top\",\"https://www.huanjuanwp.shop\"]}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "FishHuban",
+      "name": "🐅┆虎斑┆4K",
+      "api": "csp_FishCloud",
+      "ext": "{\"site\":[\"http://xhban.xyz\",\"http://38.76.197.172:16969\"]}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "Fishgege",
+      "name": "💫┆八零┆4K",
+      "api": "csp_FishCloud",
+      "ext": "{\"site\":[\"https://woog.nxog.eu.org\",\"https://ogkk.nxog.eu.org\",\"https://woog.430520.xyz\"]}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "Market",
+      "name": "🛒┆网盘┆市场",
+      "api": "csp_Market",
+      "ext": "{\"categories\":[{\"name\":\"潇洒资源一\",\"url\":\"https://pan.quark.cn/s/969cc97687d3\"},{\"name\":\"潇洒资源二\",\"url\":\"https://drive.uc.cn/s/ba531661b3eb4\"},{\"name\":\"奇奇更新一\",\"url\":\"https://pan.quark.cn/s/ab00f85da8ea\"},{\"name\":\"奇奇更新二\",\"url\":\"https://drive.uc.cn/s/ef22fcbfdd934\"}]}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1,download2",
+      "category": "网盘资源站",
+      "key": "csp_WoGG",
+      "name": "👽玩偶哥哥",
+      "api": "csp_WoGG",
+      "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://www.wogg.xyz/$$$弹\"",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "csp_SeedHub",
+      "name": "🧲┃SeedHub┃4k",
+      "api": "csp_SeedHub",
+      "ext": "",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "csp_WoGG·Candy1",
+      "name": "👽┃玩偶┃4K①",
+      "api": "csp_WoGG",
+      "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$弹\"",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "网盘资源站",
+      "key": "Fishshayang",
+      "name": "🤭┆傻样┆4K",
+      "api": "csp_FishCloud",
+      "ext": "{\"site\":[\"http://xsayang.fun\",\"http://38.76.197.172:12521\"]}",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "盘搜/网盘搜索",
+      "key": "盘搜",
+      "name": "🔍盘搜｜搜索",
+      "api": "csp_PanSou",
+      "ext": "",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "盘搜/网盘搜索",
+      "key": "趣盘",
+      "name": "🔍趣盘｜搜索",
+      "api": "csp_QuPanSo",
+      "ext": "",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "盘搜/网盘搜索",
+      "key": "FishPs",
+      "name": "🐟┆鱼鱼┆盘搜",
+      "api": "csp_FishPs",
+      "ext": "",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1,download2",
+      "category": "盘搜/网盘搜索",
+      "key": "PanSou",
+      "name": "📀盘搜",
+      "api": "csp_PanSou",
+      "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd\"",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1,download2",
+      "category": "盘搜/网盘搜索",
+      "key": "PanSearch",
+      "name": "🙀盘搜索",
+      "api": "csp_PanSearch",
+      "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd\"",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "盘搜/网盘搜索",
+      "key": "PanSou·Candy1",
+      "name": "🦊┃盘搜┃搜索",
+      "api": "csp_PanSou",
+      "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd\"",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download1",
+      "category": "盘搜/网盘搜索",
+      "key": "PanSearch·Candy1",
+      "name": "🙀┃盘Se┃搜索",
+      "api": "csp_PanSearch",
+      "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd\"",
+      "needsJar": true,
+      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+    },
+    {
+      "source": "download3",
+      "category": "网盘配置中心",
+      "key": "Wexconfig",
+      "name": "🐮配置┃中心🐮",
+      "api": "csp_PanConfigGuard",
+      "ext": "",
+      "needsJar": true,
+      "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a"
+    },
+    {
+      "source": "download3",
+      "category": "网盘配置中心",
+      "key": "MyPan",
+      "name": "🐮我的┃网盘🐮",
+      "api": "csp_MyPanGuard",
+      "ext": "",
+      "needsJar": true,
+      "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a"
+    },
+    {
+      "source": "download3",
+      "category": "网盘资源站",
+      "key": "玩偶",
+      "name": "💓‍玩偶┃4K💓‍",
+      "api": "csp_AiNewWoggGuard",
+      "ext": "",
+      "needsJar": true,
+      "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a"
+    },
+    {
+      "source": "download3",
+      "category": "网盘资源站",
+      "key": "FakeAi115Share",
+      "name": "💓115┃分享💓‍",
+      "api": "csp_FakeAi115ShareGuard",
+      "ext": "",
+      "needsJar": true,
+      "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a"
+    },
+    {
+      "source": "download3",
+      "category": "网盘资源站",
+      "key": "AList",
+      "name": "👁️Alist┃DIY👁️",
+      "api": "csp_AListGuard",
+      "ext": "",
+      "needsJar": true,
+      "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a"
+    },
+    {
+      "source": "download3",
+      "category": "网盘资源站",
+      "key": "webdav",
+      "name": "👁️WebDav┃DIY👁️",
+      "api": "csp_WebDAVGuard",
+      "ext": "",
+      "needsJar": true,
+      "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a"
+    },
+    {
+      "source": "download3",
+      "category": "盘搜/网盘搜索",
+      "key": "SoAiHaiYin",
+      "name": "🎠盘搜┃综合🎠",
+      "api": "csp_SoAiHaiYinGuard",
+      "ext": "",
+      "needsJar": true,
+      "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a"
+    },
+    {
+      "source": "download3",
+      "category": "盘搜/网盘搜索",
+      "key": "SoAiPanSoo",
+      "name": "🎠九七┃综合🎠",
+      "api": "csp_SoAiPanSooGuard",
+      "ext": "",
+      "needsJar": true,
+      "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a"
+    },
+    {
+      "source": "download3",
+      "category": "盘搜/网盘搜索",
+      "key": "SoAiAiPanSo",
+      "name": "🎠爱盘┃综合🎠",
+      "api": "csp_SoAiAiPanSoGuard",
+      "ext": "",
+      "needsJar": true,
+      "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a"
+    },
+    {
+      "source": "download3",
+      "category": "盘搜/网盘搜索",
+      "key": "SoKaKa",
+      "name": "🎠卡卡┃综合🎠",
+      "api": "csp_SoKaKaGuard",
+      "ext": "",
+      "needsJar": true,
+      "spider": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a"
+    },
+    {
+      "source": "download4",
+      "category": "网盘配置中心",
+      "key": "MDrive",
+      "name": "🗂我的云盘┃配置",
+      "api": "csp_MyDriveGuard",
+      "ext": "{\"Cloud-drive\":\"tvfan/Cloud-drive.txt\"}",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    },
+    {
+      "source": "download4",
+      "category": "网盘资源站",
+      "key": "玩偶",
+      "name": "👽玩偶哥哥┃4K弹幕",
+      "api": "csp_WoGGGuard",
+      "ext": "{\"Cloud-drive\":\"tvfan/Cloud-drive.txt\"}",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    },
+    {
+      "source": "download4",
+      "category": "网盘资源站",
+      "key": "seed",
+      "name": "💡聚剧┃四盘",
+      "api": "csp_SeedhubGuard",
+      "ext": "\"5++kwLhNYm9UrO9wh7Dl7eKamTee4s/5\"",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    },
+    {
+      "source": "download4",
+      "category": "网盘资源站",
+      "key": "立播",
+      "name": "🌟立播┃不卡",
+      "api": "csp_LibvioGuard",
+      "ext": "{\"Cloud-drive\":\"tvfan/Cloud-drive.txt\",\"siteUrl\":\"https://www.libvio.pw/\"}",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    },
+    {
+      "source": "download4",
+      "category": "盘搜/网盘搜索",
+      "key": "ZPan",
+      "name": "🎈盘搜┃四盘",
+      "api": "csp_S_zpsGuard",
+      "ext": "{\"siteUrl\":\"http://107.173.211.148/\"}",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    },
+    {
+      "source": "download4",
+      "category": "盘搜/网盘搜索",
+      "key": "JPan",
+      "name": "🦋易搜┃四盘",
+      "api": "csp_S_zpsGuard",
+      "ext": "{\"siteUrl\":\"https://so.252035.xyz/\"}",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    },
+    {
+      "source": "download4",
+      "category": "盘搜/网盘搜索",
+      "key": "YpanSo",
+      "name": "🐌盘她┃夸父",
+      "api": "csp_YpanSoGuard",
+      "ext": "{\"Cloud-drive\":\"tvfan/Cloud-drive.txt\"}",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    },
+    {
+      "source": "download4",
+      "category": "盘搜/网盘搜索",
+      "key": "BpanSo",
+      "name": "🐞盘他┃嘟嘟",
+      "api": "csp_BpanSoGuard",
+      "ext": "{\"Cloud-drive\":\"tvfan/Cloud-drive.txt\"}",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    },
+    {
+      "source": "download4",
+      "category": "盘搜/网盘搜索",
+      "key": "抠搜",
+      "name": "🌶️抠抠┃搜搜",
+      "api": "csp_KkSsGuard",
+      "ext": "{\"Cloud-drive\":\"tvfan/Cloud-drive.txt\"}",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    },
+    {
+      "source": "download4",
+      "category": "盘搜/网盘搜索",
+      "key": "UC",
+      "name": "🌈优汐┃搜搜",
+      "api": "csp_UuSsGuard",
+      "ext": "{\"Cloud-drive\":\"tvfan/Cloud-drive.txt\"}",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    },
+    {
+      "source": "download4",
+      "category": "网盘资源站",
+      "key": "push_agent",
+      "name": "🛴手机┃推送",
+      "api": "csp_PushGuard",
+      "ext": "{\"Cloud-drive\":\"tvfan/Cloud-drive.txt\"}",
+      "needsJar": true,
+      "spider": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd"
+    }
+  ]
+}

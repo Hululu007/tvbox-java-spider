@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Cache-Control" content="no-transform "/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="applicable-device" content="pc">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="keywords" content="凡人歌"/>
+    <meta name="description" content="凡人歌 - 网盘资源 - 爱盘搜"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <title>凡人歌 - 网盘资源 - 爱盘搜</title>
+    <link rel="stylesheet" href="https://code.bdstatic.com/npm/vant@2.12.22/lib/index.css">
+    <link rel="stylesheet" href="/css/main.css?t=4">
+    <link rel="stylesheet" href="/css/pc.css?t=3">
+    <script type="text/javascript" src="https://code.bdstatic.com/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://code.bdstatic.com/npm/@vant/touch-emulator@1.3.2/index.js"></script>
+    <script src="/js/ck.min.js?t=3"></script>
+    <script src="https://code.bdstatic.com/npm/fingerprintjs2@2.1.4/dist/fingerprint2.min.js" onload="fingerprintjs()"></script>
+    <script src="/js/tool.js?t=3"></script>
+    <script src="/js/suggest.js?t=2"></script>
+
+    
+<script>!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"KOTKPpHTQdhuRjId",ck:"KOTKPpHTQdhuRjId"});</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?0167ed9d3ea4ee5b56b8b71cc137deb5";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8S1QQQ1NGR"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8S1QQQ1NGR');
+</script>
+
+
+<script src="/js/fbd.min.js?t=3"></script>
+
+
+<script>
+    
+    
+    window.__closeBaiduSuggest = true;
+</script>
+
+</head>
+<body>
+<div id="app" v-cloak>
+
+
+    <div>
+        <van-row>
+
+            <van-col span="8" offset="8">
+                <div style=" text-align: center;text-decoration:none;"><a href="/?p=quark"><h1 style="color: #374f67">爱盘搜</h1></a></div>
+            </van-col>
+        </van-row>
+        <van-row>
+
+            <van-col span="8" offset="8">
+                <div class="search-suggest-wrap">
+                    <form action="/?p=quark">
+                        <van-search
+                                v-model="search_val"
+                                show-action
+                                placeholder="请输入搜索关键词"
+                                @search="onSearch"
+                                @clear="onClear"
+                        >
+                            <template #action>
+                                <div @click="onSearch">搜索</div>
+                            </template>
+                        </van-search>
+                    </form>
+                    <div class="suggest-list"></div>
+                </div>
+
+            </van-col>
+        </van-row>
+
+        <van-row>
+            <van-col span="8" offset="8">
+                <h3 align="center">
+                    凡人歌
+                </h3>
+            </van-col>
+        </van-row>
+
+        <van-row>
+            <van-col span="8" offset="8">
+                <van-cell title="名称" value="凡人歌"></van-cell>
+
+            </van-col>
+        </van-row>
+        <van-row>
+            <van-col span="8" offset="8">
+                <van-cell title="类型">
+                    
+                    文件夹
+                    
+                </van-cell>
+
+            </van-col>
+        </van-row>
+        <van-row>
+            <van-col span="8" offset="8">
+                <van-cell title="来源">
+                    夸克网盘
+                </van-cell>
+            </van-col>
+        </van-row>
+        <van-row>
+            <van-col span="8" offset="8">
+                <van-cell title="类别">
+                    其他
+                </van-cell>
+
+            </van-col>
+        </van-row>
+        
+        <van-row>
+            <van-col span="8" offset="8">
+                <van-cell title="分享时间">
+                    2024-11-10
+                </van-cell>
+
+            </van-col>
+        </van-row>
+        
+
+        
+
+        <van-row>
+            <van-col span="8" offset="8">
+                <van-goods-action style="position: static;">
+                    <van-goods-action-button  type="info" text="同意声明,继续访问下载"
+                                              @click="onDownload();"></van-goods-action-button>
+                    <van-goods-action-button  id="invalidRes"  type="warning" text="资源失效"
+                                              @click="invalidRes();"></van-goods-action-button>
+                    <van-goods-action-button  id="spamReport"  color="#7232dd" type="danger" text="垃圾举报"
+                                              @click="spamReport();"></van-goods-action-button>
+
+
+                    </van-dialog>
+                </van-goods-action>
+
+            </van-col>
+
+        </van-row>
+        
+        <van-row>
+            <van-col span="8" offset="8">
+                <div style="padding-left: 16px;">
+                    <h4>
+                        请认真阅读以下说明，您只有在了解并同意该说明后，才可继续访问本站。
+                    </h4>
+                </div>
+                <div>
+                    <van-cell-group>
+                        <van-cell>
+                            1.全站链接通过蜘蛛程序收集自网盘分享链接，以非人工方式自动生成，网站本身不储存、复制、传播、控制编辑任何网盘文件，也不提供下载服务，其链接跳转至官方网盘，文件的有效性和安全性需要您自行判断。
+                        </van-cell>
+                        <van-cell>2. 本站遵守相关法律法规，坚决杜绝一切违规不良信息，如您发现任何涉嫌违规的网盘信息，请立即向<b><a
+                                href="https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20230726161323891/20230726161323891.html">网盘官方网站</a></b>举报
+                        </van-cell>
+                        <van-cell>3. 本站作为非经营性网站，所有服务仅供学习交流使用，无任何收费请求，切勿上当支付。
+                        </van-cell>
+
+                    </van-cell-group>
+                </div>
+
+            </van-col>
+        </van-row>
+
+
+    </div>
+    <div class="site-footer-wrap">
+        <van-row>
+            <van-col span="8" offset="8">
+                
+
+
+
+<footer class="site-footer">
+    <div class="site-footer-inner">
+        <div class="footer-links">
+            <a target="_blank" href="https://xiongdipan.com/">百度云盘搜索</a>
+            &nbsp;&nbsp;<a target="_blank" href="https://www.alipansou.com/">阿里云盘搜索</a>
+            &nbsp;&nbsp;<a target="_blank" href="https://xunjiso.com/">迅雷云盘搜索</a>
+            
+        </div>
+        <div class="footer-declare">
+            声明：本站内容由网络爬虫自动抓取。本站不储存、复制、传播任何文件，不做任何盈利，仅作个人公益学习，请勿非法&商业传播。
+        </div>
+    </div>
+</footer>
+
+            </van-col>
+        </van-row>
+    </div>
+    <van-dialog v-model="down_donate_show" show-cancel-button
+                :before-close="beforeClose">
+        <div style="text-align: center;padding-bottom: 15px">
+            <div style="text-align: center;background-color:#fafafa;padding-bottom: 2px;padding-top: 2px">
+                <p>关注公众号｜网站变更实时通知</p>
+                <p>识别常规用户｜避免爬虫攻击</p>
+                <p>避免误判恶意党｜请勿取关</p>
+            </div>
+
+            <image style="width: 250px;" src="/img/maoli.jpg"/>
+            <div style="padding-top: 10px">微信关注发送"<b style="color: #e82b01">动态码</b>"获取动态码</div>
+        </div>
+        <div style="padding-left: 30px;padding-right: 30px;">
+            <van-row>
+                    <van-field style="padding-bottom: 10px;" id="activeCode"
+                               v-model="activeCode"
+                               label="动态码"
+                               placeholder="请输入动态码"
+                    />
+            </van-row>
+
+        </div>
+
+    </van-dialog>
+
+    <van-dialog v-model="spam_resource"  title="垃圾举报" show-cancel-button  :before-close="spamBeforeClose">
+        <div style="margin: 20px;text-align: center">
+            <label>反馈类型：</label>
+            <select id="spam_id" style="padding: 5px;height: 30px">
+                <option value="" disabled selected>请选择反馈类型</option>
+                <option value="1">失效</option>
+                <option value="2">空文件</option>
+                <option value="3">广告引流</option>
+                <option value="4">违法违规</option>
+                <option value="5">版权隐私</option>
+            </select>
+        </div>
+    </van-dialog>
+</div>
+
+
+<script src="https://code.bdstatic.com/npm/vue@2.6.12/dist/vue.min.js"></script>
+<script src="https://code.bdstatic.com/npm/vant@2.12.22/lib/vant.min.js"></script>
+
+<script>
+
+    var app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                spam_resource:false,
+                search_val: '',
+                donate_show: false,
+                donate: 0,
+                down_donate_show: false,
+                imageUrl: '\/img\/maoli.jpg',
+                show_cancel_button: true,
+                show_confirm_button: false,
+                intervalId: null,
+                activeCode: '',
+                had_follow:  false ,
+                show_buy:false,
+        }
+            ;
+        },
+        methods: {
+            onSearch(val) {
+                if (this.search_val == null || this.search_val == "") {
+                    vant.Toast('请输入搜索内容');
+                    return;
+                }
+                window.location.href = "/search?k=" + encodeURIComponent(this.search_val) + "\u0026p=quark";
+            },
+            onCancel() {
+                this.search_val = '';
+            },
+            onClear() {
+                this.search_val = '';
+            },
+            onDownload() {
+                if (!this.had_follow) {
+                    this.down_donate_show = true
+                } else {
+                    window.open("/cv/N6FXfgZ64bX5pKoBmXOnr9TX", "target");
+                }
+
+            },
+            toastSuccess() {
+                this.$toast.success('提交成功');
+            },
+            toastFail() {
+                this.$toast.fail('服务器异常');
+            },
+            toastFailCus(msg) {
+                this.$toast.fail(msg);
+            },
+            invalidRes() {
+                vant.Dialog.alert({
+                    title: '资源失效?',
+                    showCancelButton: true,
+                    beforeClose,
+                });
+
+                function beforeClose(action, done) {
+                    if (action === 'confirm') {
+
+                        $.post("/invalid", {fid: "N6FXfgZ64bX5pKoBmXOnr9TX"}, function (result) {
+                            done();
+                            $("#invalidRes").attr('disabled', true);
+                            app.toastSuccess()
+                        });
+                        return false;
+                    } else {
+                        done();
+                    }
+                }
+            },
+            spamReport() {
+                this.spam_resource = true
+            },
+            spamBeforeClose(action, done){
+                  if (action === 'confirm') {
+                        var spamVal = $('#spam_id').val();
+                        if (spamVal == null||spamVal=="") {
+                            app.toastFailCus("请选择反馈类型!")
+                            done(false)
+                            return;
+                        }
+                        $.post("/spam_report",{fid:"N6FXfgZ64bX5pKoBmXOnr9TX",spam_type:spamVal},function(result){
+                            done();
+                            $("#spamReport").attr('disabled',true);
+                            app.toastSuccess()
+                        });
+                        return false;
+                    } else {
+                        done();
+                    }
+            },
+            sponsor2() {
+                this.donate_show = true
+            },
+            close_down() {
+
+            },
+            no_show_donate() {
+                setCookie2("no_show_donate", 1, 14)
+            },
+            beforeClose(action, done) {
+                that=this;
+                if (action === 'confirm') {
+                    var code = $("#activeCode").val()
+                    if (isEmpty(code)) {
+                        done();
+                        vant.Dialog.alert({
+                            message: '动态码不能为空',
+                        });
+                        return;
+                    }
+                    $.post("/active",
+                        {"code": code},
+                        function (data, status) {
+                            done();
+                            if (data == '1') {
+                                that.had_follow=true;
+                                window.open("/cv/N6FXfgZ64bX5pKoBmXOnr9TX", "target");
+                            } else {
+                                vant.Dialog.alert({
+                                    message: '动态码失效,请重新从公众号获取',
+                                });
+                            }
+                        });
+
+                } else {
+                    done();
+                }
+            },
+            showBuy(){
+                app.show_buy=true
+            },
+            openNewPage(url) {
+                window.open(url, "_blank");
+            },
+        },
+
+    });
+
+    initSearchSuggest(app);
+
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "n8u2uq1fzn");
+</script> 
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a56339d61e4418e8',t:'MTc5Mzk1ODk2MQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a56339d61e4418e8',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

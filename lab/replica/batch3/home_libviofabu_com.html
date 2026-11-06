@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- 防止搜索引擎索引/收录 -->
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow">
+<!-- 通用标题，不含品牌词 -->
+<title>站点导航 · 发布页</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg:        #f5f5f7;
+    --bg-card:   #ffffff;
+    --bg-item:   #f9f9fb;
+    --border:    rgba(0,0,0,0.07);
+    --border-h:  rgba(180,140,0,0.35);
+    --gold:      #c9980a;
+    --gold-dim:  rgba(201,152,10,0.08);
+    --gold-light:rgba(201,152,10,0.12);
+    --text:      #1a1a1e;
+    --text-dim:  #aaaab8;
+    --text-mid:  #6b6b7e;
+    --ok:        #1a9e45;
+    --fail:      #d93025;
+    --ok-glow:   rgba(26,158,69,0.25);
+    --fail-glow: rgba(217,48,37,0.25);
+    --radius:    14px;
+    --radius-sm: 8px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit','Noto Sans SC',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,0,0,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0;}
+.wrap{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:60px 24px 48px;}
+header{text-align:center;margin-bottom:48px;animation:fadeUp .6s ease both;}
+.logo{font-family:'Outfit',sans-serif;font-weight:700;font-size:52px;letter-spacing:-1px;color:var(--gold);line-height:1;display:inline-block;}
+.logo::after{content:'';display:block;width:32px;height:3px;background:var(--gold);border-radius:2px;margin:10px auto 0;opacity:0.5;}
+.notice{margin-top:18px;font-size:13px;color:var(--text-dim);display:inline-flex;align-items:center;gap:8px;}
+.notice kbd{font-family:'JetBrains Mono',monospace;font-size:11px;background:#fff;border:1px solid rgba(0,0,0,0.1);border-bottom-width:2px;color:var(--text-mid);padding:2px 7px;border-radius:5px;letter-spacing:0.5px;}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,0.05);animation:fadeUp .6s ease both;}
+.card:nth-child(2){animation-delay:.07s;}.card:nth-child(3){animation-delay:.14s;}.card:nth-child(4){animation-delay:.21s;}.card:nth-child(5){animation-delay:.28s;}
+.card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+.section-title{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;}
+.section-title::before{content:'';width:3px;height:14px;background:var(--gold);border-radius:2px;flex-shrink:0;}
+.dns-banner{background:linear-gradient(135deg,#fffbef 0%,#fff8e1 100%);border:1.5px solid rgba(201,152,10,0.3);border-radius:var(--radius);padding:20px 24px;margin-bottom:16px;animation:fadeUp .6s ease both;animation-delay:.02s;}
+.dns-banner-top{display:flex;align-items:flex-start;gap:14px;}
+.dns-icon{width:40px;height:40px;border-radius:10px;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.dns-icon svg{width:20px;height:20px;fill:white;}
+.dns-title{font-size:15px;font-weight:700;color:#7a5500;line-height:1.3;}
+.dns-sub{font-size:13px;color:#a07020;margin-top:4px;line-height:1.5;}
+.dns-badge{display:inline-block;background:var(--gold);color:#fff;font-size:11px;font-weight:700;letter-spacing:.05em;padding:2px 8px;border-radius:100px;margin-left:6px;vertical-align:middle;}
+.dns-servers{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.dns-chip{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(201,152,10,0.25);border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;transition:border-color .2s,box-shadow .2s;}
+.dns-chip:hover{border-color:var(--gold);box-shadow:0 2px 8px rgba(201,152,10,0.15);}
+.dns-chip-name{font-weight:600;color:#7a5500;}
+.dns-chip-val{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-mid);}
+.dns-guide-toggle{margin-top:14px;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--gold);cursor:pointer;user-select:none;width:fit-content;}
+.dns-guide-toggle svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s;}
+.dns-guide-toggle.open svg{transform:rotate(180deg);}
+.platform-panels{display:none;}
+.platform-panels.open{display:block;}
+.platform-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.ptab{font-size:12px;font-weight:600;color:var(--text-mid);background:var(--bg-item);border:1px solid var(--border);border-radius:100px;padding:5px 14px;cursor:pointer;transition:all .2s;}
+.ptab:hover{color:var(--gold);border-color:var(--border-h);}
+.ptab.active{background:var(--gold);color:#fff;border-color:var(--gold);}
+.panel{display:none;}.panel.active{display:block;}
+.steps{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.step{display:flex;gap:12px;align-items:flex-start;}
+.step-num{width:22px;height:22px;border-radius:50%;background:var(--gold-dim);border:1px solid rgba(201,152,10,0.25);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.step-text{font-size:13px;line-height:1.6;color:var(--text-mid);}
+.step-text b{color:var(--text);font-weight:600;}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.06);border-radius:4px;padding:1px 6px;color:#7a5500;}
+.step-note{font-size:12px;color:var(--text-dim);margin-top:4px;padding-left:34px;}
+.btn-check{font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;color:var(--text-mid);background:var(--bg-item);border:1px solid var(--border);border-radius:100px;padding:5px 14px;cursor:pointer;transition:color .2s,border-color .2s,background

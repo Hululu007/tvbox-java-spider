@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-11-06T17:46:39",
+  "subscription": "http://127.0.0.1:8898/api/replica/config",
+  "configCenter": "http://127.0.0.1:8898/",
+  "replicaSites": 5,
+  "replicaTotal": 5,
+  "sites": [
+    {
+      "key": "MDrive",
+      "name": "🗂我的云盘┃配置",
+      "status": "ok",
+      "results": 4,
+      "playableResults": 4
+    },
+    {
+      "key": "seed",
+      "name": "💡聚剧┃四盘",
+      "status": "ok",
+      "results": 8,
+      "playableResults": 3
+    },
+    {
+      "key": "ZPan",
+      "name": "🎈盘搜┃四盘",
+      "status": "ok",
+      "results": 60,
+      "playableResults": 24
+    },
+    {
+      "key": "JPan",
+      "name": "🦋易搜┃四盘",
+      "status": "ok",
+      "results": 60,
+      "playableResults": 16
+    },
+    {
+      "key": "YpanSo",
+      "name": "🐌盘她┃夸父",
+      "status": "ok",
+      "results": 8,
+      "playableResults": 6
+    }
+  ],
+  "streamChain": {
+    "playable": true,
+    "rangeStatus": 206,
+    "rangeBytes": 1024,
+    "authCookiePresent": true,
+    "ucEpisodes": 19,
+    "firstEpisode": "177-第177话 慕兰之战01-4K 超高清-HEVC-2026-06-13.mp4",
+    "searchResults": 60
+  },
+  "quarkCookieConfigured": false,
+  "configCenterLoop": {
+    "saved": 2,
+    "readBackVerified": true,
+    "quarkConfiguredAfterSave": true,
+    "kfzyConfiguredAfterSave": true,
+    "jsInjected": true,
+    "testCookieCleared": true,
+    "clearSaved": 2
+  },
+  "subscriptionSiteCount": 6,
+  "spiderJarRequired": false,
+  "artifacts": [
+    "output/replica-subscription.json",
+    "output/replica-sites.json",
+    "output/replica-verify.json",
+    "tvfan/Cloud-drive.txt"
+  ]
+}

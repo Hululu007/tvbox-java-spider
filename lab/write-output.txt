@@ -1,0 +1,63 @@
+=== 第 4 课：爬虫结果怎么写文件 / 订阅配置怎么生成 ===
+
+[1/9] 读取三份订阅配置，生成对比报告
+   -> output\00-config-diff.txt (2176 bytes)
+
+[2/9] 真实抓取 https://quotes.toscrape.com 第 1~3 页
+  第 1 页: HTTP 200, 10 条, HTML 11021 字符
+  第 2 页: HTTP 200, 10 条, HTML 13699 字符
+  第 3 页: HTTP 200, 10 条, HTML 9987 字符
+  合计 30 条记录待落盘
+
+[3/9] 写 TSV（爬虫结果表，逐行流式写）
+   -> output\quotes.tsv | 31 行 (含表头) | 7895 bytes
+   表头: page | index | author | text | tags | about_url
+
+[4/9] 写 JSON（homeContent 返回结构直接落盘）
+   -> output\quotes.json | 7135 bytes | 读回 total=30, list=30
+
+[5/9] 原子写入（同目录 tmp + ATOMIC_MOVE，避免半截配置）
+   覆盖前: 第 1 次写入：旧内容
+   覆盖后: 第 2 次写入：新内容（整体替换完成）
+   残留 .tmp 文件数: 0 (必须为 0)
+   追加后行数: 2
+
+[6/9] 把编译产物打成 spider jar，并计算真实 md5
+   -> output\custom_spider.jar | 22 个 class | 23 个 zip 条目 | 55595 bytes
+   MANIFEST: com.github.catvod.spider.DemoSpider
+   md5 = be599b2f08b524150c8f921ab0b499b6
+
+[7/9] 写相对路径子规则文件（对应 xiuxiu 的 ext: tvfan/Cloud-drive.txt）
+   -> output\tvfan\Cloud-drive.txt
+   主配置 URL : http://127.0.0.1:8080/my-subscription.json
+   相对路径   : tvfan/Cloud-drive.txt
+   解析结果   : http://127.0.0.1:8080/tvfan/Cloud-drive.txt
+   要点：相对路径不能写成 /tvfan/...（以 / 开头会丢掉主配置所在目录）
+
+[8/9] 生成订阅配置：先写占位 spider，再把真实 md5 回填
+   第 1 次写入: http://127.0.0.1:8080/custom_spider.jar;md5;PENDING
+   第 2 次写入: http://127.0.0.1:8080/custom_spider.jar;md5;be599b2f08b524150c8f921ab0b499b6
+   -> output\my-subscription.json | 976 bytes | 子资源 Cloud-drive.txt
+
+[9/9] 读回校验（写完必须验证，否则不算交付）
+  spider 第三段 == jar 真实 md5               PASS
+  jar md5 复算一致                           PASS
+  独立实现复算 md5 一致                          PASS (JDK 直算=be599b2f08b524150c8f921ab0b499b6)
+  jar 含 DemoSpider.class + MANIFEST      PASS (23 条目)
+  TSV 行数 == 记录数 + 表头                     PASS (31 行 / 期望 31)
+  quotes.json 可解析且条数一致                   PASS (total=30)
+  ext 相对路径写法正确                           PASS
+  子规则文件确实存在                              PASS
+  无残留 .tmp 临时文件                          PASS
+  订阅配置可被 Gson 重新解析                       PASS (2 个站点)
+  ----------------------------------------------------
+  总体: PASS
+
+=== 全部写入与校验完成，产物清单 ===
+  output/00-config-diff.txt                          2176 bytes  md5=2be06297
+  output/atomic-demo.txt                               91 bytes  md5=44ee93a9
+  output/custom_spider.jar                          55595 bytes  md5=be599b2f
+  output/my-subscription.json                         976 bytes  md5=f8faba92
+  output/quotes.json                                 7135 bytes  md5=e4c2f33f
+  output/quotes.tsv                                  7895 bytes  md5=f2dff69b
+  output/tvfan/Cloud-drive.txt                        167 bytes  md5=50fe338c

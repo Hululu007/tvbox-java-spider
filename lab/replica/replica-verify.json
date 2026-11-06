@@ -1,0 +1,60 @@
+{
+  "service": "复刻站点自检",
+  "subscription": "http://127.0.0.1:8898/api/replica/config",
+  "playProxy": "http://127.0.0.1:8898/api/stream?ref=",
+  "sites": [
+    {
+      "key": "MDrive",
+      "name": "🗂我的云盘┃配置",
+      "originApi": "csp_MyDriveGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/MDrive/",
+      "results": 4,
+      "playableResults": 4,
+      "status": "ok",
+      "ms": 2
+    },
+    {
+      "key": "seed",
+      "name": "💡聚剧┃四盘",
+      "originApi": "csp_SeedhubGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/seed/",
+      "results": 8,
+      "playableResults": 3,
+      "status": "ok",
+      "ms": 0
+    },
+    {
+      "key": "ZPan",
+      "name": "🎈盘搜┃四盘",
+      "originApi": "csp_S_zpsGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/ZPan/",
+      "results": 60,
+      "playableResults": 24,
+      "status": "ok",
+      "ms": 16996
+    },
+    {
+      "key": "JPan",
+      "name": "🦋易搜┃四盘",
+      "originApi": "csp_S_zpsGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/JPan/",
+      "results": 60,
+      "playableResults": 16,
+      "status": "ok",
+      "ms": 2289
+    },
+    {
+      "key": "YpanSo",
+      "name": "🐌盘她┃夸父",
+      "originApi": "csp_YpanSoGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/YpanSo/",
+      "results": 8,
+      "playableResults": 6,
+      "status": "ok",
+      "ms": 7387
+    }
+  ],
+  "ok": 5,
+  "total": 5,
+  "quarkCookieConfigured": false
+}

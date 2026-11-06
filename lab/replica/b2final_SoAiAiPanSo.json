@@ -1,0 +1,88 @@
+{
+  "code": 1,
+  "msg": "数据列表",
+  "page": 1,
+  "pagecount": 1,
+  "limit": 5,
+  "total": 5,
+  "list": [
+    {
+      "vod_id": "eyJwcm92aWRlciI6InVjIiwic2hhcmVJZCI6ImFhZWI1MWNlODk1NTQiLCJwYXNzY29kZSI6IiIsIm5vdGUiOiLlh6Hkurrkv67ku5nkvKDkuYvngJrmtbfov7fouKogNEsg5rS76LeDVUMg5YWN55m75Y-v5pKtIiwidXJsIjoiaHR0cHM6Ly9kcml2ZS51Yy5jbi9zL2FhZWI1MWNlODk1NTQiLCJzb3VyY2UiOiLmtLvot4PliIbkuqso5a6e5rWL5Y-v5bGV5byAKSIsInNpdGUiOiJTb0FpQWlQYW5TbyJ9",
+      "vod_name": "凡人修仙传之瀚海迷踪 4K 活跃UC 免登可播",
+      "vod_pic": "",
+      "vod_remarks": "UC网盘 · ✅点开即播",
+      "vod_content": "凡人修仙传之瀚海迷踪 4K 活跃UC 免登可播",
+      "type_name": "UC网盘"
+    },
+    {
+      "vod_id": "eyJwcm92aWRlciI6InF1YXJrIiwic2hhcmVJZCI6ImViYzNjMjM0ZmFlNyIsInBhc3Njb2RlIjoiIiwibm90ZSI6IuWHoeS6uuS_ruS7meS8oCDmm7QxOTjpm4YgNEsg5Zu96K-t5Lit5a2XIiwidXJsIjoiaHR0cHM6Ly9wYW4ucXVhcmsuY24vcy9lYmMzYzIzNGZhZTciLCJzb3VyY2UiOiLmtLvot4PliIbkuqso5a6e5rWL5Y-v5bGV5byAKSIsInNpdGUiOiJTb0FpQWlQYW5TbyJ9",
+      "vod_name": "凡人修仙传 更198集 4K 国语中字",
+      "vod_pic": "",
+      "vod_remarks": "夸克网盘 · ✅点开即播",
+      "vod_content": "凡人修仙传 更198集 4K 国语中字",
+      "type_name": "夸克网盘"
+    },
+    {
+      "vod_id": "eyJwcm92aWRlciI6InF1YXJrIiwic2hhcmVJZCI6ImFhNzMxOTAzNjUzNiIsInBhc3Njb2RlIjoiIiwibm90ZSI6IuWHoeS6uuS_ruS7meS8oCAyMDI1IDRLIFNEUiDpq5jnoIHnjocg57qv5YeA54mIIiwidXJsIjoiaHR0cHM6Ly9wYW4ucXVhcmsuY24vcy9hYTczMTkwMzY1MzYiLCJzb3VyY2UiOiLmtLvot4PliIbkuqso5a6e5rWL5Y-v5bGV5byAKSIsInNpdGUiOiJTb0FpQWlQYW5TbyJ9",
+      "vod_name": "凡人修仙传 2025 4K SDR 高码率 纯净版",
+      "vod_pic": "",
+      "vod_remarks": "夸克网盘 · ✅点开即播",
+      "vod_content": "凡人修仙传 2025 4K SDR 高码率 纯净版",
+      "type_name": "夸克网盘"
+    },
+    {
+      "vod_id": "eyJwcm92aWRlciI6InVjIiwic2hhcmVJZCI6ImEyYjU2YzMwM2I0YjQiLCJwYXNzY29kZSI6IiIsIm5vdGUiOiLlh6Hkurrkv67ku5nkvKAg5pu0MTk46ZuGIDRLIEgyNjUgSERS55yf5b2pIiwidXJsIjoiaHR0cHM6Ly9kcml2ZS51Yy5jbi9zL2EyYjU2YzMwM2I0YjQiLCJzb3VyY2UiOiJ0dmZhbi9DbG91ZC1kcml2ZS50eHQiLCJzaXRlIjoi6Ieq5bu65bqT5YWc5bqVIn0",
+      "vod_name": "凡人修仙传 更198集 4K H265 HDR真彩",
+      "vod_pic": "",
+      "vod_remarks": "UC网盘 · ✅点开即播",
+      "vod_content": "凡人修仙传 更198集 4K H265 HDR真彩",
+      "type_name": "UC网盘"
+    },
+    {
+      "vod_id": "eyJwcm92aWRlciI6InVjIiwic2hhcmVJZCI6IjhmZDFjN2VmYTg3ZDQiLCJwYXNzY29kZSI6IiIsIm5vdGUiOiLlh6Hkurrkv67ku5nkvKAg5bmV5YWw5LmL5oiYIOW5tOeVqjQgMTk46ZuGIiwidXJsIjoiaHR0cHM6Ly9kcml2ZS51Yy5jbi9zLzhmZDFjN2VmYTg3ZDQ_cHVibGljXHUwMDNkMSIsInNvdXJjZSI6InR2ZmFuL0Nsb3VkLWRyaXZlLnR4dCIsInNpdGUiOiLoh6rlu7rlupPlhZzlupUifQ",
+      "vod_name": "凡人修仙传 幕兰之战 年番4 198集",
+      "vod_pic": "",
+      "vod_remarks": "UC网盘 · ✅点开即播",
+      "vod_content": "凡人修仙传 幕兰之战 年番4 198集",
+      "type_name": "UC网盘"
+    }
+  ],
+  "class": [
+    {
+      "type_id": "quark",
+      "type_name": "夸克(可播)"
+    },
+    {
+      "type_id": "uc",
+      "type_name": "UC(可播·免登)"
+    },
+    {
+      "type_id": "baidu",
+      "type_name": "百度"
+    },
+    {
+      "type_id": "115",
+      "type_name": "115"
+    },
+    {
+      "type_id": "aliyun",
+      "type_name": "阿里"
+    },
+    {
+      "type_id": "xunlei",
+      "type_name": "迅雷"
+    },
+    {
+      "type_id": "tianyi",
+      "type_name": "天翼"
+    },
+    {
+      "type_id": "123",
+      "type_name": "123"
+    }
+  ],
+  "wd": "凡人修仙传",
+  "replica_key": "SoAiAiPanSo",
+  "origin_api": "csp_SoAiAiPanSoGuard",
+  "backend": "aipanso.com AES-CBC 反爬 Cookie → /search?k= 列表 + 免登实例取链"
+}

@@ -1,0 +1,117 @@
+{
+  "code": 1,
+  "msg": "数据列表",
+  "page": 1,
+  "pagecount": 1,
+  "limit": 4,
+  "total": 4,
+  "list": [
+    {
+      "vod_id": "eyJwcm92aWRlciI6InF1YXJrIiwic2hhcmVJZCI6ImViYzNjMjM0ZmFlNyIsInBhc3Njb2RlIjoiIiwibm90ZSI6IuWHoeS6uuS_ruS7meS8oCDmm7QxOTjpm4YgNEsg5Zu96K-t5Lit5a2XIiwidXJsIjoiaHR0cHM6Ly9wYW4ucXVhcmsuY24vcy9lYmMzYzIzNGZhZTciLCJzb3VyY2UiOiJwYW4ucXVhcmsuY24iLCJzaXRlIjoiTURyaXZlIn0",
+      "vod_name": "凡人修仙传 更198集 4K 国语中字",
+      "vod_pic": "",
+      "vod_remarks": "夸克网盘 · ✅点开即播",
+      "vod_content": "凡人修仙传 更198集 4K 国语中字",
+      "type_name": "夸克网盘"
+    },
+    {
+      "vod_id": "eyJwcm92aWRlciI6InF1YXJrIiwic2hhcmVJZCI6ImFhNzMxOTAzNjUzNiIsInBhc3Njb2RlIjoiIiwibm90ZSI6IuWHoeS6uuS_ruS7meS8oCAyMDI1IDRLIFNEUiDpq5jnoIHnjocg57qv5YeA54mIIiwidXJsIjoiaHR0cHM6Ly9wYW4ucXVhcmsuY24vcy9hYTczMTkwMzY1MzYiLCJzb3VyY2UiOiJwYW4ucXVhcmsuY24iLCJzaXRlIjoiTURyaXZlIn0",
+      "vod_name": "凡人修仙传 2025 4K SDR 高码率 纯净版",
+      "vod_pic": "",
+      "vod_remarks": "夸克网盘 · ✅点开即播",
+      "vod_content": "凡人修仙传 2025 4K SDR 高码率 纯净版",
+      "type_name": "夸克网盘"
+    },
+    {
+      "vod_id": "eyJwcm92aWRlciI6InVjIiwic2hhcmVJZCI6ImEyYjU2YzMwM2I0YjQiLCJwYXNzY29kZSI6IiIsIm5vdGUiOiLlh6Hkurrkv67ku5nkvKAg5pu0MTk46ZuGIDRLIEgyNjUgSERS55yf5b2pIiwidXJsIjoiaHR0cHM6Ly9kcml2ZS51Yy5jbi9zL2EyYjU2YzMwM2I0YjQiLCJzb3VyY2UiOiJkcml2ZS51Yy5jbiIsInNpdGUiOiJNRHJpdmUifQ",
+      "vod_name": "凡人修仙传 更198集 4K H265 HDR真彩",
+      "vod_pic": "",
+      "vod_remarks": "UC网盘 · ✅点开即播",
+      "vod_content": "凡人修仙传 更198集 4K H265 HDR真彩",
+      "type_name": "UC网盘"
+    },
+    {
+      "vod_id": "eyJwcm92aWRlciI6InVjIiwic2hhcmVJZCI6IjhmZDFjN2VmYTg3ZDQiLCJwYXNzY29kZSI6IiIsIm5vdGUiOiLlh6Hkurrkv67ku5nkvKAg5bmV5YWw5LmL5oiYIOW5tOeVqjQgMTk46ZuGIiwidXJsIjoiaHR0cHM6Ly9kcml2ZS51Yy5jbi9zLzhmZDFjN2VmYTg3ZDQ_cHVibGljXHUwMDNkMSIsInNvdXJjZSI6ImRyaXZlLnVjLmNuIiwic2l0ZSI6Ik1Ecml2ZSJ9",
+      "vod_name": "凡人修仙传 幕兰之战 年番4 198集",
+      "vod_pic": "",
+      "vod_remarks": "UC网盘 · ✅点开即播",
+      "vod_content": "凡人修仙传 幕兰之战 年番4 198集",
+      "type_name": "UC网盘"
+    }
+  ],
+  "class": [
+    {
+      "type_id": "quark",
+      "type_name": "夸克(可播)"
+    },
+    {
+      "type_id": "uc",
+      "type_name": "UC(可播·免登)"
+    },
+    {
+      "type_id": "baidu",
+      "type_name": "百度"
+    },
+    {
+      "type_id": "115",
+      "type_name": "115"
+    },
+    {
+      "type_id": "aliyun",
+      "type_name": "阿里"
+    },
+    {
+      "type_id": "xunlei",
+      "type_name": "迅雷"
+    },
+    {
+      "type_id": "tianyi",
+      "type_name": "天翼"
+    },
+    {
+      "type_id": "123",
+      "type_name": "123"
+    }
+  ],
+  "wd": "凡人修仙传",
+  "replica_key": "MDrive",
+  "origin_api": "csp_MyDriveGuard",
+  "backend": "本地配置中心 + tvfan/Cloud-drive.txt 自建分享库",
+  "config": {
+    "config_center": "http://127.0.0.1:8898/",
+    "qr": "http://127.0.0.1:8898/api/qr",
+    "cloud_drive_file": "http://127.0.0.1:8898/tvfan/Cloud-drive.txt",
+    "cookies": {
+      "quark_cookie": {
+        "configured": false,
+        "length": 0,
+        "hint": "夸克 Cookie（pan.quark.cn，播放夸克必填）"
+      },
+      "baidu_cookie": {
+        "configured": false,
+        "length": 0,
+        "hint": "百度 Cookie（pan.baidu.com）"
+      },
+      "pan115_cookie": {
+        "configured": false,
+        "length": 0,
+        "hint": "115 Cookie（115.com）"
+      },
+      "uc_cookie": {
+        "configured": false,
+        "length": 0,
+        "hint": "UC Cookie（可选，UC 现在由接口自动下发 __pugs）"
+      },
+      "kfzy_cookie": {
+        "configured": false,
+        "length": 0,
+        "hint": "夸父资源社 Cookie（盘她┃夸父 抓帖用，留空用内置会话）"
+      },
+      "host": {
+        "configured": false,
+        "length": 0,
+        "hint": "全盘搜主站（留空用 https://quanpan.xyz）"
+      }
+    }
+  }
+}

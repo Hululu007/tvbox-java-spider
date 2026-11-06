@@ -1,0 +1,47 @@
+{
+  "code": 1,
+  "msg": "数据列表",
+  "page": 1,
+  "pagecount": 1,
+  "limit": 0,
+  "total": 0,
+  "list": [],
+  "class": [
+    {
+      "type_id": "quark",
+      "type_name": "夸克(可播)"
+    },
+    {
+      "type_id": "uc",
+      "type_name": "UC(可播·免登)"
+    },
+    {
+      "type_id": "baidu",
+      "type_name": "百度"
+    },
+    {
+      "type_id": "115",
+      "type_name": "115"
+    },
+    {
+      "type_id": "aliyun",
+      "type_name": "阿里"
+    },
+    {
+      "type_id": "xunlei",
+      "type_name": "迅雷"
+    },
+    {
+      "type_id": "tianyi",
+      "type_name": "天翼"
+    },
+    {
+      "type_id": "123",
+      "type_name": "123"
+    }
+  ],
+  "wd": "凡人修仙传",
+  "replica_key": "seed",
+  "origin_api": "csp_SeedhubGuard",
+  "backend": "seedog.cc /s/<kw>/ → /movies/<id>/ → /link_start/"
+}

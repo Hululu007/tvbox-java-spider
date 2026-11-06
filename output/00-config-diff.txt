@@ -1,0 +1,52 @@
+三份订阅配置对比报告
+生成时间: 2026-11-06T16:29:54.973910100
+========================================================================
+
+■ xhztv.json  (19865 bytes)
+  spider URL   : http://xhztv.top/xhz/Yoursmile.jar
+  spider 校验  : md5 / 69DADB9A99A618EA9E2F4E2B92968E41
+  伪装后缀     : false
+  顶层字段     : [spider, wallpaper, logo, sites, lives, parses, flags]
+  sites        : 54 (csp_=50, 非csp=4)
+  不同 api 数  : 40
+  ext 形态     : 无=18 URL=29 字符串=3 对象=4
+  parses/lives/flags : 6 / 1 / 51
+  api 复用 TOP4:
+    7x  csp_Bili
+    6x  csp_XBPQ
+    3x  http://xhztv.top/xhz/js/lib/drpy2.min.js
+    2x  csp_AppMao
+
+■ wex-20261106.json  (24351 bytes)
+  spider URL   : http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg
+  spider 校验  : md5 / 86cb2cdcd99e29334004b80e48007e9a
+  伪装后缀     : true
+  顶层字段     : [spider, wallpaper, logo, sites, lives, parses, flags]
+  sites        : 98 (csp_=98, 非csp=0)
+  不同 api 数  : 82
+  ext 形态     : 无=78 URL=2 字符串=0 对象=18
+  parses/lives/flags : 4 / 2 / 0
+  api 复用 TOP4:
+    10x  csp_WexAppV7Guard
+    7x  csp_BiliGuard
+    2x  csp_NewDouBanGuard
+    1x  csp_PanConfigGuard
+
+■ xiuxiu-20261106.json  (16767 bytes)
+  spider URL   : https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg
+  spider 校验  : md5 / b3fb6f369726e9c688dd5a7ad017d0dd
+  伪装后缀     : true
+  顶层字段     : [spider, wallpaper, logo, sites, lives, parses, flags]
+  sites        : 48 (csp_=45, 非csp=3)
+  不同 api 数  : 38
+  ext 形态     : 无=17 URL=4 字符串=7 对象=20
+  parses/lives/flags : 0 / 6 / 0
+  api 复用 TOP4:
+    7x  csp_BiliGuard
+    3x  https://ghproxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js
+    2x  csp_T4Guard
+    2x  csp_S_zpsGuard
+
+结论：三份都是同一套 schema（spider/wallpaper/logo/sites/lives/parses/flags），
+      差异只在「站点数量」和「ext 形态」。类复用率越高，ext 越重要。
+      xiuxiu 里的 "tvfan/Cloud-drive.txt" 是相对路径，说明订阅是一组文件而非单个 JSON。

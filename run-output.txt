@@ -1,0 +1,44 @@
+===== Java 爬虫教学 · 全流程演示 =====
+
+【1】订阅配置结构解析（纯本地，不发请求）
+spider   : http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a
+sites    : 7 个（type=3 且 api 以 csp_ 开头：7 个）
+csp 类名 : [csp_DemoSpider, csp_NewDouBanGuard, csp_AiNewHuaJuanGuard, csp_WexAppV7Guard, csp_BiliGuard, csp_WebDAVGuard] ... 共 7 个
+parses   : 4 个  [王, 二, 小, 帅]
+rules    : 4 组  [proxy, 火山嗅探, 抖音嗅探, 夜市點擊]
+lives    : 2 | doh: 4 | ads: 3 | headers: 1
+
+【2】spider 字段拆解 + MD5 完整性校验
+下载地址 : http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg
+校验算法 : md5
+期望摘要 : 86cb2cdcd99e29334004b80e48007e9a
+伪装后缀 : 是（非 .jar，靠内容识别）
+样本内容 md5 : 8bf2c93acef1270ed03a051980c693cb
+与配置摘要匹配: false  <- 不一致时壳会丢弃缓存、重新下载
+
+【3】csp_ 类名 -> 反射加载（壳加载 jar 的核心动作）
+  csp_DemoSpider -> com.github.catvod.spider.DemoSpider  [加载成功]
+  csp_NewDouBanGuard -> com.github.catvod.spider.NewDouBanGuard  [本工程未内置，跳过]
+  csp_AiNewHuaJuanGuard -> com.github.catvod.spider.AiNewHuaJuanGuard  [本工程未内置，跳过]
+  csp_WexAppV7Guard -> com.github.catvod.spider.WexAppV7Guard  [本工程未内置，跳过]
+
+【4】Jsoup 解析演示（离线 HTML，验证 CSS 选择器与绝对 URL）
+  提取到 2 条：
+    [Linus Torvalds] “Talk is cheap. Show me the code.” | abs:href = https://quotes.toscrape.com/author/Linus-Torvalds
+    [Abelson] “程序必须为人阅读而写。” | abs:href = https://quotes.toscrape.com/author/Abelson
+
+【5】Spider 生命周期调用（网络可用时为真实数据）
+  homeContent     -> {"class":[{"type_id":"1","type_name":"第 1 页"},{"type_id":"2","type_name":"第 2 页"},{"type_id":"3","type_name":"第 3 页"}],"list":[{"vod_id":"1#0","vod_name":"Albert Einstein：“The world as we have created ...   [1842 字符]
+  categoryContent -> {"list":[{"vod_id":"1#0","vod_name":"Albert Einstein：“The world as we have created it is a pr…","vod_pic":"","vod_remarks":"Tags: change deep-thoughts thinking world","type_name":"第 1 页"},{"vod_id":"1 ...   [1756 字符]
+  searchContent   -> {"list":[{"vod_id":"1#2","vod_name":"Albert Einstein：“There are only two ways to live your li…","vod_pic":"","vod_remarks":"Tags: inspirational life live miracle miracles","type_name":"第 1 页"}],"page" ...   [237 字符]
+  detailContent   -> {"list":[{"vod_id":"1#0","vod_name":"Albert Einstein","vod_remarks":"Albert Einstein","vod_content":"“The world as we have created it is a process of our thinking. It cannot be changed without changin ...   [401 字符]
+  playerContent   -> {"parse":0,"playUrl":"","url":"https://quotes.toscrape.com/author/Linus-Torvalds","header":{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0  ...   [216 字符]
+
+【6】并发调度：线程池 + 限速 + 去重 + 重试
+  [去重] 跳过重复 URL: https://quotes.toscrape.com/
+  返回 3 页（输入 4 条，去重后应为 3 条）：
+    https://quotes.toscrape.com/ -> 10 条记录
+    https://quotes.toscrape.com/page/2/ -> 10 条记录
+    https://quotes.toscrape.com/page/3/ -> 10 条记录
+
+===== 演示结束 =====

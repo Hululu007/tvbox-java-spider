@@ -1,0 +1,384 @@
+{
+  "index": {
+    "endpoint": "/",
+    "status": 200,
+    "bytes": 648,
+    "elapsed": 0.11,
+    "keys": [
+      "service",
+      "base",
+      "subscription",
+      "endpoints"
+    ],
+    "endpoints_len": 16
+  },
+  "sites": {
+    "endpoint": "/api/sites",
+    "status": 200,
+    "bytes": 8313,
+    "elapsed": 0.02,
+    "keys": [
+      "count",
+      "probed_at",
+      "sites"
+    ],
+    "sites_len": 26
+  },
+  "probe": {
+    "endpoint": "/api/probe",
+    "status": 200,
+    "bytes": 11220,
+    "elapsed": 0.01,
+    "keys": [
+      "probed_at",
+      "count",
+      "results"
+    ]
+  },
+  "samples": {
+    "endpoint": "/api/samples",
+    "status": 200,
+    "bytes": 21730,
+    "elapsed": 0.01,
+    "keys": [
+      "list-default",
+      "list-t1-pg2",
+      "list-at-json",
+      "search-wd",
+      "hours",
+      "xml-liangzi",
+      "xml-lzm3u8",
+      "xml-down",
+      "art"
+    ]
+  },
+  "config": {
+    "endpoint": "/api/config",
+    "status": 200,
+    "bytes": 2899,
+    "elapsed": 0.01,
+    "keys": [
+      "spider",
+      "wallpaper",
+      "logo",
+      "sites",
+      "parses",
+      "flags",
+      "lives",
+      "ads",
+      "_meta"
+    ],
+    "sites_len": 8
+  },
+  "cms-lzi": {
+    "endpoint": "/api/cms/lzi/?ac=list&pg=1",
+    "status": 200,
+    "bytes": 19705,
+    "elapsed": 1.19,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "class",
+      "list"
+    ],
+    "list_len": 20,
+    "total": 162833,
+    "first_name": "反恐特警组：放逐者",
+    "first3": [
+      "反恐特警组：放逐者",
+      "乔治和曼迪的头婚生活第三季",
+      "奇思妙探第四季"
+    ],
+    "class_len": 40
+  },
+  "cms-detail": {
+    "endpoint": "/api/cms/lzi/?ac=detail&ids=158436",
+    "status": 200,
+    "bytes": 2752,
+    "elapsed": 0.33,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list"
+    ],
+    "list_len": 1,
+    "total": 1,
+    "first_name": "反恐特警组：放逐者",
+    "first3": [
+      "反恐特警组：放逐者"
+    ],
+    "play_chars": 913
+  },
+  "cms-liangzi": {
+    "endpoint": "/api/cms/liangzi/?ac=list&pg=1",
+    "status": 200,
+    "bytes": 19587,
+    "elapsed": 0.37,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "class",
+      "list"
+    ],
+    "list_len": 20,
+    "total": 20,
+    "first_name": "反恐特警组：放逐者",
+    "first3": [
+      "反恐特警组：放逐者",
+      "乔治和曼迪的头婚生活第三季",
+      "奇思妙探第四季"
+    ],
+    "class_len": 40
+  },
+  "cms-seedhub": {
+    "endpoint": "/api/cms/seedhub/?ac=list",
+    "status": 200,
+    "bytes": 6857,
+    "elapsed": 2.88,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list"
+    ],
+    "list_len": 20,
+    "total": 20,
+    "first_name": "生化危机：爆发夜 Resident Evil",
+    "first3": [
+      "生化危机：爆发夜 Resident Evil",
+      "欢迎来龙餐馆",
+      "八仙！"
+    ],
+    "play_chars": 37
+  },
+  "cms-wuye": {
+    "endpoint": "/api/cms/wuye/?ac=list",
+    "status": 200,
+    "bytes": 14664,
+    "elapsed": 1.31,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list"
+    ],
+    "list_len": 40,
+    "total": 40,
+    "first_name": "蓝色星球第三季",
+    "first3": [
+      "蓝色星球第三季",
+      "复活男",
+      "鬼附体"
+    ],
+    "play_chars": 57
+  },
+  "cms-quanpan": {
+    "endpoint": "/api/cms/quanpan/?ac=list",
+    "status": 200,
+    "bytes": 140,
+    "elapsed": 0.0,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list"
+    ],
+    "list_len": 0,
+    "total": 0
+  },
+  "xml-json": {
+    "endpoint": "/api/xml?from=lzm3u8",
+    "status": 200,
+    "bytes": 5668,
+    "elapsed": 0.34,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list"
+    ],
+    "list_len": 20,
+    "total": 20,
+    "first_name": "反恐特警组：放逐者",
+    "first3": [
+      "反恐特警组：放逐者",
+      "乔治和曼迪的头婚生活第三季",
+      "奇思妙探第四季"
+    ]
+  },
+  "home": {
+    "endpoint": "/api/home?site=lzi",
+    "status": 200,
+    "bytes": 18862,
+    "elapsed": 0.01,
+    "keys": [
+      "class",
+      "list",
+      "filters"
+    ],
+    "list_len": 20,
+    "total": null,
+    "first_name": "反恐特警组：放逐者",
+    "first3": [
+      "反恐特警组：放逐者",
+      "乔治和曼迪的头婚生活第三季",
+      "奇思妙探第四季"
+    ],
+    "class_len": 40
+  },
+  "search": {
+    "endpoint": "/api/search?site=lzi&wd=%E5%87%A1%E4%BA%BA",
+    "status": 200,
+    "bytes": 14636,
+    "elapsed": 0.38,
+    "keys": [
+      "list",
+      "total"
+    ],
+    "list_len": 20,
+    "total": 261,
+    "first_name": "凡人修仙传2020",
+    "first3": [
+      "凡人修仙传2020",
+      "凡人修仙传 燕家堡之战",
+      "凡人修仙传：魔道争锋"
+    ]
+  },
+  "detail": {
+    "endpoint": "/api/detail?site=lzi&id=158436",
+    "status": 200,
+    "bytes": 2664,
+    "elapsed": 0.0,
+    "keys": [
+      "list"
+    ],
+    "list_len": 1,
+    "total": null,
+    "first_name": "反恐特警组：放逐者",
+    "first3": [
+      "反恐特警组：放逐者"
+    ],
+    "play_chars": 913
+  },
+  "play": {
+    "endpoint": "/api/play?site=lzi&id=158436&n=0",
+    "status": 200,
+    "bytes": 397,
+    "elapsed": 0.0,
+    "keys": [
+      "parse",
+      "url",
+      "flag",
+      "header",
+      "source_site",
+      "raw_play_url"
+    ],
+    "parse": 1,
+    "resolved_url": "https://lziplayer.com/?url=https://v.lfthirtytwo.com/share/561e7e7d74cece738"
+  },
+  "php-vod": {
+    "endpoint": "/api.php/provide/vod/?ac=list&pg=1",
+    "status": 200,
+    "bytes": 19705,
+    "elapsed": 0.0,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "class",
+      "list"
+    ],
+    "list_len": 20,
+    "total": 162833,
+    "first_name": "反恐特警组：放逐者",
+    "first3": [
+      "反恐特警组：放逐者",
+      "乔治和曼迪的头婚生活第三季",
+      "奇思妙探第四季"
+    ],
+    "class_len": 40
+  },
+  "php-art": {
+    "endpoint": "/api.php/provide/art/?ac=list",
+    "status": 200,
+    "bytes": 3037,
+    "elapsed": 0.34,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "class",
+      "list"
+    ],
+    "list_len": 20,
+    "total": 6548,
+    "first_name": "",
+    "first3": [
+      "",
+      "",
+      ""
+    ],
+    "class_len": 3
+  },
+  "php-actor": {
+    "endpoint": "/api.php/provide/actor/?ac=list",
+    "status": 200,
+    "bytes": 2731,
+    "elapsed": 0.34,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "class",
+      "list"
+    ],
+    "list_len": 20,
+    "total": 4436,
+    "first_name": "",
+    "first3": [
+      "",
+      "",
+      ""
+    ],
+    "class_len": 1
+  },
+  "php-xml": {
+    "kind": "xml",
+    "bytes": 4389,
+    "video_count": 20,
+    "elapsed": 0.31
+  }
+}

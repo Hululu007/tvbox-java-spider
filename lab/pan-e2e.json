@@ -1,0 +1,47 @@
+{
+  "verify": {
+    "site": "https://quanpan.xyz",
+    "tokenOk": true,
+    "searchResults": 60,
+    "lastError": "UC: 好友已取消了分享 (HTTP 404)",
+    "ucShare": "",
+    "quarkCookieConfigured": false
+  },
+  "detail": {
+    "episodes": 88,
+    "playItems": 88
+  },
+  "stream": {
+    "status": 206,
+    "bytes": 2048,
+    "contentRange": "bytes 0-2047/1528302179",
+    "magic": "b'\\x00\\x00\\x00\\x1cftypisom'",
+    "playable": true
+  },
+  "configCenter": {
+    "saved": 1,
+    "readBackVerified": true,
+    "jsInjected": true,
+    "cleared": true
+  },
+  "config": {
+    "sites": 49,
+    "localSites": 2,
+    "panSites": 47,
+    "byCategory": {
+      "盘搜/网盘搜索": 18,
+      "网盘资源站": 26,
+      "网盘配置中心": 3
+    },
+    "main": {
+      "key": "QuanPan4K",
+      "name": "🌸全盘搜｜夸克4K",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/pan/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    }
+  }
+}

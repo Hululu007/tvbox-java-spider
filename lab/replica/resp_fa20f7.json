@@ -1,0 +1,53 @@
+{
+  "source": "config/download4.json（与 xiuxiu-20261106.json 同版）",
+  "originSpiderJar": "https://xiuxiu-pro-new.meitudata.com/posters/8057468f8f30ba79c6dbbeb7fc1a052e.jpg;md5;b3fb6f369726e9c688dd5a7ad017d0dd",
+  "replicaType": "type:1 苹果 CMS 兼容，spider 留空，零 jar 依赖",
+  "playProxy": "http://127.0.0.1:8898/api/stream?ref=",
+  "sites": [
+    {
+      "key": "MDrive",
+      "name": "🗂我的云盘┃配置",
+      "kind": "网盘配置中心",
+      "originApi": "csp_MyDriveGuard",
+      "originExt": "{\"Cloud-drive\":\"tvfan/Cloud-drive.txt\"}",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/MDrive/",
+      "backend": "本地配置中心 + tvfan/Cloud-drive.txt 自建分享库"
+    },
+    {
+      "key": "seed",
+      "name": "💡聚剧┃四盘",
+      "kind": "四盘资源站",
+      "originApi": "csp_SeedhubGuard",
+      "originExt": "\"5++kwLhNYm9UrO9wh7Dl7eKamTee4s/5\"（加密 ext，原样保留）",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/seed/",
+      "backend": "seedog.cc /s/<kw>/ → /movies/<id>/ → /link_start/"
+    },
+    {
+      "key": "ZPan",
+      "name": "🎈盘搜┃四盘",
+      "kind": "盘搜/网盘搜索",
+      "originApi": "csp_S_zpsGuard",
+      "originExt": "{\"siteUrl\":\"http://107.173.211.148/\"}",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/ZPan/",
+      "backend": "PanSou 免登实例 107.173.211.148（8 盘）"
+    },
+    {
+      "key": "JPan",
+      "name": "🦋易搜┃四盘",
+      "kind": "盘搜/网盘搜索",
+      "originApi": "csp_S_zpsGuard",
+      "originExt": "{\"siteUrl\":\"https://so.252035.xyz/\"}",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/JPan/",
+      "backend": "PanSou 免登实例 so.252035.xyz（10 盘）"
+    },
+    {
+      "key": "YpanSo",
+      "name": "🐌盘她┃夸父",
+      "kind": "盘搜/网盘搜索",
+      "originApi": "csp_YpanSoGuard",
+      "originExt": "{\"Cloud-drive\":\"tvfan/Cloud-drive.txt\"}",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/YpanSo/",
+      "backend": "kfzy.net search.htm → thread-<id>.htm（带论坛 Cookie）"
+    }
+  ]
+}

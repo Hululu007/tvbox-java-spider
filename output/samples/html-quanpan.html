@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="canonical" href="https://quanpan.xyz/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>全盘搜索 - 找网盘资源，全盘搜索帮你搞定！</title>
+    <meta name="keywords" content="网盘搜索,网盘资源,百度网盘,阿里云盘,夸克网盘">
+    <meta name="description" content="聚合多平台网盘资源，一键搜索百度网盘、阿里云盘、夸克网盘、UC网盘、123云盘、115云盘、阿里云盘、电驴、磁力、百度网盘、迅雷、UC网盘、夸克网盘、移动网盘、天翼云、123云盘、115云盘、阿里云盘、电驴、磁力、百度网盘、迅雷、UC网盘、夸克网盘、移动网盘、天翼云、123云盘、115云盘等。">
+    <link rel="stylesheet" href="./statics/main.css"/>
+    <link rel="stylesheet" href="./statics/orbit.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_5211862_evm7h9jwgjj.css"/>
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8270bdb8daaad63a6c318d983a8c038d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body class="page-home">
+
+
+<main class="home">
+    
+    <div class="brand">
+        <div class="brand-logo">
+            <a href="./"><img src="./statics/images/logo.webp" alt="全盘搜索"></a>
+        </div>
+        <h1 class="brand-slogan">找网盘资源，<span class="brand-slogan-strong">全盘搜索</span>帮你搞定</h1>
+        <div class="brand-subtitle">
+            <div class="brand-subtitle-item"><i class="icon icon-yes"></i>主流网盘全覆盖</div>
+            <div class="brand-subtitle-item"><i class="icon icon-yes"></i>链接有效性检测</div>
+            <div class="brand-subtitle-item"><i class="icon icon-yes"></i>真免费无广告</div>
+        </div>
+    </div>
+
+    <div class="search">
+        <form class="search-form big" id="searchForm" autocomplete="off">
+            <input type="text" name="q" id="searchInput" class="search-input" placeholder="输入影片名称" maxlength="100" autocomplete="off"/>
+            <button type="button" class="search-clear" id="searchClear" aria-label="清除"><i class="icon icon-no"></i></button>
+            <button type="submit" class="search-btn"><i class="icon icon-search"></i><div class="loader" style="display: none;"></div></button>
+            <div class="suggest-box" id="suggestBox" hidden></div>
+        </form>
+    </div>
+
+    <div class="orbit" style="display: none;">
+        <div class="orbit-wrap">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring" style="animation-delay:6s;"></div>
+            <div class="pulse-ring" style="animation-delay:8s;"></div>
+
+            <div class="orbit-center"><span class="fb" ><img src="./statics/images/icon.webp" alt="logo"></span></div>
+
+            <div class="orbit-ring orbit-ring-1">
+                <div class="orbit-item pos-0"><span class="fb"><img src="./statics/pan-icon/baidu.svg" alt="百度网盘"></span></div>
+                <div class="orbit-item pos-60"><span class="fb"><img src="./statics/pan-icon/xunlei.svg" alt="迅雷"></span></div>
+                <div class="orbit-item pos-120"><span class="fb"><img src="./statics/pan-icon/uc.svg" alt="UC网盘"></span></div>
+                <div class="orbit-item pos-180"><span class="fb"><img src="./statics/pan-icon/kuake.svg" alt="夸克网盘"></span></div>
+                <div class="orbit-item pos-240"><span class="fb"><img src="./statics/pan-icon/yidong.svg" alt="移动网盘"></span></div>
+                <div class="orbit-item pos-300"><span class="fb"><img src="./statics/pan-icon/tianyi.svg" alt="天翼云"></span></div>
+            </div>
+
+            <div class="orbit-ring orbit-ring-2">
+                <div class="orbit-item pos-0"><span class="fb"><img src="./statics/pan-icon/123.svg" alt="123云盘"></span></div>
+                <div class="orbit-item pos-60"><span class="fb"><img src="./statics/pan-icon/115.svg" alt="115云盘"></span></div>
+                <div class="orbit-item pos-120"><span class="fb"><img src="./statics/pan-icon/magnet.svg" alt="磁力"></span></div>
+                <div class="orbit-item pos-180"><span class="fb"><img src="./statics/pan-icon/ali.svg" alt="阿里云盘"></span></div>
+                <div class="orbit-item pos-240"><span class="fb"><img src="./statics/pan-icon/eMule.svg" alt="电驴"></span></div>
+                <div class="orbit-item pos-300"><span class="fb"><img src="./statics/pan-icon/guangya.svg" alt="光鸭云盘"></span></div>
+            </div>
+
+            <div class="data-particle" style="top:20%;left:30%;background:#3b82f6;--dx:40px;--dy:-60px;--dur:3s;"></div>
+            <div class="data-particle" style="top:60%;right:20%;background:#10b981;--dx:-50px;--dy:30px;--dur:4s;animation-delay:1s;"></div>
+            <div class="data-particle" style="bottom:25%;left:25%;background:#a78bfa;--dx:60px;--dy:40px;--dur:3.5s;animation-delay:2s;"></div>
+            <div class="data-particle" style="top:35%;right:30%;background:#f59e0b;--dx:-30px;--dy:-50px;--dur:4.5s;animation-delay:.5s;"></div>
+            <div class="data-particle" style="top:50%;left:50%;background:#60a5fa;--dx:20px;--dy:70px;--dur:5s;animation-delay:1.5s;"></div>
+        </div>
+    </div>
+    
+
+    <div class="search-loading" style="display: none;">
+        <div class="loading">
+            <div class="loading-box">
+                <div class="loading-dot"><img src="./statics/pan-icon/baidu.svg" alt="百度网盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/xunlei.svg" alt="迅雷"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/uc.svg" alt="UC网盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/kuake.svg" alt="夸克网盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/yidong.svg" alt="移动网盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/tianyi.svg" alt="天翼云"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/123.svg" alt="123云盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/115.svg" alt="115云盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/magnet.svg" alt="磁力"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/ali.svg" alt="阿里云盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/eMule.svg" alt="电驴"></div>
+                <!-- 复制一份，用于传送带无缝循环 -->
+                <div class="loading-dot"><img src="./statics/pan-icon/baidu.svg" alt="百度网盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/xunlei.svg" alt="迅雷"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/uc.svg" alt="UC网盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/kuake.svg" alt="夸克网盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/yidong.svg" alt="移动网盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/tianyi.svg" alt="天翼云"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/123.svg" alt="123云盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/115.svg" alt="115云盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/magnet.svg" alt="磁力"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/ali.svg" alt="阿里云盘"></div>
+                <div class="loading-dot"><img src="./statics/pan-icon/eMule.svg" alt="电驴"></div>
+            </div>
+        </div>
+        <div class="loader-text">全盘搜索中...</div>
+    </div>
+
+    <div class="result-main" style="display: none;">
+        <div class="result-meta" id="resultMeta"></div>
+
+        <nav class="tabbar" id="tabbar"></nav>
+
+        <div class="tabpanel" id="tabpanel"></div>
+    </div>
+
+</main>
+
+<footer class="footbar">© 2026 全盘搜索. All Rights Reserved.</footer>
+
+
+<div class="toast" id="toast"></div>
+
+<div class="transfer-modal" id="transferModal" hidden>
+    <div class="transfer-modal-box">
+        <div class="transfer-header">
+            <div class="transfer-title">资源详情</div>
+            <button class="transfer-close" data-act="transfer-close" aria-label="关闭">×</button>
+        </div>
+        <div class="transfer-body" id="transferBody"></div>
+    </div>
+</div>
+
+<script type="module" src="./home.min.js"></script>
+</body>
+</html>

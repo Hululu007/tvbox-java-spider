@@ -1,0 +1,46 @@
+{
+  "spider": "http://127.0.0.1:8080/custom_spider.jar;md5;be599b2f08b524150c8f921ab0b499b6",
+  "wallpaper": "",
+  "logo": "",
+  "sites": [
+    {
+      "key": "DemoSpider",
+      "name": "🧪本地┃爬虫Demo🧪",
+      "type": 3,
+      "api": "csp_DemoSpider",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0,
+      "ext": {
+        "Cloud-drive": "tvfan/Cloud-drive.txt",
+        "base": "https://quotes.toscrape.com"
+      }
+    },
+    {
+      "key": "DemoSpider2",
+      "name": "📄规则┃文件引用📄",
+      "type": 3,
+      "api": "csp_DemoSpider",
+      "searchable": 1,
+      "ext": {
+        "json": "tvfan/Cloud-drive.txt"
+      }
+    }
+  ],
+  "parses": [
+    {
+      "name": "本地解析",
+      "type": 1,
+      "url": "http://127.0.0.1:8080/parse?url="
+    }
+  ],
+  "lives": [
+    {
+      "name": "示例直播",
+      "type": 0,
+      "url": "https://example.invalid/live.m3u",
+      "playerType": 2
+    }
+  ],
+  "flags": []
+}

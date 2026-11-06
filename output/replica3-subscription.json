@@ -1,0 +1,285 @@
+{
+  "spider": "",
+  "wallpaper": "",
+  "logo": "",
+  "warningText": "17 站点复刻版（无需 spider jar）｜网盘配置中心/填夸克 Cookie/扫码：http://127.0.0.1:8898/ ｜播放经本地流代理自动补鉴权头",
+  "sites": [
+    {
+      "key": "HuaJuan4K",
+      "name": "💓花卷┃4K💓‍",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/HuaJuan4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewHuaJuanGuard",
+        "backend": "hjzhencai.top 苹果 CMS 搜索 → 详情页夸克/UC 分享",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "Wogg4K",
+      "name": "💓‍玩偶┃4K💓‍",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/Wogg4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewWoggGuard",
+        "backend": "wogg.net /vodsearch/ → /voddetail/ 内嵌多盘分享",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "GuanYing4K",
+      "name": "💓‍观影┃4K💓‍",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/GuanYing4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewGuanYingGuard",
+        "backend": "中文域名站 PoW 浏览器验证，走免登盘搜 + 活跃 UC 兜底",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "Qiwei4K",
+      "name": "💓‍七味┃4K💓‍",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/Qiwei4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiQwMkvGuard",
+        "backend": "qwmkv.com /vs/ 搜索被 PoW 验证拦截，走免登盘搜兜底",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "AiNewPianKu",
+      "name": "💓盘库┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/AiNewPianKu/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewPianKuGuard",
+        "backend": "tvfan/Cloud-drive.txt 自建 4K 库 + 夸父 4K 帖子 + 盘搜 4K 条目",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "HuBan4K",
+      "name": "💓虎斑┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/HuBan4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewHuBanGuard",
+        "backend": "虎斑 4K 苹果 CMS 搜索 → 详情页 UC/夸克/百度分享",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "MuOu4K",
+      "name": "💓木偶┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/MuOu4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewMuOuGuard",
+        "backend": "muoua.top 苹果 CMS 搜索 → 详情页分享",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "DuoDuo4K",
+      "name": "💓多多┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/DuoDuo4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewDuoDuoGuard",
+        "backend": "yydsys /index.php/vod/search/wd/<kw>.html → 详情页分享",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "KuaiYing4K",
+      "name": "💓快影┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/KuaiYing4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewKuaiYingGuard",
+        "backend": "加固壳未暴露后端，走免登盘搜 + 活跃 UC 兜底",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "LaBi4K",
+      "name": "💓蜡笔┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/LaBi4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewLaBiGuard",
+        "backend": "tvpanpan.site 苹果 CMS 搜索 → 详情页分享",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "ShanDian4K",
+      "name": "💓闪电┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/ShanDian4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewShanDianGuard",
+        "backend": "源站下线，走免登盘搜 + 活跃 UC 兜底",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "JuTou4K",
+      "name": "💓剧透┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/JuTou4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewJuTouGuard",
+        "backend": "加固壳未暴露后端，走免登盘搜 + 活跃 UC 兜底",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "Libvio4K",
+      "name": "💓立播┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/Libvio4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewLibvioGuard",
+        "backend": "libvio.cam /search/-------------.html 搜索 → 详情页",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "ZhiNan4K",
+      "name": "💓‍原盘┃4K💓‍",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/ZhiNan4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewZhiNan4KGuard",
+        "backend": "4kzn.cc WordPress 站，搜索未开放，走免登盘搜 + 活跃 UC 兜底",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "WoNiu4K",
+      "name": "💓‍蜗牛┃4K💓‍",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/WoNiu4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewWoNiu4KGuard",
+        "backend": "wn4k.com /vodsearch/-------------/ → /voddetail/<id>/",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "PanMi4K",
+      "name": "💓盘迷┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/PanMi4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiPan1MeGuard",
+        "backend": "加固壳未暴露后端，走免登盘搜 + 活跃 UC 兜底",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "YiDong4K",
+      "name": "💓逸动┃4K💓",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/YiDong4K/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": {
+        "origin_api": "csp_AiNewYiDong4KGuard",
+        "backend": "无 ext 站点，走免登盘搜 + 活跃 UC 兜底",
+        "play_proxy": "http://127.0.0.1:8898/api/stream?ref="
+      }
+    },
+    {
+      "key": "QuanPan4K",
+      "name": "🌸全盘搜｜夸克4K",
+      "type": 1,
+      "api": "http://127.0.0.1:8898/api/cms/pan/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    }
+  ],
+  "parses": [
+    {
+      "name": "全盘搜直链",
+      "type": 1,
+      "url": "http://127.0.0.1:8898/api/parse?url="
+    }
+  ],
+  "lives": [],
+  "rules": [],
+  "doh": [],
+  "ads": [],
+  "flags": []
+}

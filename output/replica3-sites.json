@@ -1,0 +1,161 @@
+{
+  "source": "config/download3.json 索引 4–20（与 wex-20261106.json 同版） + config/download1.json 同名 4K 站明文 ext.site",
+  "originSpiderJar": "http://oss4liview.moji.com/thd_file/2026/11/04/690e7f13e63718e6ea88add0c59d4289.jpg;md5;86cb2cdcd99e29334004b80e48007e9a（wexguard 加固壳；download1 同源插件 md5 c78599dab489dae65c893e121df0de2f 已校验）",
+  "replicaType": "type:1 苹果 CMS 兼容，spider 留空，零 jar 依赖",
+  "playProxy": "http://127.0.0.1:8898/api/stream?ref=",
+  "sites": [
+    {
+      "key": "HuaJuan4K",
+      "name": "💓花卷┃4K💓‍",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewHuaJuanGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1 ext.site=https://www.hjzhencai.top",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/HuaJuan4K/",
+      "backend": "hjzhencai.top 苹果 CMS 搜索 → 详情页夸克/UC 分享"
+    },
+    {
+      "key": "Wogg4K",
+      "name": "💓‍玩偶┃4K💓‍",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewWoggGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1 ext.site=https://www.wogg.net",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/Wogg4K/",
+      "backend": "wogg.net /vodsearch/ → /voddetail/ 内嵌多盘分享"
+    },
+    {
+      "key": "GuanYing4K",
+      "name": "💓‍观影┃4K💓‍",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewGuanYingGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1 中文域名系列",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/GuanYing4K/",
+      "backend": "中文域名站 PoW 浏览器验证，走免登盘搜 + 活跃 UC 兜底"
+    },
+    {
+      "key": "Qiwei4K",
+      "name": "💓‍七味┃4K💓‍",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiQwMkvGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1 ext.site=https://www.qwmkv.com",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/Qiwei4K/",
+      "backend": "qwmkv.com /vs/ 搜索被 PoW 验证拦截，走免登盘搜兜底"
+    },
+    {
+      "key": "AiNewPianKu",
+      "name": "💓盘库┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewPianKuGuard",
+      "originExt": "无 ext（download3 加固 dex 内硬编码）",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/AiNewPianKu/",
+      "backend": "tvfan/Cloud-drive.txt 自建 4K 库 + 夸父 4K 帖子 + 盘搜 4K 条目"
+    },
+    {
+      "key": "HuBan4K",
+      "name": "💓虎斑┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewHuBanGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1 ext.site=http://103.40.14.172:16968",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/HuBan4K/",
+      "backend": "虎斑 4K 苹果 CMS 搜索 → 详情页 UC/夸克/百度分享"
+    },
+    {
+      "key": "MuOu4K",
+      "name": "💓木偶┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewMuOuGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1 ext.site=https://www.muoua.top",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/MuOu4K/",
+      "backend": "muoua.top 苹果 CMS 搜索 → 详情页分享"
+    },
+    {
+      "key": "DuoDuo4K",
+      "name": "💓多多┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewDuoDuoGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1 ext.site=https://tv.yydsys.top",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/DuoDuo4K/",
+      "backend": "yydsys /index.php/vod/search/wd/<kw>.html → 详情页分享"
+    },
+    {
+      "key": "KuaiYing4K",
+      "name": "💓快影┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewKuaiYingGuard",
+      "originExt": "无 ext（download3 加固 dex 内硬编码）",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/KuaiYing4K/",
+      "backend": "加固壳未暴露后端，走免登盘搜 + 活跃 UC 兜底"
+    },
+    {
+      "key": "LaBi4K",
+      "name": "💓蜡笔┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewLaBiGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源站点 http://tvpanpan.site",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/LaBi4K/",
+      "backend": "tvpanpan.site 苹果 CMS 搜索 → 详情页分享"
+    },
+    {
+      "key": "ShanDian4K",
+      "name": "💓闪电┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewShanDianGuard",
+      "originExt": "无 ext（download3 加固 dex）；shandian.blog 已 522 下线",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/ShanDian4K/",
+      "backend": "源站下线，走免登盘搜 + 活跃 UC 兜底"
+    },
+    {
+      "key": "JuTou4K",
+      "name": "💓剧透┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewJuTouGuard",
+      "originExt": "无 ext（download3 加固 dex 内硬编码）",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/JuTou4K/",
+      "backend": "加固壳未暴露后端，走免登盘搜 + 活跃 UC 兜底"
+    },
+    {
+      "key": "Libvio4K",
+      "name": "💓立播┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewLibvioGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1 ext.site=https://www.libvio.cam",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/Libvio4K/",
+      "backend": "libvio.cam /search/-------------.html 搜索 → 详情页"
+    },
+    {
+      "key": "ZhiNan4K",
+      "name": "💓‍原盘┃4K💓‍",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewZhiNan4KGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1「指南｜4K自扫」ext.site=https://4kzn.cc",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/ZhiNan4K/",
+      "backend": "4kzn.cc WordPress 站，搜索未开放，走免登盘搜 + 活跃 UC 兜底"
+    },
+    {
+      "key": "WoNiu4K",
+      "name": "💓‍蜗牛┃4K💓‍",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewWoNiu4KGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1 ext.site=https://wn4k.com",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/WoNiu4K/",
+      "backend": "wn4k.com /vodsearch/-------------/ → /voddetail/<id>/"
+    },
+    {
+      "key": "PanMi4K",
+      "name": "💓盘迷┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiPan1MeGuard",
+      "originExt": "无 ext（download3 加固 dex 内硬编码）",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/PanMi4K/",
+      "backend": "加固壳未暴露后端，走免登盘搜 + 活跃 UC 兜底"
+    },
+    {
+      "key": "YiDong4K",
+      "name": "💓逸动┃4K💓",
+      "kind": "4K 网盘资源站",
+      "originApi": "csp_AiNewYiDong4KGuard",
+      "originExt": "无 ext（download3 加固 dex）；同源 download1「移动｜4K」csp_Yidong4K",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/YiDong4K/",
+      "backend": "无 ext 站点，走免登盘搜 + 活跃 UC 兜底"
+    }
+  ]
+}

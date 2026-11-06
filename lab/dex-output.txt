@@ -1,0 +1,58 @@
+===== 第 3 课 · dex 静态分析 =====
+
+【1】dex 文件头
+  magic       : dex.035.
+  大小        : 2105816 字节
+  string_ids  : 9824
+  type_ids    : 2305
+
+【2】类名清单与订阅配置对照
+  com.github.catvod.spider 下的类名 : 1379
+  配置引用的不同类 : 38
+  命中 : 38   缺失 : 0  []
+  配置里的几个关键类是否在包中:
+    XBPQ : 存在
+    Bili : 存在
+    AppMao : 存在
+    AppLd : 存在
+    Init : 存在
+    Proxy : 存在
+    XPath : 存在
+
+【3】Spider 契约方法名（字符串表里应能找到）
+  homeContent : 1
+  homeVideoContent : 1
+  categoryContent : 1
+  detailContent : 1
+  searchContent : 1
+  playerContent : 1
+  init : 1
+  destroy : 1
+
+【4】加解密相关常量（解释 ext 里的 base64 密文）
+  AES : 1
+  AES/CBC/PKCS5Padding : 1
+  AES/CTR/PKCS5Padding : 1
+  DESede : 1
+  DESede/CBC/PKCS7Padding : 1
+  Base64 : 1
+  Ljavax/crypto/Cipher; : 1
+  Ljavax/crypto/spec/SecretKeySpec; : 1
+  Ljavax/crypto/spec/IvParameterSpec; : 1
+
+【5】规则引擎关键字（csp_XBPQ 靠 ext 对象驱动）
+  && : 88
+  嗅探词 : 0
+  分类url : 0
+  搜索url : 0
+  数组 : 0
+  [替换: : 0
+  m3u8 : 13
+  .mp4 : 2
+  {cateId} : 1
+  {catePg} : 1
+  {wd} : 2
+  post; : 3
+
+  -> 结论：dex 内确实存在通用规则引擎，站点差异全部下沉到 ext；
+     ext 里的加密串由包内 AES/DESede 逻辑解密，密钥需反编译具体类才能定位。

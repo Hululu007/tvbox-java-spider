@@ -1,0 +1,17 @@
+# ==========================================================
+# 🗂我的云盘┃配置 · 复刻版子规则文件
+# 原契约: type:3 / csp_MyDriveGuard / ext.Cloud-drive=tvfan/Cloud-drive.txt
+# 壳按主配置 URL 目录解析；本服务同时以 /tvfan/Cloud-drive.txt 提供 HTTP 读取
+# ==========================================================
+config_center=http://127.0.0.1:8898/
+qr_api=http://127.0.0.1:8898/api/qr
+subscription=http://127.0.0.1:8898/api/replica/config
+cookie_api=http://127.0.0.1:8898/api/cookies
+quark_cookie=未配置
+kfzy_cookie=使用内置会话
+# ---- 自建分享库：share=<网盘分享URL>|<备注> ----
+# 每行一条，点开即播（夸克需在配置中心填 Cookie，UC 免登）
+share=https://pan.quark.cn/s/ebc3c234fae7|凡人修仙传 更198集 4K 国语中字
+share=https://pan.quark.cn/s/aa7319036536|凡人修仙传 2025 4K SDR 高码率 纯净版
+share=https://drive.uc.cn/s/a2b56c303b4b4|凡人修仙传 更198集 4K H265 HDR真彩
+share=https://drive.uc.cn/s/8fd1c7efa87d4?public=1|凡人修仙传 幕兰之战 年番4 198集

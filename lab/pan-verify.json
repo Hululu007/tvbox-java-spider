@@ -1,0 +1,185 @@
+{
+  "root": {
+    "status": 200,
+    "bytes": 5555,
+    "elapsed": 0.1,
+    "head": "<!doctype html><html lang=\"zh-CN\"><head><meta charset=\"utf-8\">\n<meta name=\"viewp"
+  },
+  "status": {
+    "status": 200,
+    "bytes": 915,
+    "elapsed": 0.54,
+    "keys": [
+      "service",
+      "backend",
+      "tokenCached",
+      "cookies",
+      "configCenter",
+      "subscription",
+      "localOnly"
+    ]
+  },
+  "config": {
+    "status": 200,
+    "bytes": 18405,
+    "elapsed": 0.03,
+    "keys": [
+      "spider",
+      "wallpaper",
+      "logo",
+      "warningText",
+      "sites",
+      "parses",
+      "lives",
+      "rules",
+      "doh",
+      "ads"
+    ],
+    "sites_len": 49
+  },
+  "local": {
+    "status": 200,
+    "bytes": 928,
+    "elapsed": 0.01,
+    "keys": [
+      "spider",
+      "wallpaper",
+      "logo",
+      "warningText",
+      "sites",
+      "parses",
+      "lives",
+      "rules",
+      "doh",
+      "ads"
+    ],
+    "sites_len": 2
+  },
+  "sites": {
+    "status": 200,
+    "bytes": 17914,
+    "elapsed": 0.0,
+    "keys": [
+      "from",
+      "total",
+      "byCategory",
+      "bySource",
+      "distinctCspClasses",
+      "sites"
+    ],
+    "sites_len": 47,
+    "total": 47
+  },
+  "qr": {
+    "status": 200,
+    "bytes": 371,
+    "elapsed": 0.0,
+    "keys": [
+      "text",
+      "url",
+      "usage",
+      "lanHint"
+    ]
+  },
+  "cookies": {
+    "status": 200,
+    "bytes": 620,
+    "elapsed": 0.0,
+    "keys": [
+      "quark_cookie",
+      "baidu_cookie",
+      "pan115_cookie",
+      "uc_cookie",
+      "host"
+    ]
+  },
+  "jsplugin": {
+    "status": 200,
+    "bytes": 66807,
+    "elapsed": 0.02,
+    "head": "\r\n/* ============================================================\r\n * 全盘搜4K · Ca"
+  },
+  "qrcodejs": {
+    "status": 200,
+    "bytes": 19927,
+    "elapsed": 0.0,
+    "head": "var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this"
+  },
+  "verify": {
+    "status": 200,
+    "bytes": 202,
+    "elapsed": 1.37,
+    "keys": [
+      "site",
+      "tokenOk",
+      "searchResults",
+      "ucShare",
+      "catalogError",
+      "quarkCookieConfigured"
+    ],
+    "tokenOk": true,
+    "searchResults": 60,
+    "ucShare": "7410e49c7c7b4",
+    "quarkCookieConfigured": false,
+    "catalogError": "UC: 好友已取消了分享 (HTTP 404)"
+  },
+  "search": {
+    "status": 200,
+    "bytes": 40792,
+    "elapsed": 1.17,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list",
+      "class",
+      "wd"
+    ],
+    "list_len": 60,
+    "class_len": 4,
+    "total": 60
+  },
+  "cms-list": {
+    "status": 200,
+    "bytes": 19673,
+    "elapsed": 1.2,
+    "keys": [
+      "hot",
+      "list"
+    ],
+    "list_total": 27
+  },
+  "cms-wd": {
+    "status": 200,
+    "bytes": 40792,
+    "elapsed": 1.13,
+    "keys": [
+      "code",
+      "msg",
+      "page",
+      "pagecount",
+      "limit",
+      "total",
+      "list",
+      "class",
+      "wd"
+    ],
+    "list_len": 60,
+    "class_len": 4,
+    "total": 60
+  },
+  "home": {
+    "status": 200,
+    "bytes": 380,
+    "elapsed": 0.0,
+    "keys": [
+      "service",
+      "path",
+      "endpoints"
+    ],
+    "endpoints_len": 14
+  }
+}

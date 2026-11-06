@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8"> 
+    <title>随机图片接口</title> 
+</head> 
+<body> 
+    <script> 
+        (function () {
+            // 获取当前北京时间（UTC+8）
+            const now = new Date();
+            const utc = now.getTime()  + (now.getTimezoneOffset()  * 60000);
+            const beijingTime = new Date(utc + (3600000 * 8));
+            const currentHour = beijingTime.getHours(); 
+            
+            // 判断是否在18:00-05:00时间段（不显示遮罩）
+            const isNightMode = currentHour >= 18 || currentHour < 5;
+            
+            if (!isNightMode) {
+                // 创建遮罩层
+                const overlayDiv = document.createElement('div'); 
+                overlayDiv.style.cssText  = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 99998;
+                    background-color: #fff;
+                `;
+                document.documentElement.appendChild(overlayDiv); 
+                
+                // 创建图片元素
+                const overlayImage = new Image();
+                overlayImage.style.cssText  = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 99999;
+                `;
+                
+                // 响应式图片路径
+                const width = window.innerWidth  || document.documentElement.clientWidth; 
+                overlayImage.src  = width <= 1080 ? 
+                    'https://api.suxun.site/api/img?s=mobile&k=meizi'  : 
+                    'https://3650000.xyz/view/api.php?p=1747637389'; 
+                
+                // 图片加载处理
+                overlayImage.onload  = () => overlayDiv.appendChild(overlayImage); 
+                overlayImage.onerror  = () => {
+                    overlayImage.src  = 'https://s21.ax1x.com/2025/03/21/pE0FEtS.jpg'; 
+                    overlayImage.onerror  = null;
+                    overlayDiv.appendChild(overlayImage); 
+                };
+            }
+        })();
+    </script>
+<!DOCTYPE html>
+<html lang="zh-cn">
+ <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+     <title>搜索结果凡人-多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。</title>
+     <meta name="keywords" content="凡人-多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。" />
+     <meta name="description" content="凡人-多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。" />
+     
+<link rel="icon" href="/template/DYXS2/static/picture/logo.png" type="image/png" />
+<link href="/template/DYXS2/static/css/style.css" rel="stylesheet" type="text/css">
+<link href="/template/DYXS2/static/css/ali.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/template/DYXS2/static/css/swiper-bundle.min.css" type="text/css">
+<script>var maccms={"path":"","mid":"1","url":"pan.yydsys.de","wapurl":"tv.yydsys.cc","mob_status":"2"};</script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/jquery.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/jquery.lazyload.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/template/DYXS2/static/js/jquery.cookie.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/home.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/jquery.clipboard.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/swiper-bundle.min.js"></script>
+<script type="text/javascript"  src="/template/DYXS2/static/js/script.js"></script>
+
+ </head>
+<body class="search page">
+<header id="header" class="wrapper">
+  <div class="nav content">
+     <div class="brand"><a href="/" class="logo" title="多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。"><img src="/template/DYXS2/static/image/logo.png" alt="多多影音--最热的云盘资源分享站，只有免费分享，无APP无在线播放。"></a></div>
+    <div class="nav-search"></div>
+    <nav class="nav-menu">
+      <ul class="nav-menu-items">
+      <li class="nav-menu-item ">
+		<a href="/" class="white " title="多多影音-云盘资源分享首页"><i class="icon-home"></i>首页</a>
+	</li>
+      			
+	    <li class="nav-menu-item ">
+		<a class="nav-link" href="/index.php/vod/type/id/1.html"><span class="nav-menu-item-name">
+		    	            	                        <i class="icon-cate-dy"></i>
+	                        		    多多电影 </span> </a>
+		</li>
+					
+	    <li class="nav-menu-item ">
+		<a class="nav-link" href="/index.php/vod/type/id/2.html"><span class="nav-menu-item-name">
+		    	            	                        <i class="icon-cate-ds"></i>
+	                        		    多多剧集 </span> </a>
+		</li>
+					
+	    <li class="nav-menu-item ">
+		<a class="nav-link" href="/index.php/vod/type/id/4.html"><span class="nav-menu-item-name">
+		    	            	                        <i class="icon-cate-dm"></i>
+	                        		    动漫 </span> </a>
+		</li>
+					
+	    <li class="nav-menu-item ">
+		<a class="nav-link" href="/index.php/vod/type/id/5.html"><span class="nav-menu-item-name">
+		    	            	                        <i class="icon-cate-yy"></i>
+	                        		    短剧 </span> </a>
+		</li>
+					
+	    <li class="nav-menu-item ">
+		<a class="nav-link" href="/index.php/vod/type/id/3.html"><span class="nav-menu-item-name">
+		    	            	                        <i class="icon-cate-zy"></i>
+	                        		    综艺 </span> </a>
+		</li>
+					
+	    <li class="nav-menu-item ">
+		<a class="nav-link" href="/index.php/vod/type/id/20.html"><span class="nav-menu-item-name">
+		    	            	                        <i class="icon-cate-yy"></i>
+	                        		    纪录 </span> </a>
+		</li>
+			
+
+        <li class="space-line-bold"></li>
+        <li class="nav-menu-item drop"><span class="nav-menu-icon"><i class="icon-watch-history"></i></span>
+          <div class="drop-content drop-history">
+            <div class="drop-content-box">
+              <ul class="drop-content-items" id="history"><li class="list-item list-item-title"><a href="" class="playlist historyclean"><i class="icon-clear"></i></a><strong>我的观影记录</strong></li></ul>
+            </div>
+          </div>
+          <div class="shortcuts-mobile-overlay"></div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header> <!-- 头部 -->
+<main id="main" class="wrapper">
+  <div class="content">
+    <div id="search-content">
+    <form action="/index.php/vod/search.html">
+				<div class="search-box">
+					<input class="search-input ac_wd" id="txtKeywords" type="text" name="wd" autocomplete="off" placeholder="搜索电影、电视剧、综艺、动漫">
+					<div class="search-drop">
+						<div class="drop-content-items ac_hot none">
+							<div class="list-item list-item-title"><strong>大家都在搜这些影片</strong></div>
+							<div class="search-tag">
+												       	<a href="/index.php/vod/search/wd/%E5%8F%98%E5%BD%A2%E9%87%91%E5%88%9A.html" class="hot "><i class="icon-hot"></i>变形金刚</a>
+						    					       	<a href="/index.php/vod/search/wd/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85.html" class="hot "><i class="icon-hot"></i>火影忍者</a>
+						    					       	<a href="/index.php/vod/search/wd/%E5%A4%8D%E4%BB%87%E8%80%85%E8%81%94%E7%9B%9F.html" class="hot "><i class="icon-hot"></i>复仇者联盟</a>
+						    					       	<a href="/index.php/vod/search/wd/%E6%88%98%E7%8B%BC.html" class="hot "><i class="icon-hot"></i>战狼</a>
+						    					       	<a href="/index.php/vod/search/wd/%E7%BA%A2%E6%B5%B7%E8%A1%8C%E5%8A%A8.html" class=""><i class="icon-hot"></i>红海行动</a>
+						    							</div>
+						</div>
+					</div>
+					<button class="search-btn search-go" type="submit"><i class="icon-search"></i></button>
+					<button class="cancel-btn" type="button">取消</button>
+				</div>
+			</form>
+      <div class="search-stat">
+        <h1>凡人</h1>
+        <h2>搜索"凡人" ，找到 <strong class="mac_total"></strong>部影视作品</h2>
+      </div>
+    </div>
+    <div class="module">
+      <div class="module-list">
+        <div class="module-items">
+             
+                   <div class="module-search-item">
+            <div class="video-cover">
+              <div class="module-item-cover">
+                <div class="module-item-pic"><a href="/index.php/vod/play/id/44/sid/1/nid/1.html" title="立刻播放凡人修仙传"><i class="icon-play"></i></a><img class="lazy lazyload" data-src="https://pic.ry-pic.com/upload/vod/20260613-1/ce3d8602c4801d9a0454a8254a56df18.webp" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png" alt="凡人修仙传">
+                  <div class="loading"></div>
+                </div>
+              </div>
+            </div>
+            <div class="video-info">
+              <div class="video-info-header"><a class="video-serial" href="/index.php/vod/detail/id/44.html" title="凡人修仙传">全198集</a>
+                <h3><a href="/index.php/vod/detail/id/44.html" title="凡人修仙传">凡人修仙传</a></h3>
+                <div class="video-info-aux">
+                <a href="/index.php/vod/type/id/4.html" title="动漫" class="tag-link"><span class="video-tag-icon">
+                                         <i class="icon-cate-dm"></i>
+                    动漫</span></a>
+                	<div class="tag-link"><a href="/index.php/vod/search/year/2020.html" target="_blank">2020</a>&nbsp;</div>
+                  <div class="tag-link"><a href="/index.php/vod/search/area/%E5%A4%A7%E9%99%86.html" target="_blank">大陆</a>&nbsp;</div>
+                 </div>
+              </div>
+              <div class="video-info-main">
+                  <div class="video-info-items"><span class="video-info-itemtitle">导演：</span>
+                 	<div class="video-info-item video-info-actor"><span class="slash">/</span>
+					    <a href="/index.php/vod/search/director/%E4%BC%8D%E9%95%87%E7%84%AF.html" target="_blank">伍镇焯</a><span class="slash">/</span><a href="/index.php/vod/search/director/%E7%8E%8B%E8%A3%95%E4%BB%81.html" target="_blank">王裕仁</a><span class="slash">/</span>						</div>
+                </div>
+                <div class="video-info-items"><span class="video-info-itemtitle">主演：</span>
+                 <div class="video-info-item video-info-actor"><span class="slash">/</span>
+						<a href="/index.php/vod/search/actor/%E9%92%B1%E6%96%87%E9%9D%92.html" target="_blank">钱文青</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9D%A8%E5%A4%A9%E7%BF%94.html" target="_blank">杨天翔</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9D%A8%E9%BB%98.html" target="_blank">杨默</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%AD%AA%E6%AD%AA.html" target="_blank">歪歪</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E8%B0%B7%E6%B1%9F%E5%B1%B1.html" target="_blank">谷江山</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E4%B9%94%E8%AF%97%E8%AF%AD.html" target="_blank">乔诗语</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E4%BD%9F%E5%BF%83%E7%AB%B9.html" target="_blank">佟心竹</a><span class="slash">/</span>						</div>
+                </div>
+                  <div class="video-info-items"><span class="video-info-itemtitle">剧情：</span>
+                  <div class="video-info-item">平凡少年韩立出生贫困，为了让家人过上更好的生活，自愿前去七玄门参加入门考核，最终被墨大夫收入门下。　　墨大夫一开始对韩立悉心培养、传授医术，让韩立对他非常感激，但随着一同入门的弟子张铁失踪，韩立才发现</div>
+                </div>
+              </div>
+              <div class="video-info-footer">
+                               <a href="/index.php/vod/detail/id/44.html" class="btn-aux btn-aux-o btn-base" title="下载凡人修仙传"><i class="icon-download"></i><strong>查看资源</strong></a>
+               	              </div>
+            </div>
+          </div>  
+             
+                   <div class="module-search-item">
+            <div class="video-cover">
+              <div class="module-item-cover">
+                <div class="module-item-pic"><a href="/index.php/vod/play/id/8468/sid/1/nid/1.html" title="立刻播放凡人修仙传真人剧"><i class="icon-play"></i></a><img class="lazy lazyload" data-src="https://liangcang-material.alicdn.com/prod/upload/40c3e6707aba4ecdb03b696bebf318a2.webp.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png" alt="凡人修仙传真人剧">
+                  <div class="loading"></div>
+                </div>
+              </div>
+            </div>
+            <div class="video-info">
+              <div class="video-info-header"><a class="video-serial" href="/index.php/vod/detail/id/8468.html" title="凡人修仙传真人剧">全30集</a>
+                <h3><a href="/index.php/vod/detail/id/8468.html" title="凡人修仙传真人剧">凡人修仙传真人剧</a></h3>
+                <div class="video-info-aux">
+                <a href="/index.php/vod/type/id/2.html" title="多多剧集" class="tag-link"><span class="video-tag-icon">
+                                         <i class="icon-cate-ds"></i>
+                      多多剧集</span></a>
+                	<div class="tag-link"><a href="/index.php/vod/search/year/2025.html" target="_blank">2025</a>&nbsp;</div>
+                  <div class="tag-link"><a href="/index.php/vod/search/area/%E5%86%85%E5%9C%B0.html" target="_blank">内地</a>&nbsp;</div>
+                 </div>
+              </div>
+              <div class="video-info-main">
+                  <div class="video-info-items"><span class="video-info-itemtitle">导演：</span>
+                 	<div class="video-info-item video-info-actor"><span class="slash">/</span>
+					    <a href="/index.php/vod/search/director/%E6%9D%A8%E9%98%B3.html" target="_blank">杨阳</a><span class="slash">/</span>						</div>
+                </div>
+                <div class="video-info-items"><span class="video-info-itemtitle">主演：</span>
+                 <div class="video-info-item video-info-actor"><span class="slash">/</span>
+						<a href="/index.php/vod/search/actor/%E6%9D%A8%E6%B4%8B.html" target="_blank">杨洋</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E9%87%91%E6%99%A8.html" target="_blank">金晨</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%B1%AA%E9%93%8E.html" target="_blank">汪铎</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E8%B5%B5%E5%B0%8F%E6%A3%A0.html" target="_blank">赵小棠</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E8%B5%B5%E6%99%B4.html" target="_blank">赵晴</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E9%87%91%E4%BD%B3%E6%82%A6.html" target="_blank">金佳悦</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E8%8D%A3%E6%A2%93%E5%B8%8C.html" target="_blank">荣梓希</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%BC%A0%E5%A9%89%E5%84%BF.html" target="_blank">张婉儿</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E8%83%A1%E5%AE%87%E8%BD%A9.html" target="_blank">胡宇轩</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%BC%A0%E7%BF%94.html" target="_blank">张翔</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%A8%9C%E4%B8%80.html" target="_blank">娜一</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E9%99%88%E9%9C%87.html" target="_blank">陈震</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%96%BD%E4%BA%88%E6%96%90.html" target="_blank">施予斐</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9D%8E%E5%9C%A3%E4%BD%B3.html" target="_blank">李圣佳</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%A2%81%E5%92%8F%E5%A6%AE.html" target="_blank">梁咏妮</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%88%98%E7%8F%82%E5%90%9B.html" target="_blank">刘珂君</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9D%8E%E7%86%B9%E5%AD%90.html" target="_blank">李熹子</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%BB%96%E8%AF%AD%E8%BE%B0.html" target="_blank">廖语辰</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E4%B8%A5%E4%B8%B0.html" target="_blank">严丰</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E9%99%88%E6%9F%8F%E8%9E%8D.html" target="_blank">陈柏融</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%B8%B8%E8%8D%BB.html" target="_blank">常荻</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%88%98%E5%A4%A9%E5%AE%9D.html" target="_blank">刘天宝</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%96%BB%E4%BA%A2.html" target="_blank">喻亢</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E7%8E%8B%E6%B5%B7%E7%A5%A5.html" target="_blank">王海祥</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E7%A5%96%E5%8D%A1%E5%B0%94.html" target="_blank">祖卡尔</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9B%B9%E6%98%8E%E5%8D%8E.html" target="_blank">曹明华</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9D%8E%E8%B6%8A.html" target="_blank">李越</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E4%B8%81%E6%A1%A5.html" target="_blank">丁桥</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%88%98%E9%A0%94.html" target="_blank">刘頔</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9B%B9%E8%B5%9E.html" target="_blank">曹赞</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%AD%99%E4%B8%80%E9%B8%A3.html" target="_blank">孙一鸣</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9F%B3%E4%BB%95%E7%82%8E.html" target="_blank">柳仕炎</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E9%83%AD%E9%A6%A8%E9%92%B0.html" target="_blank">郭馨钰</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%BC%A0%E6%80%80%E5%85%AC.html" target="_blank">张怀公</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9F%B3%E5%B2%A9.html" target="_blank">柳岩</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9D%8E%E4%B9%83%E6%96%87.html" target="_blank">李乃文</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E9%87%91%E5%A3%AB%E6%9D%B0.html" target="_blank">金士杰</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E8%B4%BE%E5%86%B0.html" target="_blank">贾冰</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E9%A2%96%E5%84%BF.html" target="_blank">颖儿</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%90%B4%E6%A8%BE.html" target="_blank">吴樾</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9B%B9%E9%AA%8F.html" target="_blank">曹骏</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E7%AE%A1%E4%BA%91%E9%B9%8F.html" target="_blank">管云鹏</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E9%A2%9C%E4%B8%B9%E6%99%A8.html" target="_blank">颜丹晨</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%BC%A0%E6%B5%B7%E5%AE%87.html" target="_blank">张海宇</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9B%B2%E9%AB%98%E4%BD%8D.html" target="_blank">曲高位</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E7%8E%8B%E5%86%A0.html" target="_blank">王冠</a><span class="slash">/</span><a href="/index.php/vod/search.html" target="_blank"></a><span class="slash">/</span>						</div>
+                </div>
+                  <div class="video-info-items"><span class="video-info-itemtitle">剧情：</span>
+                  <div class="video-info-item">该剧改编自忘语的同名小说，讲述了普通的山村穷小子韩立（杨洋 饰），偶然之下，跨入到一个江湖小门派，虽然资质平庸，但依靠自身努力和合理算计最后修炼成仙的故事。</div>
+                </div>
+              </div>
+              <div class="video-info-footer">
+                               <a href="/index.php/vod/detail/id/8468.html" class="btn-aux btn-aux-o btn-base" title="下载凡人修仙传真人剧"><i class="icon-download"></i><strong>查看资源</strong></a>
+               	              </div>
+            </div>
+          </div>  
+             
+                   <div class="module-search-item">
+            <div class="video-cover">
+              <div class="module-item-cover">
+                <div class="module-item-pic"><a href="/index.php/vod/play/id/9386/sid/1/nid/1.html" title="立刻播放凡人仙葫"><i class="icon-play"></i></a><img class="lazy lazyload" data-src="https://i.kkb.xx.kg/image/kPqKLHMQGNbK8xA9Z89F31.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png" alt="凡人仙葫">
+                  <div class="loading"></div>
+                </div>
+              </div>
+            </div>
+            <div class="video-info">
+              <div class="video-info-header"><a class="video-serial" href="/index.php/vod/detail/id/9386.html" title="凡人仙葫">更新至60集</a>
+                <h3><a href="/index.php/vod/detail/id/9386.html" title="凡人仙葫">凡人仙葫</a></h3>
+                <div class="video-info-aux">
+                <a href="/index.php/vod/type/id/5.html" title="短剧" class="tag-link"><span class="video-tag-icon">
+                                         <i class="icon-cate-dm"></i>
+                    短剧</span></a>
+                	<div class="tag-link"><a href="/index.php/vod/search/year/2026.html" target="_blank">2026</a>&nbsp;</div>
+                  <div class="tag-link"><a href="/index.php/vod/search/area/%E5%A4%A7%E9%99%86.html" target="_blank">大陆</a>&nbsp;</div>
+                 </div>
+              </div>
+              <div class="video-info-main">
+                  <div class="video-info-items"><span class="video-info-itemtitle">导演：</span>
+                 	<div class="video-info-item video-info-actor"><span class="slash">/</span>
+					    <a href="/index.php/vod/search/director/TG%40ucquark.html" target="_blank">TG@ucquark</a><span class="slash">/</span>						</div>
+                </div>
+                <div class="video-info-items"><span class="video-info-itemtitle">主演：</span>
+                 <div class="video-info-item video-info-actor"><span class="slash">/</span>
+						<a href="/index.php/vod/search/actor/TG%40ucquark.html" target="_blank">TG@ucquark</a><span class="slash">/</span>						</div>
+                </div>
+                  <div class="video-info-items"><span class="video-info-itemtitle">剧情：</span>
+                  <div class="video-info-item">二狗子生在乡下，老实本分，一辈子就仨愿望，攒几亩薄田，当个安稳小地主，再娶个能干活的媳妇，日子安稳便心满意足。谁料一场意外，他捡到一只神秘葫芦，又被云游老骗子一顿忽悠，稀里糊涂踏上修仙路。从此灵根、功法、宗门纷争接踵而至，人人争仙途、夺造化，唯有二狗子格格不入。他初心不改，只想守着几亩良田，过最平凡的生活!</div>
+                </div>
+              </div>
+              <div class="video-info-footer">
+                               <a href="/index.php/vod/detail/id/9386.html" class="btn-aux btn-aux-o btn-base" title="下载凡人仙葫"><i class="icon-download"></i><strong>查看资源</strong></a>
+               	              </div>
+            </div>
+          </div>  
+             
+                   <div class="module-search-item">
+            <div class="video-cover">
+              <div class="module-item-cover">
+                <div class="module-item-pic"><a href="/index.php/vod/play/id/116/sid/1/nid/1.html" title="立刻播放凡人修仙传 虚天战纪"><i class="icon-play"></i></a><img class="lazy lazyload" data-src="https://s1.imagehub.cc/images/2025/01/04/dcc43e754dc839c205bbcffd9c175801.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png" alt="凡人修仙传 虚天战纪">
+                  <div class="loading"></div>
+                </div>
+              </div>
+            </div>
+            <div class="video-info">
+              <div class="video-info-header"><a class="video-serial" href="/index.php/vod/detail/id/116.html" title="凡人修仙传 虚天战纪">已完结</a>
+                <h3><a href="/index.php/vod/detail/id/116.html" title="凡人修仙传 虚天战纪">凡人修仙传 虚天战纪</a></h3>
+                <div class="video-info-aux">
+                <a href="/index.php/vod/type/id/4.html" title="动漫" class="tag-link"><span class="video-tag-icon">
+                                         <i class="icon-cate-dm"></i>
+                    动漫</span></a>
+                	<div class="tag-link"><a href="/index.php/vod/search/year/2025.html" target="_blank">2025</a>&nbsp;</div>
+                  <div class="tag-link"><a href="/index.php/vod/search/area/%E5%9B%BD%E4%BA%A7.html" target="_blank">国产</a>&nbsp;</div>
+                 </div>
+              </div>
+              <div class="video-info-main">
+                  <div class="video-info-items"><span class="video-info-itemtitle">导演：</span>
+                 	<div class="video-info-item video-info-actor"><span class="slash">/</span>
+					    <a href="/index.php/vod/search/director/%E6%9C%AA%E7%9F%A5.html" target="_blank">未知</a><span class="slash">/</span>						</div>
+                </div>
+                <div class="video-info-items"><span class="video-info-itemtitle">主演：</span>
+                 <div class="video-info-item video-info-actor"><span class="slash">/</span>
+						<a href="/index.php/vod/search/actor/%E6%9C%AA%E7%9F%A5.html" target="_blank">未知</a><span class="slash">/</span>						</div>
+                </div>
+                  <div class="video-info-items"><span class="video-info-itemtitle">剧情：</span>
+                  <div class="video-info-item">看机智的凡人小子韩立如何稳健发展、步步为营，战魔道、夺至宝、驰骋星海、快意恩仇，成为纵横三界的强者。他日仙界重相逢，一声道友尽沧桑。</div>
+                </div>
+              </div>
+              <div class="video-info-footer">
+                               <a href="/index.php/vod/detail/id/116.html" class="btn-aux btn-aux-o btn-base" title="下载凡人修仙传 虚天战纪"><i class="icon-download"></i><strong>查看资源</strong></a>
+               	              </div>
+            </div>
+          </div>  
+             
+                   <div class="module-search-item">
+            <div class="video-cover">
+              <div class="module-item-cover">
+                <div class="module-item-pic"><a href="/index.php/vod/play/id/6000/sid/1/nid/1.html" title="立刻播放凡人修仙传：星海飞驰篇"><i class="icon-play"></i></a><img class="lazy lazyload" data-src="https://wsrv.nl/?url=https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2900285966.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png" alt="凡人修仙传：星海飞驰篇">
+                  <div class="loading"></div>
+                </div>
+              </div>
+            </div>
+            <div class="video-info">
+              <div class="video-info-header"><a class="video-serial" href="/index.php/vod/detail/id/6000.html" title="凡人修仙传：星海飞驰篇">已完结</a>
+                <h3><a href="/index.php/vod/detail/id/6000.html" title="凡人修仙传：星海飞驰篇">凡人修仙传：星海飞驰篇</a></h3>
+                <div class="video-info-aux">
+                <a href="/index.php/vod/type/id/4.html" title="动漫" class="tag-link"><span class="video-tag-icon">
+                                         <i class="icon-cate-dm"></i>
+                    动漫</span></a>
+                	<div class="tag-link"><a href="/index.php/vod/search/year/2023.html" target="_blank">2023</a>&nbsp;</div>
+                  <div class="tag-link"><a href="/index.php/vod/search/area/%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86.html" target="_blank">中国大陆</a>&nbsp;</div>
+                 </div>
+              </div>
+              <div class="video-info-main">
+                  <div class="video-info-items"><span class="video-info-itemtitle">导演：</span>
+                 	<div class="video-info-item video-info-actor"><span class="slash">/</span>
+					    <a href="/index.php/vod/search/director/%E7%8E%8B%E8%A3%95%E4%BB%81.html" target="_blank">王裕仁</a><span class="slash">/</span><a href="/index.php/vod/search/director/%E6%9E%97%E5%AE%87%E6%98%82.html" target="_blank">林宇昂</a><span class="slash">/</span>						</div>
+                </div>
+                <div class="video-info-items"><span class="video-info-itemtitle">主演：</span>
+                 <div class="video-info-item video-info-actor"><span class="slash">/</span>
+						<a href="/index.php/vod/search/actor/%E9%92%B1%E6%96%87%E9%9D%92.html" target="_blank">钱文青</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9D%A8%E5%A4%A9%E7%BF%94.html" target="_blank">杨天翔</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E4%BD%9F%E5%BF%83%E7%AB%B9.html" target="_blank">佟心竹</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%AD%AA%E6%AD%AA.html" target="_blank">歪歪</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E8%B0%B7%E6%B1%9F%E5%B1%B1.html" target="_blank">谷江山</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9D%A8%E9%BB%98.html" target="_blank">杨默</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%94%90%E5%B0%8F%E5%96%9C.html" target="_blank">唐小喜</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E4%B9%94%E8%AF%97%E8%AF%AD.html" target="_blank">乔诗语</a><span class="slash">/</span>						</div>
+                </div>
+                  <div class="video-info-items"><span class="video-info-itemtitle">剧情：</span>
+                  <div class="video-info-item">看机智的凡人小子韩立如何稳健发展、步步为营，战魔道、夺至宝、驰骋星海、快意恩仇，成为纵横三界的强者。他日仙界重相逢，一声道友尽沧桑。</div>
+                </div>
+              </div>
+              <div class="video-info-footer">
+                               <a href="/index.php/vod/detail/id/6000.html" class="btn-aux btn-aux-o btn-base" title="下载凡人修仙传：星海飞驰篇"><i class="icon-download"></i><strong>查看资源</strong></a>
+               	              </div>
+            </div>
+          </div>  
+             
+                   <div class="module-search-item">
+            <div class="video-cover">
+              <div class="module-item-cover">
+                <div class="module-item-pic"><a href="/index.php/vod/play/id/3384/sid/1/nid/1.html" title="立刻播放凡人修仙传重制版"><i class="icon-play"></i></a><img class="lazy lazyload" data-src="https://sss.image8899.net/upload/vod/20230205-1/ff89ad93780e666b25b651f00ff59e76.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png" alt="凡人修仙传重制版">
+                  <div class="loading"></div>
+                </div>
+              </div>
+            </div>
+            <div class="video-info">
+              <div class="video-info-header"><a class="video-serial" href="/index.php/vod/detail/id/3384.html" title="凡人修仙传重制版">已完结</a>
+                <h3><a href="/index.php/vod/detail/id/3384.html" title="凡人修仙传重制版">凡人修仙传重制版</a></h3>
+                <div class="video-info-aux">
+                <a href="/index.php/vod/type/id/4.html" title="动漫" class="tag-link"><span class="video-tag-icon">
+                                         <i class="icon-cate-dm"></i>
+                    动漫</span></a>
+                	<div class="tag-link"><a href="/index.php/vod/search/year/2023.html" target="_blank">2023</a>&nbsp;</div>
+                  <div class="tag-link"><a href="/index.php/vod/search/area/%E5%A4%A7%E9%99%86.html" target="_blank">大陆</a>&nbsp;</div>
+                 </div>
+              </div>
+              <div class="video-info-main">
+                  <div class="video-info-items"><span class="video-info-itemtitle">导演：</span>
+                 	<div class="video-info-item video-info-actor"><span class="slash">/</span>
+					    <a href="/index.php/vod/search/director/%E4%BC%8D%E9%95%87%E7%84%AF.html" target="_blank">伍镇焯</a><span class="slash">/</span><a href="/index.php/vod/search/director/%E7%8E%8B%E8%A3%95%E4%BB%81.html" target="_blank">王裕仁</a><span class="slash">/</span>						</div>
+                </div>
+                <div class="video-info-items"><span class="video-info-itemtitle">主演：</span>
+                 <div class="video-info-item video-info-actor"><span class="slash">/</span>
+						<a href="/index.php/vod/search/actor/%E9%92%B1%E6%96%87%E9%9D%92.html" target="_blank">钱文青</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9D%A8%E5%A4%A9%E7%BF%94.html" target="_blank">杨天翔</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%9D%A8%E9%BB%98.html" target="_blank">杨默</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E6%AD%AA%E6%AD%AA.html" target="_blank">歪歪</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E8%B0%B7%E6%B1%9F%E5%B1%B1.html" target="_blank">谷江山</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E4%B9%94%E8%AF%97%E8%AF%AD.html" target="_blank">乔诗语</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E4%BD%9F%E5%BF%83%E7%AB%B9.html" target="_blank">佟心竹</a><span class="slash">/</span>						</div>
+                </div>
+                  <div class="video-info-items"><span class="video-info-itemtitle">剧情：</span>
+                  <div class="video-info-item">平凡少年韩立出生贫困，为了让家人过上更好的生活，自愿前去七玄门参加入门考核，最终被墨大夫收入门下。　　墨大夫一开始对韩立悉心培养、传授医术，让韩立对他非常感激，但随着一同入门的弟子张铁失踪，韩立才发现</div>
+                </div>
+              </div>
+              <div class="video-info-footer">
+                               <a href="/index.php/vod/detail/id/3384.html" class="btn-aux btn-aux-o btn-base" title="下载凡人修仙传重制版"><i class="icon-download"></i><strong>查看资源</strong></a>
+               	              </div>
+            </div>
+          </div>  
+             
+                   <div class="module-search-item">
+            <div class="video-cover">
+              <div class="module-item-cover">
+                <div class="module-item-pic"><a href="/index.php/vod/play/id/601/sid/1/nid/1.html" title="立刻播放凡人歌"><i class="icon-play"></i></a><img class="lazy lazyload" data-src="https://img.ffzy888.com/upload/vod/20240831-1/b63d72ea458a7e4408b2e17fa73e8066.jpg" src="https://s1.imagehub.cc/images/2025/09/27/beef662bdfb1374ec91ef7ce6927455d.png" alt="凡人歌">
+                  <div class="loading"></div>
+                </div>
+              </div>
+            </div>
+            <div class="video-info">
+              <div class="video-info-header"><a class="video-serial" href="/index.php/vod/detail/id/601.html" title="凡人歌">4K</a>
+                <h3><a href="/index.php/vod/detail/id/601.html" title="凡人歌">凡人歌</a></h3>
+                <div class="video-info-aux">
+                <a href="/index.php/vod/type/id/2.html" title="多多剧集" class="tag-link"><span class="video-tag-icon">
+                                         <i class="icon-cate-ds"></i>
+                      多多剧集</span></a>
+                	<div class="tag-link"><a href="/index.php/vod/search/year/2024.html" target="_blank">2024</a>&nbsp;</div>
+                  <div class="tag-link"><a href="/index.php/vod/search/area/%E5%86%85%E5%9C%B0.html" target="_blank">内地</a>&nbsp;</div>
+                 </div>
+              </div>
+              <div class="video-info-main">
+                  <div class="video-info-items"><span class="video-info-itemtitle">导演：</span>
+                 	<div class="video-info-item video-info-actor"><span class="slash">/</span>
+					    <a href="/index.php/vod/search/director/%E7%AE%80%E5%B7%9D%E8%A8%B8.html" target="_blank">简川訸</a><span class="slash">/</span>						</div>
+                </div>
+                <div class="video-info-items"><span class="video-info-itemtitle">主演：</span>
+                 <div class="video-info-item video-info-actor"><span class="slash">/</span>
+						<a href="/index.php/vod/search/actor/%E6%AE%B7%E6%A1%83.html" target="_blank">殷桃</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E7%8E%8B%E9%AA%81.html" target="_blank">王骁</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E7%AB%A0%E8%8B%A5%E6%A5%A0.html" target="_blank">章若楠</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E7%A7%A6%E4%BF%8A%E6%9D%B0.html" target="_blank">秦俊杰</a><span class="slash">/</span><a href="/index.php/vod/search/actor/%E5%BC%A0%E5%93%B2%E5%8D%8E.html" target="_blank">张哲华</a><span class="slash">/</span><a href="/index.php/vod

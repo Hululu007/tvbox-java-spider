@@ -1,0 +1,50 @@
+{
+  "service": "复刻站点自检",
+  "subscription": "http://127.0.0.1:8898/api/replica2/config",
+  "playProxy": "http://127.0.0.1:8898/api/stream?ref=",
+  "sites": [
+    {
+      "key": "SoAiHaiYin",
+      "name": "🎠盘搜┃综合🎠",
+      "originApi": "csp_SoAiHaiYinGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/SoAiHaiYin/",
+      "results": 20,
+      "playableResults": 20,
+      "status": "ok",
+      "ms": 8443
+    },
+    {
+      "key": "SoAiPanSoo",
+      "name": "🎠九七┃综合🎠",
+      "originApi": "csp_SoAiPanSooGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/SoAiPanSoo/",
+      "results": 20,
+      "playableResults": 0,
+      "status": "ok",
+      "ms": 29802
+    },
+    {
+      "key": "SoAiAiPanSo",
+      "name": "🎠爱盘┃综合🎠",
+      "originApi": "csp_SoAiAiPanSoGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/SoAiAiPanSo/",
+      "results": 24,
+      "playableResults": 24,
+      "status": "ok",
+      "ms": 26058
+    },
+    {
+      "key": "AiNewPianKu",
+      "name": "💓盘库┃4K💓",
+      "originApi": "csp_AiNewPianKuGuard",
+      "replicaApi": "http://127.0.0.1:8898/api/cms/AiNewPianKu/",
+      "results": 28,
+      "playableResults": 26,
+      "status": "ok",
+      "ms": 18062
+    }
+  ],
+  "ok": 4,
+  "total": 4,
+  "quarkCookieConfigured": false
+}

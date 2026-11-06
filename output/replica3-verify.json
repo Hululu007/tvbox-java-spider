@@ -1,0 +1,391 @@
+{
+  "generatedAt": "2026-11-06T18:51:29",
+  "subscription": "http://127.0.0.1:8898/api/replica3/config",
+  "fullSubscription": "http://127.0.0.1:8898/api/replica/config",
+  "configCenter": "http://127.0.0.1:8898/",
+  "verify": {
+    "ok": 17,
+    "total": 17,
+    "sites": [
+      {
+        "key": "HuaJuan4K",
+        "status": "ok",
+        "results": 29,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "Wogg4K",
+        "status": "ok",
+        "results": 30,
+        "playableResults": 30,
+        "ms": 0
+      },
+      {
+        "key": "GuanYing4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "Qiwei4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "AiNewPianKu",
+        "status": "ok",
+        "results": 28,
+        "playableResults": 26,
+        "ms": 42528
+      },
+      {
+        "key": "HuBan4K",
+        "status": "ok",
+        "results": 30,
+        "playableResults": 26,
+        "ms": 0
+      },
+      {
+        "key": "MuOu4K",
+        "status": "ok",
+        "results": 28,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "DuoDuo4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "KuaiYing4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "LaBi4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "ShanDian4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 2
+      },
+      {
+        "key": "JuTou4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 1
+      },
+      {
+        "key": "Libvio4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "ZhiNan4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "WoNiu4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "PanMi4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 0
+      },
+      {
+        "key": "YiDong4K",
+        "status": "ok",
+        "results": 25,
+        "playableResults": 25,
+        "ms": 0
+      }
+    ]
+  },
+  "sites": {
+    "HuaJuan4K": {
+      "list": 29,
+      "realSiteRows": 4,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12,
+        "百度网盘": 4
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "Wogg4K": {
+      "list": 30,
+      "realSiteRows": 6,
+      "providers": {
+        "UC网盘": 17,
+        "夸克网盘": 13
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "GuanYing4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "Qiwei4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "AiNewPianKu": {
+      "list": 28,
+      "realSiteRows": 0,
+      "providers": {
+        "夸克网盘": 16,
+        "UC网盘": 10,
+        "百度网盘": 1,
+        "迅雷云盘": 1
+      },
+      "frontShare": "ebc3c234fae7",
+      "frontEpisodes": 24,
+      "detailError": ""
+    },
+    "HuBan4K": {
+      "list": 30,
+      "realSiteRows": 5,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 13,
+        "百度网盘": 4
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "MuOu4K": {
+      "list": 28,
+      "realSiteRows": 3,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12,
+        "百度网盘": 2,
+        "115网盘": 1
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "DuoDuo4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "KuaiYing4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "LaBi4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "ShanDian4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "JuTou4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "Libvio4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "ZhiNan4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "WoNiu4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "PanMi4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    },
+    "YiDong4K": {
+      "list": 25,
+      "realSiteRows": 0,
+      "providers": {
+        "UC网盘": 13,
+        "夸克网盘": 12
+      },
+      "frontShare": "aaeb51ce89554",
+      "frontEpisodes": 19,
+      "detailError": ""
+    }
+  },
+  "streamChains": {
+    "HuaJuan4K": {
+      "status": 206,
+      "contentType": "video/mp4",
+      "contentRange": "bytes 0-2047/1705099146",
+      "magic": "b'\\x00\\x00\\x00\\x1cftypisom'",
+      "episodes": 19,
+      "title": "[花卷4K] 凡人修仙传之瀚海迷踪 4K 活跃UC 免登可播"
+    },
+    "Wogg4K": {
+      "status": 206,
+      "contentType": "video/mp4",
+      "contentRange": "bytes 0-2047/1705099146",
+      "magic": "b'\\x00\\x00\\x00\\x1cftypisom'",
+      "episodes": 19,
+      "title": "[玩偶哥哥4K] 凡人修仙传之瀚海迷踪 4K 活跃UC 免登可播"
+    },
+    "KuaiYing4K": {
+      "status": 206,
+      "contentType": "video/mp4",
+      "contentRange": "bytes 0-2047/1705099146",
+      "magic": "b'\\x00\\x00\\x00\\x1cftypisom'",
+      "episodes": 19,
+      "title": "[快影4K] 凡人修仙传之瀚海迷踪 4K 活跃UC 免登可播"
+    }
+  },
+  "configCenterLoop": {
+    "saved": 1,
+    "readBackVerified": true,
+    "configuredAfterSave": true,
+    "jsInjected": true,
+    "testCookieCleared": true,
+    "clearSaved": 1
+  },
+  "subscriptionSites": 18,
+  "fullSubscriptionSites": 26,
+  "spiderJarRequired": false,
+  "frontRowsPlayable": 17,
+  "playableChains": 3,
+  "notes": [
+    "17 个站点来自 download3.json 索引 4–20，全部 type:3 + csp_AiNew*Guard；加固壳 md5 86cb2cdc… 已校验，classes.dex 只有类名，实现加密在 assets/wexshinidie.guard。",
+    "download1.json 里同名 4K 站保留明文 ext.site，据此定位真实后端（苹果 CMS 模板站）；download1 插件 jar md5 c78599dab489dae65c893e121df0de2f 已校验，其 dex 含 FishCloud / Wogg / Qiwei / WoNiu / Gying / Libvio 类与网盘分享正则。",
+    "真实后端：花卷 hjzhencai.top、玩偶 wogg.net、虎斑 103.40.14.172:16968、木偶 muoua.top、多多 tv.yydsys.top、蜡笔 tvpanpan.site、立播 libvio.cam、蜗牛 wn4k.com；搜索页 → 详情页直接内嵌夸克/UC/百度分享。",
+    "观影中文域名与七味 qwmkv.com 有 PoW 浏览器安全验证；快影/剧透/盘迷/逸动/闪电/原盘的后端在加固壳内未暴露或源站已下线，统一走免登 PanSou 实例 + 活跃 UC 兜底。",
+    "前排分享经 PanSouClient.catalog 实测展开目录后才前置；旧 UC 分享 a2b56c303b4b4 / 8fd1c7efa87d4 已失效（404），当前活跃 aaeb51ce89554 实测 19 集、206 video/mp4。",
+    "夸克播放仍需配置中心填 Cookie 或扫码，UC 免登即可播；测试 Cookie 已清空。",
+    "4K 适配器改用独立 HttpClient 只发单套浏览器头（通用 request 会叠加两套 UA/Accept）；花卷/玩偶/虎斑/木偶实测抓到本站详情页分享（4/6/5/3 条）。",
+    "多多/蜡笔/立播/蜗牛源站对长关键词偶发返回随机页或连接挂起（curl 同款头复现），由免登 PanSou 实例 + 活跃 UC 兜底接管，不影响搜索与播放。"
+  ],
+  "residualGaps": [
+    "加固壳 wexshinidie.guard 未脱壳",
+    "观影/七味 PoW 验证未绕过",
+    "源站偶发超时或已下线，由兜底源接管",
+    "夸克/百度/115 真实播放需用户 Cookie"
+  ],
+  "realSiteRows": {
+    "HuaJuan4K": 4,
+    "Wogg4K": 6,
+    "HuBan4K": 5,
+    "MuOu4K": 3,
+    "DuoDuo4K": 0,
+    "LaBi4K": 0,
+    "Libvio4K": 0,
+    "WoNiu4K": 0
+  }
+}

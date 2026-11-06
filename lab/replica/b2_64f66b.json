@@ -1,0 +1,45 @@
+{
+  "service": "ok",
+  "backend": "https://quanpan.xyz",
+  "tokenCached": false,
+  "tokenError": "HTTP 403 {\"code\":403,\"message\":\"访问被拒绝\"}",
+  "cookies": {
+    "quark_cookie": {
+      "configured": false,
+      "length": 0,
+      "hint": "夸克 Cookie（pan.quark.cn，播放夸克必填）"
+    },
+    "baidu_cookie": {
+      "configured": false,
+      "length": 0,
+      "hint": "百度 Cookie（pan.baidu.com）"
+    },
+    "pan115_cookie": {
+      "configured": false,
+      "length": 0,
+      "hint": "115 Cookie（115.com）"
+    },
+    "uc_cookie": {
+      "configured": false,
+      "length": 0,
+      "hint": "UC Cookie（可选，UC 现在由接口自动下发 __pugs）"
+    },
+    "kfzy_cookie": {
+      "configured": false,
+      "length": 0,
+      "hint": "夸父资源社 Cookie（盘她┃夸父 抓帖用，留空用内置会话）"
+    },
+    "host": {
+      "configured": false,
+      "length": 0,
+      "hint": "全盘搜主站（留空用 https://quanpan.xyz）"
+    }
+  },
+  "configCenter": "http://127.0.0.1:8898/",
+  "subscription": "http://127.0.0.1:8898/api/config",
+  "localOnly": "http://127.0.0.1:8898/api/local",
+  "replicaSubscription": "http://127.0.0.1:8898/api/replica/config",
+  "replicaSites": 9,
+  "replica2Subscription": "http://127.0.0.1:8898/api/replica2/config",
+  "replica2Sites": 4
+}
