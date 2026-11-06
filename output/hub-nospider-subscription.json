@@ -1,0 +1,23 @@
+{
+  "spider": "",
+  "wallpaper": "",
+  "logo": "",
+  "sites": [
+    {
+      "key": "HubQuanPan4K",
+      "name": "🌸全盘搜｜云端4K",
+      "type": 3,
+      "api": "https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/spider/cloud_spider.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "{\"host\": \"http://107.173.211.148\", \"site\": \"QuanPan4K\", \"cookies\": {}}"
+    }
+  ],
+  "parses": [],
+  "lives": [],
+  "rules": [],
+  "doh": [],
+  "ads": [],
+  "flags": []
+}

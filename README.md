@@ -115,11 +115,34 @@ cp output/pan/cookies.example.json output/pan/cookies.json
 3. **仓库为空 / 分支名写错**：确认 `https://github.com/tlwj01/tvbox-java-spider` 的 `main` 分支已有 `output/*.json`；TVBox 里地址不要带多余空格或引号。
 4. **本机关机 / 不在同一局域网**：用 `output/cloud-subscription.json`（云端版），里面没有 `127.0.0.1`；`replica-subscription.json` 是本机版，站点 `type:1` 且 `api` 指向 8898，电脑不开机就搜不到内容。
 
+## Hub 免费版 4.0.1「报天神」排查
+
+「天神」**不是错误码**，是另一份第三方 TVBox 配置 `https://0.wdzb.eu.cc/tvbox/天神.json`
+里的站点名「🌹天神｜小屋」（104 个站点、首个 `api` 为 `csp_Market` 配置中心）。
+该 APK（Android TVBox/FongMi 系，带 QuickJS + Rhino + Python 运行时）本体、
+`yi.jar` 引擎包、本仓库所有订阅里都检索不到这两个字，所以它只能来自 App
+当前实际加载的那份配置 —— 也就是**你填的订阅地址没生效**。
+
+处理顺序：
+
+1. 在 App 首页看第一个源是不是「🌹天神｜小屋」；是就说明仍在用旧配置。
+2. 「设置 → 配置地址」清空历史/粘贴内容（Hub 系常见「粘贴内容 > 配置地址」优先级），
+   只填 `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json`。
+3. 若仍回退，用「粘贴配置」把
+   `output/hub-subscription.json` 的内容整份粘进去（1 个站点、无 `warningText`），
+   绕开 URL 缓存与云控回退；这个版本地址：
+   `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/hub-subscription.json`。
+   自带 JS 引擎的分支若加载 `spider` jar 失败，改用
+   `output/hub-nospider-subscription.json`。
+4. 还显示「天神」就是 App 清数据/云控强制配置：清 App 数据后重试，或换无云控版本。
+5. 备用 CDN：`fastly.jsdelivr.net` / `gcore.jsdelivr.net` 同路径；电视端用手机热点对比，
+   排除家宽 DNS 拦截 jsDelivr。
+
 ## 后续自动更新
 
 两层机制，默认启用第一层：
 
-1. **本地定时任务**（WorkBuddy 自动化，每 6 小时）：执行 `bash scripts/sync-github.sh` —— ECJ 编译 → `ReplicaSites` 重生成三批订阅 → `scripts/build-cloud.py` 重生成云端订阅与 `cloud_spider.js` → `scripts/sanitize.py` 脱敏 → 有变更才 commit，再由 `scripts/gh-api-sync.py` 经 `api.github.com` 的 Git Data API 增量同步到 `main`（本机 `github.com` 的 git 通道被代理拦成 502，所以不走 `git push`）。日志在 `logs/sync.log`（不入库）。**云端产物推上仓库后，本机是否开机都不影响其它设备使用**。
+1. **本地定时任务**（WorkBuddy 自动化，每 6 小时）：执行 `bash scripts/sync-github.sh` —— ECJ 编译 → `ReplicaSites` 重生成三批订阅 → `scripts/build-cloud.py` 重生成云端订阅与 `cloud_spider.js` → `scripts/build-hub.py` 重生成 Hub 兼容订阅 → `scripts/sanitize.py` 脱敏 → 有变更才 commit，再由 `scripts/gh-api-sync.py` 经 `api.github.com` 的 Git Data API 增量同步到 `main`（本机 `github.com` 的 git 通道被代理拦成 502，所以不走 `git push`）。日志在 `logs/sync.log`（不入库）。**云端产物推上仓库后，本机是否开机都不影响其它设备使用**。
 2. **云端 GitHub Actions（可选）**：`workflows/auto-update.yml` 是模板，需要令牌具备 `workflow` 权限时再复制到 `.github/workflows/`：
 
 ```bash

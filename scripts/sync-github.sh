@@ -22,6 +22,7 @@ fi
 
 # 3) 重新生成云端版订阅 / 客户端 JS 插件（本机关机也能用）
 python scripts/build-cloud.py >> logs/sync.log 2>&1 || { log "云端订阅生成失败"; exit 1; }
+python scripts/build-hub.py >> logs/sync.log 2>&1 || { log "Hub 兼容订阅生成失败"; exit 1; }
 
 # 4) 推送前脱敏
 python scripts/sanitize.py >> logs/sync.log 2>&1 || { log "脱敏失败"; exit 1; }
