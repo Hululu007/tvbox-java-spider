@@ -157,10 +157,25 @@ def upload_blob(sha):
     return sha
 
 
+def ensure_initialized():
+    """完全空的仓库连 Git Data API 都会返回 409，先用 Contents API 造一个初始提交。"""
+    code, _ = req("GET", "/git/ref/heads/" + BRANCH)
+    if code == 200:
+        return
+    code, result = req("PUT", "/contents/.github-init", {
+        "message": "chore: 初始化仓库",
+        "content": base64.b64encode(b"init\n").decode("ascii"),
+    })
+    if code not in (200, 201):
+        raise RuntimeError("初始化空仓库失败 HTTP %s: %s" % (code, result))
+    print("空仓库已初始化（Contents API 建立 %s 分支）" % BRANCH)
+
+
 def main():
     sha_map = load_map(MAP_FILE)
     tree_map = load_map(TREE_MAP_FILE)
 
+    ensure_initialized()
     code, ref = req("GET", "/git/ref/heads/" + BRANCH)
     if code == 200:
         remote_head = ref.get("object", {}).get("sha")
@@ -171,6 +186,7 @@ def main():
         print("读取远端 ref 失败 HTTP %s: %s" % (code, ref))
         return 1
 
+    base_parent = None
     if remote_head:
         local_base = next((k for k, v in sha_map.items() if v == remote_head),
                           remote_head)
@@ -178,9 +194,12 @@ def main():
                                cwd=str(ROOT), stdout=subprocess.DEVNULL,
                                stderr=subprocess.DEVNULL)
         if probe.returncode:
-            print("远端 HEAD %s 无法对应本地提交，停止以免覆盖历史" % remote_head)
-            return 2
-        revs = git("rev-list", "--reverse", local_base + "..HEAD").split()
+            # Contents API 生成的初始化提交不在本地历史里：作为本地根提交的父提交
+            base_parent = remote_head
+            print("远端为初始化提交，作为基线父提交")
+            revs = git("rev-list", "--reverse", "HEAD").split()
+        else:
+            revs = git("rev-list", "--reverse", local_base + "..HEAD").split()
     else:
         revs = git("rev-list", "--reverse", "HEAD").split()
 
@@ -189,7 +208,7 @@ def main():
         return 0
     print("待推送提交 %d 个" % len(revs))
 
-    for local_sha in revs:
+    for idx, local_sha in enumerate(revs):
         info = commit_info(local_sha)
         entries = tree_entries(local_sha)
         parent = info["parents"][0] if info["parents"] else None
@@ -222,6 +241,8 @@ def main():
             "author": identity(info["author"]),
             "committer": identity(info["committer"]),
         }
+        if idx == 0 and base_parent:
+            payload["parents"] = [base_parent] + payload["parents"]
         code, commit = req("POST", "/git/commits", payload)
         if code not in (200, 201) or not commit.get("sha"):
             print("创建 commit 失败 HTTP %s: %s" % (code, commit))
