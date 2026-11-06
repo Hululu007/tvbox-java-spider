@@ -28,7 +28,8 @@ function request(url, arg) {
   } else {
     h = arg || {};
   }
-  const args = ['--noproxy', '*', '-sS', '-L', '--max-time', '35', '-X', method,
+  const maxTime = (arg && typeof arg.timeout === 'number') ? Math.min(35, Math.ceil(arg.timeout / 1000)) : 35;
+  const args = ['--noproxy', '*', '-sS', '-L', '--max-time', String(maxTime), '-X', method,
     '-H', 'User-Agent: ' + UA, '-o', out, '-w', '%{http_code}'];
   for (const k of Object.keys(h)) {
     if (/^user-agent$/i.test(k)) continue;

@@ -1673,9 +1673,8 @@ var CLOUD_FALLBACK = {
   }
 };
 
-/* 上层 searchContent 会做「标题必须包含关键词」的相关性过滤。
- * 直接返回内置目录会被过滤成 0 条，所以给每条 note 加上当前关键词前缀，
- * 保证后端空结果时搜索也不空白；真实片名仍保留在后面，用户能看出是兜底。 */
+/* 后端不可用时的兜底：直接返回内置热门影视库（不再强制加关键词前缀，
+ * 避免"搜A却显示B"的误导）。这些是 UC 免登分享，点开即播。 */
 function cloudFallbackFor(kw) {
   var out = { total: 0, merged_by_type: {} };
   var m = CLOUD_FALLBACK.merged_by_type, n = 0;
@@ -1684,7 +1683,6 @@ function cloudFallbackFor(kw) {
     for (var i = 0; i < arr.length; i++) {
       var e = arr[i], copy = {};
       for (var f in e) copy[f] = e[f];
-      copy.note = (kw ? kw + " " : "") + String(e.note || "");
       list.push(copy);
       n++;
     }
@@ -1707,10 +1705,10 @@ function cloudHasData(d) {
 
 function cloudGet(site, url, kw) {
   var lastErr = "";
-  for (var attempt = 0; attempt < 2; attempt++) {
+  for (var attempt = 0; attempt < 1; attempt++) {
     var res = $http.get(url, {
       headers: { "User-Agent": UA, "Accept": "application/json" },
-      timeout: 25000,
+      timeout: 10000,
       responseType: "text"
     });
     var status = Number(res.status || 0);
@@ -1733,11 +1731,9 @@ function cloudGet(site, url, kw) {
 }
 
 function qpApi(context, method, path, body) {
-  var site = getHost(context);
   var kw = (body && body.kw) ? String(body.kw) : "";
-  if (!kw || path.indexOf("/api/hot") === 0) kw = CLOUD_HOT_WORDS[0];
-  var url = site + "/api/search?kw=" + encodeURIComponent(kw) + "&res=merge&src=all";
-  return cloudGet(site, url, kw);
+  if (!kw) kw = CLOUD_HOT_WORDS[0];
+  return cloudSearch(kw);
 }
 
 function __hawk_home(params, context) {
@@ -1779,3 +1775,105 @@ getCatalog = function (context, share) {
   }
   return __origGetCatalog(context, share);
 };
+
+/* ---------- 7. 多后端搜索（国内直连优先） ----------
+ * 国内真机直连多数海外 PanSou 实例会超时，这里多后端轮询：
+ *   1) yunso.net：国内直连可达（HTTPS），返回 Data[] 格式，转成 merged_by_type
+ *   2) 用户 host（默认 107.173.211.148 海外 PanSou，网络通时用，结果最准）
+ * 任一成功即返回；全部失败/超时则用内置兜底目录。
+ * yunso 返回混杂 txt 小说等，已过滤文档类后缀，只保留影视/无后缀分享。 */
+var CLOUD_DOC_EXT = ["txt","doc","docx","pdf","epub","mobi","azw","azw3","rtf","xls","xlsx","ppt","pptx","md","zip","rar","7z","apk","exe","jpg","png","gif","webp"];
+
+function cloudRaw(url, timeoutMs) {
+  try {
+    var res = $http.get(url, {
+      headers: { "User-Agent": UA, "Accept": "application/json, text/event-stream, */*" },
+      timeout: timeoutMs || 9000,
+      responseType: "text"
+    });
+    if (Number(res.status || 0) >= 400) return null;
+    try { return JSON.parse(typeof res.data === "string" ? res.data : JSON.stringify(res.data || "")); }
+    catch (e) { return null; }
+  } catch (e) { return null; }
+}
+
+function yunsoProv(name, url) {
+  var n = String(name || "").toLowerCase();
+  if (n.indexOf("夸克") >= 0 || url.indexOf("pan.quark.cn") >= 0) return "quark";
+  if (n.indexOf("uc") >= 0 || url.indexOf("uc.cn") >= 0) return "uc";
+  if (n.indexOf("百度") >= 0 || url.indexOf("pan.baidu.com") >= 0) return "baidu";
+  if (n.indexOf("115") >= 0 || url.indexOf("115.com") >= 0 || url.indexOf("115cdn") >= 0) return "115";
+  if (n.indexOf("天翼") >= 0 || url.indexOf("cloud.189.cn") >= 0) return "189";
+  if (n.indexOf("阿里") >= 0 || url.indexOf("aliyundrive") >= 0 || url.indexOf("alipan") >= 0) return "aliyun";
+  return "";
+}
+
+function yunsoToMerged(j, kw) {
+  var items = (j && (j.Data || j.data || j.items)) || [];
+  if (!items.length) return null;
+  var merged = {};
+  for (var i = 0; i < items.length; i++) {
+    var it = items[i] || {};
+    var name = String(it.ScrName || it.name || it.title || "");
+    var lower = name.toLowerCase();
+    var isDoc = false;
+    for (var d = 0; d < CLOUD_DOC_EXT.length; d++) {
+      if (lower.indexOf("." + CLOUD_DOC_EXT[d]) >= 0) { isDoc = true; break; }
+    }
+    if (isDoc) continue;
+    var url = String(it.Scrurl || it.url || "");
+    var prov = yunsoProv(it.Scrurlname || it.source || "", url);
+    if (!prov || !url) continue;
+    if (!merged[prov]) merged[prov] = [];
+    merged[prov].push({ url: url.replace(/\?.*$/, ""), note: name, passcode: String(it.Scrpass || it.passcode || "") });
+  }
+  var total = 0;
+  for (var k in merged) total += merged[k].length;
+  if (!total) return null;
+  return { total: total, merged_by_type: merged };
+}
+
+function cloudSearch(kw) {
+  var backends = [
+    { name: "yunso", url: "https://www.yunso.net/api/opensearch.php?q=" + encodeURIComponent(kw) },
+    { name: "pansou", url: CLOUD_DEFAULT_HOST + "/api/search?kw=" + encodeURIComponent(kw) + "&res=merge&src=all" }
+  ];
+  for (var b = 0; b < backends.length; b++) {
+    var j = cloudRaw(backends[b].url, 9000);
+    if (backends[b].name === "yunso") {
+      var m = yunsoToMerged(j, kw);
+      if (m) return m;
+    } else {
+      if (j && cloudHasData(j.data)) return j.data;
+    }
+  }
+  if (typeof console !== "undefined" && console.log) {
+    console.log("[cloud] 搜索后端全不可用，用内置兜底目录 kw=" + kw);
+  }
+  return cloudFallbackFor(kw);
+}
+
+/* ---------- 8. 覆盖搜索入口：移除"标题必须含关键词"的硬过滤 ----------
+ * 原 __hawk_search 调 shapeSearchItems 做标题包含匹配，而盘搜返回的分享标题是
+ * 自由的（如"凡人修仙传之瀚海迷踪 4K"），用户输入"电影/流浪地球"几乎全部被过滤
+ * 成 0 条 → 搜索"没反应"。这里直接透传后端整形后的结果，盘搜靠后端模糊匹配即可。 */
+function __hawk_search(params, context) {
+  var kw = String((params && params.keyword) || "").trim();
+  var page = Math.max(1, Number((params && params.page) || 1));
+  if (!kw || page > 1) return { items: [], page: page };
+  try {
+    var r = qpSearch(context, kw);
+    return { items: r.items || [], page: page };
+  } catch (e) {
+    var fb = cloudFallbackFor(kw);
+    var items = [];
+    for (var k in (fb.merged_by_type || {})) {
+      var arr = fb.merged_by_type[k] || [];
+      for (var i = 0; i < arr.length; i++) {
+        items.push({ id: k + "-" + i, title: arr[i].note, status: arr[i].source, ref: { provider: k, url: arr[i].url, note: arr[i].note, passcode: arr[i].passcode || "" } });
+      }
+    }
+    return { items: items, page: page };
+  }
+}
+
