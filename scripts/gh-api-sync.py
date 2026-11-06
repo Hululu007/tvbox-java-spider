@@ -223,8 +223,14 @@ def main():
                                        commit_info(parent)["tree"])
             tree_payload = {"base_tree": parent_tree, "tree": changed}
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-            list(pool.map(upload_blob, blobs))
+        done = 0
+        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+            futures = [pool.submit(upload_blob, sha) for sha in blobs]
+            for future in concurrent.futures.as_completed(futures):
+                future.result()
+                done += 1
+                if done % 25 == 0 or done == len(blobs):
+                    print("  blob 进度 %d/%d" % (done, len(blobs)), flush=True)
 
         code, tree = req("POST", "/git/trees", tree_payload)
         if code not in (200, 201) or not tree.get("sha"):
