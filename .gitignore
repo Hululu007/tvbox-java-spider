@@ -16,3 +16,7 @@ lab/replica/aipanso-cookie.txt
 Thumbs.db
 .idea/
 .vscode/
+
+# 第三方配置/引擎分析样本（不入库）
+lab/replica/yi.jar
+lab/replica/tianshen.json
