@@ -30,8 +30,8 @@ if git diff --cached --quiet; then
   exit 0
 fi
 git commit -m "chore: 自动刷新订阅 $(date '+%F %T')" >> logs/sync.log 2>&1
-if ! git push origin HEAD:main >> logs/sync.log 2>&1; then
-  log "推送失败：检查 GitHub 凭据是否过期（git credential fill / 重新设备授权）"
+if ! python scripts/gh-api-sync.py >> logs/sync.log 2>&1; then
+  log "推送失败：检查 .gh-token 是否有效 / 重新设备授权（详见 logs/sync.log）"
   exit 1
 fi
-log "已推送到 GitHub main"
+log "已通过 GitHub API 同步到 main"

@@ -8,10 +8,10 @@
 
 | 用途 | 地址 |
 | --- | --- |
-| 全量聚合订阅（26 个复刻站点，推荐） | `https://raw.githubusercontent.com/tlwj01/tvbox-java-spider/main/output/replica-subscription.json` |
-| 第二批（综合 4 站）订阅 | `https://raw.githubusercontent.com/tlwj01/tvbox-java-spider/main/output/replica2-subscription.json` |
-| 第三批（17 个 4K 站）订阅 | `https://raw.githubusercontent.com/tlwj01/tvbox-java-spider/main/output/replica3-subscription.json` |
-| 原始网盘全量订阅（49 个 type:3 站点，未做可用性验证） | `https://raw.githubusercontent.com/tlwj01/tvbox-java-spider/main/output/pan-subscription.json` |
+| 全量聚合订阅（26 个复刻站点，推荐） | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/replica-subscription.json` |
+| 第二批（综合 4 站）订阅 | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/replica2-subscription.json` |
+| 第三批（17 个 4K 站）订阅 | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/replica3-subscription.json` |
+| 原始网盘全量订阅（49 个 type:3 站点，未做可用性验证） | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/pan-subscription.json` |
 
 订阅内站点均为 `type:1`、`spider` 留空，依赖仓库内的本地接口服务（8898）解析，不需要额外 jar。
 
@@ -64,6 +64,16 @@ cp output/pan/cookies.example.json output/pan/cookies.json
 | `host` | 全盘搜主站，留空用 `https://quanpan.xyz` |
 
 也可启动 `PanApiServer` 后访问 `http://127.0.0.1:8898/api/config` 用网页表单填写，写入为 UTF-8 无 BOM + 原子写 + 读回校验。
+
+## TVBox「配置取得失败 443」排查
+
+443 是 HTTPS 端口，这个报错基本都是「地址取不到」，不是订阅格式问题：
+
+1. **填的是 GitHub raw 直链**：`raw.githubusercontent.com` 在国内常被阻断。改用上面的 jsDelivr 地址（`@main` 也可换成具体 commit 固定版本）；仍不通就加镜像前缀，例如
+   `https://ghproxy.net/https://raw.githubusercontent.com/tlwj01/tvbox-java-spider/main/output/replica-subscription.json`。
+2. **填的是 `127.0.0.1:8898`**：在电视/手机上 127.0.0.1 指向设备自己。改成电脑局域网 IP（如 `http://192.168.1.10:8898/api/replica/config`），并用 `java -cp "out;lib/*" com.github.catvod.pan.PanApiServer 8898 lan` 启动（默认只绑 127.0.0.1），同时放行 Windows 防火墙 8898 端口。
+3. **仓库为空 / 分支名写错**：确认 `https://github.com/tlwj01/tvbox-java-spider` 的 `main` 分支已有 `output/*.json`；TVBox 里地址不要带多余空格或引号。
+4. 订阅内站点是 `type:1`、`spider` 留空，需要 8898 服务在线才能搜索播放；只把订阅文件拷到电视上能加载配置但搜不到内容。
 
 ## 后续自动更新
 

@@ -32,6 +32,6 @@ printf 'protocol=https\nhost=github.com\nusername=%s\npassword=%s\n\n' "$OWNER" 
 
 git remote remove origin 2>/dev/null || true
 git remote add origin "https://github.com/$OWNER/$REPO.git"
-# 用 Authorization 头推送，避免令牌进入 .git/config
-git -c "http.extraheader=AUTHORIZATION: bearer $TOKEN" push -u origin main
+# 本机代理会拦截 github.com 的 git 通道（502），改走 api.github.com 的 Git Data API
+python scripts/gh-api-sync.py
 echo "已推送: https://github.com/$OWNER/$REPO"
