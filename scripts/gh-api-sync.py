@@ -162,8 +162,12 @@ def main():
     tree_map = load_map(TREE_MAP_FILE)
 
     code, ref = req("GET", "/git/ref/heads/" + BRANCH)
-    remote_head = ref.get("object", {}).get("sha") if code == 200 else None
-    if code not in (200, 404):
+    if code == 200:
+        remote_head = ref.get("object", {}).get("sha")
+    elif code == 404 or (code == 409 and "empty" in str(ref.get("message", "")).lower()):
+        # 新建的空仓库返回 409 Git Repository is empty.
+        remote_head = None
+    else:
         print("读取远端 ref 失败 HTTP %s: %s" % (code, ref))
         return 1
 
