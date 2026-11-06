@@ -20,10 +20,13 @@ if ! java -cp "out;$CP" com.github.catvod.pan.ReplicaSites >> logs/sync.log 2>&1
   exit 1
 fi
 
-# 3) 推送前脱敏
+# 3) 重新生成云端版订阅 / 客户端 JS 插件（本机关机也能用）
+python scripts/build-cloud.py >> logs/sync.log 2>&1 || { log "云端订阅生成失败"; exit 1; }
+
+# 4) 推送前脱敏
 python scripts/sanitize.py >> logs/sync.log 2>&1 || { log "脱敏失败"; exit 1; }
 
-# 4) 仅在有变更时提交并推送
+# 5) 仅在有变更时提交并推送
 git add -A
 if git diff --cached --quiet; then
   log "无变更，跳过推送"

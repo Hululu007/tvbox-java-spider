@@ -4,16 +4,56 @@
 
 仓库：<https://github.com/tlwj01/tvbox-java-spider>
 
-## 订阅地址（推送成功后即可用）
+## 订阅地址
+
+**推荐：本机关机也能用 / 国内网直连**（零本机依赖，见下一节）：
+
+```
+https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
+```
 
 | 用途 | 地址 |
 | --- | --- |
-| 全量聚合订阅（26 个复刻站点，推荐） | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/replica-subscription.json` |
+| **云端版（27 站点，推荐）** | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json` |
+| 本机/局域网版（26 个复刻站点，需 8898 常开） | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/replica-subscription.json` |
 | 第二批（综合 4 站）订阅 | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/replica2-subscription.json` |
 | 第三批（17 个 4K 站）订阅 | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/replica3-subscription.json` |
 | 原始网盘全量订阅（49 个 type:3 站点，未做可用性验证） | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/pan-subscription.json` |
 
-订阅内站点均为 `type:1`、`spider` 留空，依赖仓库内的本地接口服务（8898）解析，不需要额外 jar。
+本机/局域网版的站点是 `type:1`，`api` 指向 `127.0.0.1:8898`，**必须电脑常开**；云端版是 `type:3`，在电视/手机上自己跑 JS 插件，与电脑无关。
+
+## 本机关机也能用（国内网）
+
+云端版把「服务端」整个移到 TVBox 客户端，链路里没有这台电脑：
+
+```
+TVBox ──jsDelivr──> 订阅 JSON + cloud_spider.js（国内直连 200）
+    ──直连────────> PanSou 免登实例 /api/search（国内直连 200）
+    ──直连────────> UC / 夸克 官方接口取真实直链
+    ──直连播放────> 网盘 OSS（play 返回带 header 的直链，无需流代理）
+```
+
+- 订阅里 **27 个站点全部 `type:3`**，`api` 指向 `spider/cloud_spider.js`，零 `127.0.0.1`、零本机 8898、零 `play_proxy`。
+- 插件 = `lab/quanpan/quanpan_spider.js` + `spider/cloud-overlay.js`。覆盖层把默认后端从需要令牌且国内返回 403 的 `quanpan.xyz` 换成免登 PanSou 实例，并让首页用热门词聚合；取链逻辑原样保留，`play()` 直接返回 `{parse:0, url:直链, header:{...}}`。
+- UC 免登可播；夸克/百度/115 需 Cookie。填法：在订阅 JSON 里把对应站点的 `ext` 改成
+  `{"host":"http://107.173.211.148","site":"HuaJuan4K","cookies":{"quark_cookie":"你的 Cookie"}}`（`ext` 是 JSON 字符串）。**不要提交带 Cookie 的订阅**，`scripts/sanitize.py` 会清空会话值。
+- `spider` 字段沿用原配置的 JS 引擎 jar（`yi.jar`，国内实测 302→200）；壳自带 JS 引擎时可留空。
+
+国内网备用地址（`raw.githubusercontent.com` / `ghproxy.net` 直连实测不通，别用）：
+
+```
+https://fastly.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
+https://gcore.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
+```
+
+本机复核：`python scripts/build-cloud.py` 重新生成产物，`node scripts/verify-cloud-spider.js 凡人修仙传` 模拟 TVBox 跑 `init → home → search → detail → play`。
+
+| | 云端版 | 本机/局域网版 |
+| --- | --- | --- |
+| 电脑关机 | 可用 | 不可用 |
+| 跨设备 / 外网 | 可用 | 需同一局域网 |
+| 逐站复刻后端 | 统一走免登聚合 | 26 个站点各自适配器 + 兜底目录 |
+| 点开即播 | UC 免登直链；夸克需 Cookie | 本机流代理自动补鉴权头 |
 
 ## 目录
 
@@ -73,13 +113,13 @@ cp output/pan/cookies.example.json output/pan/cookies.json
    `https://ghproxy.net/https://raw.githubusercontent.com/tlwj01/tvbox-java-spider/main/output/replica-subscription.json`。
 2. **填的是 `127.0.0.1:8898`**：在电视/手机上 127.0.0.1 指向设备自己。改成电脑局域网 IP（如 `http://192.168.1.10:8898/api/replica/config`），并用 `java -cp "out;lib/*" com.github.catvod.pan.PanApiServer 8898 lan` 启动（默认只绑 127.0.0.1），同时放行 Windows 防火墙 8898 端口。
 3. **仓库为空 / 分支名写错**：确认 `https://github.com/tlwj01/tvbox-java-spider` 的 `main` 分支已有 `output/*.json`；TVBox 里地址不要带多余空格或引号。
-4. 订阅内站点是 `type:1`、`spider` 留空，需要 8898 服务在线才能搜索播放；只把订阅文件拷到电视上能加载配置但搜不到内容。
+4. **本机关机 / 不在同一局域网**：用 `output/cloud-subscription.json`（云端版），里面没有 `127.0.0.1`；`replica-subscription.json` 是本机版，站点 `type:1` 且 `api` 指向 8898，电脑不开机就搜不到内容。
 
 ## 后续自动更新
 
 两层机制，默认启用第一层：
 
-1. **本地定时任务**（WorkBuddy 自动化，每 6 小时）：执行 `bash scripts/sync-github.sh` —— ECJ 编译 → 运行 `ReplicaSites` 重新生成订阅 → 推送前 `scripts/sanitize.py` 脱敏 → 有变更才 commit，再由 `scripts/gh-api-sync.py` 经 `api.github.com` 的 Git Data API 增量同步到 `main`（本机 `github.com` 的 git 通道被代理拦成 502，所以不走 `git push`）。日志在 `logs/sync.log`（不入库）。
+1. **本地定时任务**（WorkBuddy 自动化，每 6 小时）：执行 `bash scripts/sync-github.sh` —— ECJ 编译 → `ReplicaSites` 重生成三批订阅 → `scripts/build-cloud.py` 重生成云端订阅与 `cloud_spider.js` → `scripts/sanitize.py` 脱敏 → 有变更才 commit，再由 `scripts/gh-api-sync.py` 经 `api.github.com` 的 Git Data API 增量同步到 `main`（本机 `github.com` 的 git 通道被代理拦成 502，所以不走 `git push`）。日志在 `logs/sync.log`（不入库）。**云端产物推上仓库后，本机是否开机都不影响其它设备使用**。
 2. **云端 GitHub Actions（可选）**：`workflows/auto-update.yml` 是模板，需要令牌具备 `workflow` 权限时再复制到 `.github/workflows/`：
 
 ```bash
@@ -98,7 +138,8 @@ mkdir -p .github/workflows && cp workflows/auto-update.yml .github/workflows/
 
 ## 已知限制
 
-- 夸克 / 百度 / 115 的真实播放仍需用户自己的 Cookie；UC 免登链路可直连播放（实测 `206 video/mp4`）。
+- 夸克 / 百度 / 115 的真实播放仍需用户自己的 Cookie；UC 免登链路可直连播放（本机版实测 `206 video/mp4`）。
+- 云端版依赖免登 PanSou 实例的分享数据，聚合来的分享链接有时效（UC 可能回 `41012 好友已取消了分享`）；插件已验证 `init / home / search` 与取链请求格式，播放需在 TVBox 上用仍有效的分享实测。夸克等缺 Cookie 时会优雅跳过目录而不是报错。
 - `wexshinidie.guard` 加固壳未脱壳；爱盘搜 `/cv/` 动态码、观影/七味 PoW 未绕过，命中时由兜底库接管。
 - `output/pan-subscription.json` 里的 49 个 `type:3` 原始站点未逐一做可用性验证。
 - 8899 影视采集组的站点未合并进 8898 全量聚合订阅。

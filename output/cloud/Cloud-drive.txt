@@ -1,0 +1,16 @@
+# ==========================================================
+# 云端版「🗂我的云盘┃配置」子规则（不依赖本机 8898）
+# 订阅: https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
+# ==========================================================
+config_center=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud/
+spider=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/spider/cloud_spider.js
+subscription=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
+backend=http://107.173.211.148
+quark_cookie=未配置（夸克播放请在订阅 ext.cookies.quark_cookie 填本人 Cookie）
+kfzy_cookie=云端版不使用
+# ---- 自建分享库（UC 免登可播，夸克需 Cookie）----
+share=https://pan.quark.cn/s/ebc3c234fae7|凡人修仙传 更198集 4K 国语中字
+share=https://pan.quark.cn/s/aa7319036536|凡人修仙传 2025 4K SDR 高码率 纯净版
+share=https://drive.uc.cn/s/a2b56c303b4b4|凡人修仙传 更198集 4K H265 HDR真彩
+share=https://drive.uc.cn/s/8fd1c7efa87d4?public=1|凡人修仙传 幕兰之战 年番4 198集
+share=https://drive.uc.cn/s/aaeb51ce89554|凡人修仙传之瀚海迷踪 4K 活跃UC 免登可播
