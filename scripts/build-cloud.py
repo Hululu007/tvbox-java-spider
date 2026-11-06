@@ -3,10 +3,18 @@
 
 1) spider/cloud_spider.js = 原 quanpan_spider.js + cloud-overlay.js
    （客户端 JS 插件，TVBox 自己跑，不经过本机 8898）
-2) output/cloud-subscription.json = 纯云端订阅，零 127.0.0.1 / 零本机代理
+2) output/cloud-subscription.json / output/safe-subscription.json
+   纯云端订阅，零 127.0.0.1 / 零本机代理 / 零 spider jar / 零 warningText
 3) output/cloud/Cloud-drive.txt = 云端版配置中心子规则
 
-国内直连实测：jsDelivr 200、PanSou 免登实例 200、原 spider jar 200。
+重要：原 download1 的 yi.jar 是加固壳（assets/dex.enc + libsecure.so +
+com.github.catvod.secure.NativeSecure + getPackageName/exit/Toast），会做宿主
+白名单校验。HUB 免费版 4.0.1 等不在白名单的 App 加载它时会弹
+「本接口仅支持天神及部分原版开源空壳软件…9秒后自动退出」并杀进程。
+本订阅 27 个站点全是 type:3 + .js，由 App 内置 QuickJS 执行，不需要 spider jar，
+因此 spider 一律留空、且不写 warningText（避免任何公告弹窗）。
+
+safe-subscription.json 是全新文件名，用于绕开 jsDelivr @main 的 7 天旧缓存。
 """
 import json
 import re
@@ -18,9 +26,10 @@ CDN = "https://cdn.jsdelivr.net/gh/" + GH + "@main/"
 # jsDelivr 动态压缩地址（仓库里只有 .js，.min.js 由 CDN 用 Terser 实时生成）：
 # 73KB -> 45KB，国内网下载更稳，也绕开 @main 的 7 天旧缓存。
 JS_URL = CDN + "spider/cloud_spider.min.js"
-SUB_URL = CDN + "output/cloud-subscription.json"
+SAFE_NAME = "safe-subscription.json"
+SAFE_URL = CDN + "output/" + SAFE_NAME
 HOST = "http://107.173.211.148"          # PanSou 免登实例，/api/search 返回 merged_by_type
-JAR = "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"  # 原 download1 配置的 JS 引擎 jar
+JAR = ""                                  # 禁用 yi.jar，见文件头说明
 
 
 def build_spider():
@@ -71,8 +80,6 @@ def build_subscription():
         "spider": JAR,
         "wallpaper": "",
         "logo": "",
-        "warningText": ("云端版｜本机关机/关机后仍可用｜国内网直连｜零 127.0.0.1、零本机 8898｜"
-                        "UC 免登点开即播；夸克/百度/115 需在 ext.cookies 填本人 Cookie"),
         "sites": sites,
         "parses": [],
         "lives": [],
@@ -81,9 +88,11 @@ def build_subscription():
         "ads": [],
         "flags": [],
     }
-    out = ROOT / "output/cloud-subscription.json"
-    out.write_text(json.dumps(cfg, ensure_ascii=False, indent=2), encoding="utf-8")
-    return out, len(sites)
+    text = json.dumps(cfg, ensure_ascii=False, indent=2)
+    for p in (ROOT / "output/cloud-subscription.json",
+              ROOT / "output" / SAFE_NAME):
+        p.write_text(text, encoding="utf-8")
+    return ROOT / "output/cloud-subscription.json", len(sites), text
 
 
 def build_cloud_drive():
@@ -92,11 +101,12 @@ def build_cloud_drive():
     lines = [
         "# ==========================================================",
         "# 云端版「🗂我的云盘┃配置」子规则（不依赖本机 8898）",
-        "# 订阅: " + SUB_URL,
+        "# 订阅: " + SAFE_URL,
+        "# spider 留空：yi.jar 带宿主白名单校验，非天神版会弹窗并退出",
         "# ==========================================================",
         "config_center=" + CDN + "output/cloud/",
-        "spider=" + JS_URL,
-        "subscription=" + SUB_URL,
+        "spider=",
+        "subscription=" + SAFE_URL,
         "backend=" + HOST,
         "quark_cookie=未配置（夸克播放请在订阅 ext.cookies.quark_cookie 填本人 Cookie）",
         "kfzy_cookie=云端版不使用",
@@ -109,17 +119,21 @@ def build_cloud_drive():
 
 def main():
     p1, n1 = build_spider()
-    p2, n2 = build_subscription()
+    p2, n2, text = build_subscription()
     p3, n3 = build_cloud_drive()
-    text = p2.read_text(encoding="utf-8")
     leaks = re.findall(r"https?://[^\"\\ ]*(?:127\.0\.0\.1|192\.168\.|localhost)[^\"\\ ]*", text)
+    bad = [k for k in ("yi.jar", "warningText", "天神") if k in text]
     print("cloud_spider.js      : %s (%d bytes)" % (p1.relative_to(ROOT), n1))
     print("cloud-subscription   : %s (%d sites)" % (p2.relative_to(ROOT), n2))
+    print("safe-subscription    : output/%s (同一份内容，新文件名绕开 CDN 缓存)" % SAFE_NAME)
     print("cloud/Cloud-drive.txt: %s (%d shares)" % (p3.relative_to(ROOT), n3))
     print("本机地址残留          : %d" % len(leaks))
+    print("jar/公告/天神残留     : %s" % (", ".join(bad) if bad else "无"))
     if leaks:
         raise SystemExit("订阅中仍有本机地址: " + ", ".join(leaks[:5]))
-    print("CDN 订阅地址          : " + SUB_URL)
+    if bad:
+        raise SystemExit("订阅中仍有触发弹窗的字段: " + ", ".join(bad))
+    print("推荐订阅地址          : " + SAFE_URL)
 
 
 if __name__ == "__main__":

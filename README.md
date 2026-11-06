@@ -9,12 +9,12 @@
 **推荐：本机关机也能用 / 国内网直连**（零本机依赖，见下一节）：
 
 ```
-https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
+https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/safe-subscription.json
 ```
 
 | 用途 | 地址 |
 | --- | --- |
-| **云端版（27 站点，推荐）** | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json` |
+| **云端版（27 站点，推荐）** | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/safe-subscription.json` |
 | 本机/局域网版（26 个复刻站点，需 8898 常开） | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/replica-subscription.json` |
 | 第二批（综合 4 站）订阅 | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/replica2-subscription.json` |
 | 第三批（17 个 4K 站）订阅 | `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/replica3-subscription.json` |
@@ -37,16 +37,16 @@ TVBox ──jsDelivr──> 订阅 JSON + cloud_spider.js（国内直连 200）
 - 插件 = `lab/quanpan/quanpan_spider.js` + `spider/cloud-overlay.js`。覆盖层把默认后端从需要令牌且国内返回 403 的 `quanpan.xyz` 换成免登 PanSou 实例，并让首页用热门词聚合；取链逻辑原样保留，`play()` 直接返回 `{parse:0, url:直链, header:{...}}`。
 - UC 免登可播；夸克/百度/115 需 Cookie。填法：在订阅 JSON 里把对应站点的 `ext` 改成
   `{"host":"http://107.173.211.148","site":"HuaJuan4K","cookies":{"quark_cookie":"你的 Cookie"}}`（`ext` 是 JSON 字符串）。**不要提交带 Cookie 的订阅**，`scripts/sanitize.py` 会清空会话值。
-- `spider` 字段沿用原配置的 JS 引擎 jar（`yi.jar`，国内实测 302→200）；壳自带 JS 引擎时可留空。
+- **`spider` 一律留空**：原配置的 `yi.jar` 带宿主白名单校验，在 Hub 免费版等非「天神/原版开源空壳」上会弹窗并 9 秒退出（见下文）。`type:3` + `.js` 站点由 App 内置 QuickJS 执行，不需要 jar。
 
 国内网备用地址（`raw.githubusercontent.com` / `ghproxy.net` 直连实测不通，别用）：
 
 ```
-https://fastly.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
-https://gcore.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
+https://fastly.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/safe-subscription.json
+https://gcore.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/safe-subscription.json
 ```
 
-本机复核：`python scripts/build-cloud.py` 重新生成产物，`node scripts/verify-cloud-spider.js 凡人修仙传` 模拟 TVBox 跑 `init → home → search → detail → play`。
+本机复核：`python scripts/build-cloud.py` 重新生成产物，`node scripts/verify-cloud-spider.js 电影` 模拟 TVBox 跑 `init → home → search → detail → play`。
 
 | | 云端版 | 本机/局域网版 |
 | --- | --- | --- |
@@ -113,30 +113,35 @@ cp output/pan/cookies.example.json output/pan/cookies.json
    `https://ghproxy.net/https://raw.githubusercontent.com/tlwj01/tvbox-java-spider/main/output/replica-subscription.json`。
 2. **填的是 `127.0.0.1:8898`**：在电视/手机上 127.0.0.1 指向设备自己。改成电脑局域网 IP（如 `http://192.168.1.10:8898/api/replica/config`），并用 `java -cp "out;lib/*" com.github.catvod.pan.PanApiServer 8898 lan` 启动（默认只绑 127.0.0.1），同时放行 Windows 防火墙 8898 端口。
 3. **仓库为空 / 分支名写错**：确认 `https://github.com/tlwj01/tvbox-java-spider` 的 `main` 分支已有 `output/*.json`；TVBox 里地址不要带多余空格或引号。
-4. **本机关机 / 不在同一局域网**：用 `output/cloud-subscription.json`（云端版），里面没有 `127.0.0.1`；`replica-subscription.json` 是本机版，站点 `type:1` 且 `api` 指向 8898，电脑不开机就搜不到内容。
+4. **本机关机 / 不在同一局域网**：用 `output/safe-subscription.json`（云端版），里面没有 `127.0.0.1`；`replica-subscription.json` 是本机版，站点 `type:1` 且 `api` 指向 8898，电脑不开机就搜不到内容。
 
-## Hub 免费版 4.0.1「报天神」排查
+## Hub 免费版 4.0.1 弹窗「本接口仅支持天神…9秒后自动退出」
 
-「天神」**不是错误码**，是另一份第三方 TVBox 配置 `https://0.wdzb.eu.cc/tvbox/天神.json`
-里的站点名「🌹天神｜小屋」（104 个站点、首个 `api` 为 `csp_Market` 配置中心）。
-该 APK（Android TVBox/FongMi 系，带 QuickJS + Rhino + Python 运行时）本体、
-`yi.jar` 引擎包、本仓库所有订阅里都检索不到这两个字，所以它只能来自 App
-当前实际加载的那份配置 —— 也就是**你填的订阅地址没生效**。
+**真因：配置里 `spider` 指向的 `yi.jar` 带宿主白名单校验。**
 
-处理顺序：
+`yi.jar` 是加固壳：`assets/dex.enc` + `libsecure.so` +
+`com.github.catvod.secure.NativeSecure` + `getPackageName` / `exit` / `Toast` /
+`InitializationErrorString`，还带随机域名鉴权接口。Hub 免费版等非
+「天神 / 原版开源空壳」App 加载它就会弹公告并倒计时杀进程。弹窗文案
+在 APK、jar 明文、任何订阅里都搜不到（由加密 dex / native / 鉴权接口运行时返回），
+所以换配置地址、清缓存都不会让它消失。
 
-1. 在 App 首页看第一个源是不是「🌹天神｜小屋」；是就说明仍在用旧配置。
-2. 「设置 → 配置地址」清空历史/粘贴内容（Hub 系常见「粘贴内容 > 配置地址」优先级），
-   只填 `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json`。
-3. 若仍回退，用「粘贴配置」把
-   `output/hub-subscription.json` 的内容整份粘进去（1 个站点、无 `warningText`），
-   绕开 URL 缓存与云控回退；这个版本地址：
-   `https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/hub-subscription.json`。
-   自带 JS 引擎的分支若加载 `spider` jar 失败，改用
-   `output/hub-nospider-subscription.json`。
-4. 还显示「天神」就是 App 清数据/云控强制配置：清 App 数据后重试，或换无云控版本。
-5. 备用 CDN：`fastly.jsdelivr.net` / `gcore.jsdelivr.net` 同路径；电视端用手机热点对比，
-   排除家宽 DNS 拦截 jsDelivr。
+本仓库所有订阅已把 `spider`（以及站点级 `jar`）留空、删除 `warningText`；
+27 个站点全是 `type:3` + `.js`，由 App 内置 QuickJS 执行，根本不需要 spider jar。
+`scripts/strip-jar.py` 在每次自动同步时强制清理所有产物，防止回退。
+
+**填这个全新地址**（新文件名绕开 jsDelivr `@main` 的 7 天缓存）：
+
+```
+https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/safe-subscription.json
+```
+
+仍被 App 回退到旧配置时，用「粘贴配置」把 `output/hub-subscription.json`
+（523B、1 站点、无 spider、无 warningText）整份粘进去，绕开 URL 缓存与云控：
+`https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/hub-subscription.json`
+
+修好的标志：启动后不再出现 9 秒倒计时，首页第一个源是「🌸全盘搜｜云端4K」。
+备用 CDN：`fastly.jsdelivr.net` / `gcore.jsdelivr.net` 同路径。
 
 ## 后续自动更新
 

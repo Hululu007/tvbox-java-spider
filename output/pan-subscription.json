@@ -1,8 +1,7 @@
 {
-  "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar",
+  "spider": "",
   "wallpaper": "",
   "logo": "",
-  "warningText": "网盘配置中心（填夸克 Cookie / 扫码）：http://127.0.0.1:8898/  ｜搜索后端 quanpan.xyz｜播放经本地流代理，无需壳支持 Cookie",
   "sites": [
     {
       "key": "QuanPan4K",
@@ -44,7 +43,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "jar": ""
     },
     {
       "key": "fok",
@@ -82,7 +81,7 @@
           "https://www.wexwp.cc"
         ]
       },
-      "jar": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "jar": ""
     },
     {
       "key": "夸父",
@@ -102,7 +101,7 @@
         ],
         "cookie": ""
       },
-      "jar": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "jar": ""
     },
     {
       "key": "Wogg",
@@ -343,7 +342,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
-      "jar": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "jar": ""
     },
     {
       "key": "趣盘",
@@ -351,7 +350,7 @@
       "type": 3,
       "hide": 1,
       "api": "csp_QuPanSo",
-      "jar": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "jar": ""
     },
     {
       "key": "FishPs",

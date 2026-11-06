@@ -23,7 +23,9 @@
  *   host 可换成任何兼容 PanSou /api/search 的实例；cookies 仅播放夸克/百度/115 需要。
  * ============================================================ */
 
-var CLOUD_HOT_WORDS = ["4K 电影", "凡人修仙传", "电视剧 4K"];
+/* 通用词命中率远高于具体片名：实测「4K 电影」「凡人修仙传」返回 total:0，
+ * 而「电影」返回 total:18。首页只要求有内容，任一热词成功即可。 */
+var CLOUD_HOT_WORDS = ["电影", "电视剧", "综艺", "凡人修仙传"];
 var CLOUD_DEFAULT_HOST = "http://107.173.211.148";
 
 USER_HOST = CLOUD_DEFAULT_HOST;
@@ -53,9 +55,39 @@ var CLOUD_FALLBACK = {
   }
 };
 
-function cloudFallbackData() { return CLOUD_FALLBACK; }
+/* 上层 searchContent 会做「标题必须包含关键词」的相关性过滤。
+ * 直接返回内置目录会被过滤成 0 条，所以给每条 note 加上当前关键词前缀，
+ * 保证后端空结果时搜索也不空白；真实片名仍保留在后面，用户能看出是兜底。 */
+function cloudFallbackFor(kw) {
+  var out = { total: 0, merged_by_type: {} };
+  var m = CLOUD_FALLBACK.merged_by_type, n = 0;
+  for (var k in m) {
+    var arr = m[k] || [], list = [];
+    for (var i = 0; i < arr.length; i++) {
+      var e = arr[i], copy = {};
+      for (var f in e) copy[f] = e[f];
+      copy.note = (kw ? kw + " " : "") + String(e.note || "");
+      list.push(copy);
+      n++;
+    }
+    out.merged_by_type[k] = list;
+  }
+  out.total = n;
+  return out;
+}
 
-function cloudGet(site, url) {
+/* code:0 + data.total:0 也是「无结果」，不能当成成功，否则首页/搜索全空白。 */
+function cloudHasData(d) {
+  if (!d) return false;
+  if (Number(d.total || d.total_result || 0) > 0) return true;
+  var m = d.merged_by_type || {};
+  for (var k in m) {
+    if (m[k] && m[k].length) return true;
+  }
+  return false;
+}
+
+function cloudGet(site, url, kw) {
   var lastErr = "";
   for (var attempt = 0; attempt < 2; attempt++) {
     var res = $http.get(url, {
@@ -70,8 +102,8 @@ function cloudGet(site, url) {
     } catch (e) {}
     if (status < 400 && json) {
       var code = (json.code === undefined) ? 0 : Number(json.code);
-      if ((code === 0 || code === 200) && json.data) return json.data;
-      lastErr = "code=" + code + " " + (json.message || "");
+      if ((code === 0 || code === 200) && cloudHasData(json.data)) return json.data;
+      lastErr = "code=" + code + " 空结果 " + (json.message || "");
     } else {
       lastErr = "HTTP " + status + " / 响应不完整";
     }
@@ -79,7 +111,7 @@ function cloudGet(site, url) {
   if (typeof console !== "undefined" && console.log) {
     console.log("[cloud] 后端不可用（" + lastErr + "），启用内置兜底目录");
   }
-  return cloudFallbackData();
+  return cloudFallbackFor(kw);
 }
 
 function qpApi(context, method, path, body) {
@@ -87,7 +119,7 @@ function qpApi(context, method, path, body) {
   var kw = (body && body.kw) ? String(body.kw) : "";
   if (!kw || path.indexOf("/api/hot") === 0) kw = CLOUD_HOT_WORDS[0];
   var url = site + "/api/search?kw=" + encodeURIComponent(kw) + "&res=merge&src=all";
-  return cloudGet(site, url);
+  return cloudGet(site, url, kw);
 }
 
 function __hawk_home(params, context) {

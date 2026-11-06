@@ -1,10 +1,11 @@
 # ==========================================================
 # 云端版「🗂我的云盘┃配置」子规则（不依赖本机 8898）
-# 订阅: https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
+# 订阅: https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/safe-subscription.json
+# spider 留空：yi.jar 带宿主白名单校验，非天神版会弹窗并退出
 # ==========================================================
 config_center=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud/
-spider=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/spider/cloud_spider.min.js
-subscription=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/cloud-subscription.json
+spider=
+subscription=https://cdn.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main/output/safe-subscription.json
 backend=http://107.173.211.148
 quark_cookie=未配置（夸克播放请在订阅 ext.cookies.quark_cookie 填本人 Cookie）
 kfzy_cookie=云端版不使用

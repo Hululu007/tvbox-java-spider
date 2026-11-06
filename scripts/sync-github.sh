@@ -24,10 +24,13 @@ fi
 python scripts/build-cloud.py >> logs/sync.log 2>&1 || { log "云端订阅生成失败"; exit 1; }
 python scripts/build-hub.py >> logs/sync.log 2>&1 || { log "Hub 兼容订阅生成失败"; exit 1; }
 
-# 4) 推送前脱敏
+# 4) 清除 yi.jar 宿主校验字段与公告弹窗（HUB 免费版「报天神」的根因）
+python scripts/strip-jar.py >> logs/sync.log 2>&1 || { log "jar 清理失败"; exit 1; }
+
+# 5) 推送前脱敏
 python scripts/sanitize.py >> logs/sync.log 2>&1 || { log "脱敏失败"; exit 1; }
 
-# 5) 仅在有变更时提交并推送
+# 6) 仅在有变更时提交并推送
 git add -A
 if git diff --cached --quiet; then
   log "无变更，跳过推送"
@@ -40,9 +43,9 @@ if ! python scripts/gh-api-sync.py >> logs/sync.log 2>&1; then
 fi
 log "已通过 GitHub API 同步到 main"
 
-# 6) 刷新 jsDelivr 缓存：@main 默认缓存 7 天，不刷就只有仓库更新、电视端拿不到
+# 7) 刷新 jsDelivr 缓存：@main 默认缓存 7 天，不刷就只有仓库更新、电视端拿不到
 CDN_BASE="https://purge.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main"
-for f in output/cloud-subscription.json spider/cloud_spider.js spider/cloud_spider.min.js; do
+for f in output/safe-subscription.json output/cloud-subscription.json output/hub-subscription.json output/hub-nospider-subscription.json spider/cloud_spider.js spider/cloud_spider.min.js; do
   curl --noproxy '*' -sS --max-time 15 "$CDN_BASE/$f" >/dev/null 2>&1 || true
 done
 log "已刷新 jsDelivr 缓存（云端订阅 / 插件）"

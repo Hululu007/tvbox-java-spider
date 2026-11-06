@@ -1,14 +1,19 @@
 # -*- coding: utf-8 -*-
 """生成 Hub 免费版 4.0.1 专用的极简兼容订阅。
 
-用途：排查「报天神」。天神是另一份第三方配置（0.wdzb.eu.cc/tvbox/天神.json）
-里的站点名「🌹天神｜小屋」，不是错误码。若 App 里出现它，说明当前加载的仍是
-旧配置/云控回退配置。本订阅只留 1 个站点、去掉 warningText（避免弹窗被误认
-为报错）、字段形态对齐原 download1.json，方便用「粘贴配置」直接验证。
+「报天神」的真因：原 download1 配置里的 spider=yi.jar 是加固壳，
+带宿主白名单校验（NativeSecure / libsecure.so / assets/dex.enc），
+在 HUB 免费版等非「天神 / 原版开源空壳」App 上初始化时会弹
+「本接口仅支持天神及部分原版开源空壳软件，使用其他版本软件将在9秒后自动退出」
+并倒计时杀进程。文案不在 APK、不在 jar 明文、也不在任何订阅里，
+由加密 dex / native / 鉴权接口运行时返回。
+
+本订阅所有产出：spider 留空、无 warningText、单站点，供「粘贴配置」直接验证。
+站点是 type:3 + .js，由 App 内置 QuickJS 执行，不需要 spider jar。
 
 产出：
-  output/hub-subscription.json          带原版 JS 引擎 jar
-  output/hub-nospider-subscription.json spider 留空（自带 JS 引擎的分支）
+  output/hub-subscription.json            单站点、spider 留空（推荐粘贴）
+  output/hub-nospider-subscription.json   同上，保留旧文件名兼容
 """
 import json
 import pathlib
@@ -19,7 +24,6 @@ GH = "tlwj01/tvbox-java-spider"
 CDN = "https://cdn.jsdelivr.net/gh/" + GH + "@main/"
 JS_URL = CDN + "spider/cloud_spider.min.js"
 HOST = "http://107.173.211.148"
-JAR = "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
 
 
 def build_site():
@@ -36,9 +40,9 @@ def build_site():
     }
 
 
-def build_cfg(spider):
+def build_cfg():
     return {
-        "spider": spider,
+        "spider": "",
         "wallpaper": "",
         "logo": "",
         "sites": [build_site()],
@@ -52,19 +56,20 @@ def build_cfg(spider):
 
 
 def main():
-    for name, spider in (("hub-subscription.json", JAR),
-                         ("hub-nospider-subscription.json", "")):
-        cfg = build_cfg(spider)
-        text = json.dumps(cfg, ensure_ascii=False, indent=2)
-        if "天神" in text or "warningText" in text:
-            raise SystemExit("Hub 订阅不应含天神/warningText")
-        if re.search(r"https?://[^\"\\ ]*(127\.0\.0\.1|192\.168\.|localhost)", text):
-            raise SystemExit("Hub 订阅仍含本机地址")
+    cfg = build_cfg()
+    text = json.dumps(cfg, ensure_ascii=False, indent=2)
+    for bad in ("天神", "warningText", "yi.jar"):
+        if bad in text:
+            raise SystemExit("Hub 订阅不应含 " + bad)
+    if re.search(r"https?://[^\"\\ ]*(127\.0\.0\.1|192\.168\.|localhost)", text):
+        raise SystemExit("Hub 订阅仍含本机地址")
+    for name in ("hub-subscription.json", "hub-nospider-subscription.json"):
         p = ROOT / "output" / name
         p.write_text(text, encoding="utf-8")
-        print("%-38s %5d bytes, sites=1, spider=%s" %
-              (name, len(text.encode("utf-8")), "jar" if spider else "empty"))
+        print("%-38s %5d bytes, sites=1, spider=empty" %
+              (name, len(text.encode("utf-8"))))
     print("CDN 地址: " + CDN + "output/hub-subscription.json")
+    print("粘贴配置内容: output/hub-subscription.json")
 
 
 if __name__ == "__main__":

@@ -22,7 +22,7 @@
       "api": "https://cdn.jsdelivr.net/gh/tlwj01/tvbox-quanpan@main/quanpan_spider.js",
       "ext": "",
       "needsJar": false,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -32,7 +32,7 @@
       "api": "csp_PanQuark",
       "ext": "",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -42,7 +42,7 @@
       "api": "csp_XBPQ",
       "ext": "{\"分类url\":\"https://www.freeok.vip/vod-show/{cateId}-{area}-------{catePg}---{year}.html\",\"分类\":\"FREE电影&FREE剧集&FREE动漫&FREE综艺&FREE短剧&FREE少儿\",\"分类值\":\"1&2&3&4&12&5\",\"播放请求头\":\"User-Agent$Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\",\"副标...",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -52,7 +52,7 @@
       "api": "csp_PanWebShare",
       "ext": "{\"site\":[\"http://www.wexwp.cc\",\"https://www.2xiaopan.one\",\"https://www.wexwp.cc\"]}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -62,7 +62,7 @@
       "api": "csp_PanWebShareKF",
       "ext": "{\"site\":[\"https://www.kfzy.net\"],\"cookie\":\"\"}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -72,7 +72,7 @@
       "api": "csp_Wogg",
       "ext": "{\"site\":[\"https://wogg.xxooo.cf\",\"https://woggpan.888484.xyz\",\"https://www.wogg.live\",\"http://woggpan.xxooo.cf\"],\"filter\":\"https://tc-new.z.wiki/autoupload/iYHTWVx6T8RrCmqdGD6MOdiO_OyvX7mIgxFBfDMDErs/20260320/oOf4/wogg.json\"}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -82,7 +82,7 @@
       "api": "csp_FishCloud",
       "ext": "{\"site\":[\"https://www.muoua.top\",\"https://333.333291.xyz\",\"https://666.666291.xyz\"]}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -92,7 +92,7 @@
       "api": "csp_SeedHub",
       "ext": "{\"site\":[\"https://sidhub.cc\",\"https://seeduck.cc\",\"https://hubdog.cc\"]}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -102,7 +102,7 @@
       "api": "csp_PanWebShare123",
       "ext": "{\"site\":[\"https://123panfx.com\",\"https://pan1.me\"],\"cookie\":\"\"}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -112,7 +112,7 @@
       "api": "csp_PanWebShareGuangYa",
       "ext": "{\"site\":[\"https://www.guangya.net\"],\"cookie\":\"\"}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -122,7 +122,7 @@
       "api": "csp_FishCloud",
       "ext": "{\"site\":[\"https://tv.yydsys.top\",\"https://tv.yydsys.cc\",\"https://tv.214521.xyz\"]}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -132,7 +132,7 @@
       "api": "csp_FishCloud",
       "ext": "{\"site\":[\"https://www.hjzhencai.top\",\"https://www.huanjuanwp.shop\"]}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -142,7 +142,7 @@
       "api": "csp_FishCloud",
       "ext": "{\"site\":[\"http://xhban.xyz\",\"http://38.76.197.172:16969\"]}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -152,7 +152,7 @@
       "api": "csp_FishCloud",
       "ext": "{\"site\":[\"https://woog.nxog.eu.org\",\"https://ogkk.nxog.eu.org\",\"https://woog.430520.xyz\"]}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -162,7 +162,7 @@
       "api": "csp_Market",
       "ext": "{\"categories\":[{\"name\":\"潇洒资源一\",\"url\":\"https://pan.quark.cn/s/969cc97687d3\"},{\"name\":\"潇洒资源二\",\"url\":\"https://drive.uc.cn/s/ba531661b3eb4\"},{\"name\":\"奇奇更新一\",\"url\":\"https://pan.quark.cn/s/ab00f85da8ea\"},{\"name\":\"奇奇更新二\",\"url\":\"https://drive.uc.cn/s/ef22fcbfdd934\"}]}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1,download2",
@@ -172,7 +172,7 @@
       "api": "csp_WoGG",
       "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://www.wogg.xyz/$$$弹\"",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -182,7 +182,7 @@
       "api": "csp_SeedHub",
       "ext": "",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -192,7 +192,7 @@
       "api": "csp_WoGG",
       "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$弹\"",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -202,7 +202,7 @@
       "api": "csp_FishCloud",
       "ext": "{\"site\":[\"http://xsayang.fun\",\"http://38.76.197.172:12521\"]}",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -212,7 +212,7 @@
       "api": "csp_PanSou",
       "ext": "",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -222,7 +222,7 @@
       "api": "csp_QuPanSo",
       "ext": "",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -232,7 +232,7 @@
       "api": "csp_FishPs",
       "ext": "",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1,download2",
@@ -242,7 +242,7 @@
       "api": "csp_PanSou",
       "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd\"",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1,download2",
@@ -252,7 +252,7 @@
       "api": "csp_PanSearch",
       "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd\"",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -262,7 +262,7 @@
       "api": "csp_PanSou",
       "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd\"",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download1",
@@ -272,7 +272,7 @@
       "api": "csp_PanSearch",
       "ext": "\"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd\"",
       "needsJar": true,
-      "spider": "https://meow.668yun.top/c/rEkDf4vxeobu/yi.jar"
+      "spider": ""
     },
     {
       "source": "download3",
