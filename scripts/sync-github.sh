@@ -38,3 +38,10 @@ if ! python scripts/gh-api-sync.py >> logs/sync.log 2>&1; then
   exit 1
 fi
 log "已通过 GitHub API 同步到 main"
+
+# 6) 刷新 jsDelivr 缓存：@main 默认缓存 7 天，不刷就只有仓库更新、电视端拿不到
+CDN_BASE="https://purge.jsdelivr.net/gh/tlwj01/tvbox-java-spider@main"
+for f in output/cloud-subscription.json spider/cloud_spider.js spider/cloud_spider.min.js; do
+  curl --noproxy '*' -sS --max-time 15 "$CDN_BASE/$f" >/dev/null 2>&1 || true
+done
+log "已刷新 jsDelivr 缓存（云端订阅 / 插件）"

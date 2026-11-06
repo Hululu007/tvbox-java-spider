@@ -126,6 +126,8 @@ cp output/pan/cookies.example.json output/pan/cookies.json
 mkdir -p .github/workflows && cp workflows/auto-update.yml .github/workflows/
 ```
 
+同步成功后脚本会调用 `purge.jsdelivr.net` 刷新 `@main` 的订阅与插件缓存（jsDelivr 默认缓存 7 天，不刷则电视端仍拿旧版）。
+
 默认不放进 `.github/workflows/`，避免首次推送因令牌缺少 workflow 权限被 GitHub 拒绝。
 
 首次发布或凭据过期时：运行 `bash scripts/gh-device-poll.sh`（需先有 `.gh-device.json`），在 <https://github.com/login/device> 输入终端给出的 user_code 完成授权，令牌自动保存到 `.gh-token`；随后 `bash scripts/gh-publish.sh` 会创建仓库、把凭据写入 Git Credential Manager 并推送 `main`。之后定时同步即可无人值守运行。
