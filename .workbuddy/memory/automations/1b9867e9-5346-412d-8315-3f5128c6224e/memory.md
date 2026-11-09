@@ -12,3 +12,10 @@
 - 编译/生成/脱敏/同步均无失败；远端 main 仍是 19:31 那次 API 同步的 c52ede9e（本地 HEAD 6ae20de），本次未走 API 路径，因此未检验 .gh-token 有效性，也未触发设备授权需求。
 - 未改动任何凭据文件（.gh-token / .gh-device.json / output/pan/cookies.json 时间戳保持 19:10 / 19:03 / 19:04，三者均未被 git 跟踪）与 Cookie 值；跟踪文本中无会话 Cookie 残留。
 - 环境事实更新（修正 19:11 记录）：`origin` 远端已配置，`.gh-token` 已存在（40 字节），GCM/API 同步链路在 19:31 已实际跑通一次。
+
+## 2026-11-09 08:01 (GMT+8)
+- 执行 `bash scripts/sync-github.sh`，退出码 0，单次运行、未重试。
+- 结果：ECJ 编译通过（仅 1 条未用 import 警告）→ ReplicaSites 重新生成三批 6 个 replica*.json 与 tvfan/Cloud-drive.txt（08:01:51~52，内容与 HEAD 完全一致）→ build-cloud/build-hub/strip-jar 正常（清理 3 处 warningText）→ sanitize.py 处理 0 个文件 → git 无变更，日志尾行「[2026-11-09 08:01:53] 无变更，跳过推送」，未提交、未调用 gh-api-sync.py、未 git push、未刷 CDN。
+- 编译/生成/脱敏/同步均无失败，未出现 .gh-token 失效提示，故本次无需设备授权；因未走 API 路径，未检验令牌有效性。
+- 凭据文件 .gh-token / .gh-device.json / output/pan/cookies.json 的 sha256 与 mtime 运行前后完全一致，Cookie 值未改动；跟踪文本无真实会话 Cookie（仅占位符与正则）。
+- 环境事实：本地 HEAD e797f5a（2026-11-06 21:54），.git/gh-sha-map.json 中已映射远端 7532be83，说明 21:55 曾单独跑过 gh-api-sync.py，当前无未推送提交；remote 状态本次未经 API 复核。
