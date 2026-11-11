@@ -54,3 +54,10 @@
 - 编译/生成/脱敏/同步均无失败；实际走 API 路径成功，.gh-token 有效，未出现令牌失效或设备授权提示，无需 bash scripts/gh-device-poll.sh。
 - 运行前后 .gh-token / .gh-device.json / output/pan/cookies.json 的 sha256（78cff3d0… / 7db88f1e… / 614cbdab…）与 mtime（11-06 19:03~19:10）完全一致；Cookie 值未改动。
 - 环境事实：本地 HEAD bcd4713；订阅类产物内容与 HEAD 一致，触发提交的唯一变更仍是自动化 memory.md 等记录文件；本次写入该记录会再次留下未提交变更，供下次运行触发一次 API 同步提交。
+
+## 2026-11-11 08:40 (GMT+8)
+- 执行 `bash scripts/sync-github.sh`，退出码 0，单次运行、未重试、未使用 git push。
+- 结果：ECJ 编译通过（仅 1 条未用 import 警告）→ ReplicaSites 刷新三批复刻订阅/站点对照 → build-cloud（cloud_spider_v2.js 72661 bytes、cloud-subscription 27 sites、本机地址残留 0）/build-hub（hub、nospider 各 526 bytes、sites=1、spider=empty）/strip-jar（清理 3 文件 warningText=3 处）正常 → sanitize.py 处理 0 个文件 → 检测到变更 2 文件 12 行新增（自动化 memory.md + 新建 .workbuddy/memory/2026-11-11.md）→ 提交 13fbc85 → gh-api-sync.py 经 Git Data API 同步 2 个 blob，13fbc85d 映射远端 d8a1e3de，refs/heads/main 更新至 d8a1e3dedbf82678ffd38ba07353908b52e664d5 → 刷新 jsDelivr 缓存。日志尾行「[2026-11-11 08:40:57] 已刷新 jsDelivr 缓存（云端订阅 / 插件）」。
+- 编译/生成/脱敏/同步均无失败；实际走 API 路径且成功，.gh-token 有效，未出现令牌失效或设备授权提示，无需 bash scripts/gh-device-poll.sh / 重新发起设备授权。
+- 运行前后 .gh-token / .gh-device.json / output/pan/cookies.json 的 sha256（78cff3d0… / 7db88f1e… / 614cbdab…）与 mtime（均 11-06 19:03~19:10）完全一致，三者均未被 git 跟踪；Cookie 值未改动，跟踪文本无真实会话 Cookie 残留。
+- 环境事实：本地 HEAD 13fbc85；订阅类产物内容与 HEAD 一致，触发提交的唯一变更仍是自动化 memory.md 等记录文件；本次写入该记录会再次留下未提交变更，供下次运行触发一次 API 同步提交。
