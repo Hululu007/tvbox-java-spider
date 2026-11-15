@@ -132,3 +132,11 @@
 - 运行前 git 工作区已干净；本地 HEAD dfd4cb0（15:56:33）在 .git/gh-sha-map.json 中映射远端 14992d58660b50dec7bc8ad4a48e8dae9f1967c3，与 GET 返回的 refs/heads/main 一致，无未推送提交，故「无变更，跳过推送」判断正确。
 - 运行前后 .gh-token / .gh-device.json / output/pan/cookies.json 的 sha256（78cff3d0… / 7db88f1e… / 614cbdab…）与 mtime（均 11-06 19:03~19:10）完全一致，三者均未被 git 跟踪；Cookie 值未改动，未修改任何凭据文件。
 - 环境事实：09:54 之后 15:56 另有一次未写入本记录的运行（HEAD dfd4cb0）；本次写入该记录与本日工作区日志会留下未提交变更，供下次运行触发一次 API 同步提交。
+
+## 2026-11-15 04:02 (GMT+8)
+- 执行 `bash scripts/sync-github.sh`，退出码 0，单次运行、未重试、未使用 git push；全程走 api.github.com Git Data API。
+- 结果：ECJ 编译通过（仅 1 条 ReplicaSources.java 未用 import 警告）→ ReplicaSites 刷新三批复刻订阅/站点对照（25 站点、去重 17）→ build-cloud（cloud_spider_v2.js 72661 bytes、cloud-subscription 27 sites、cloud/Cloud-drive.txt 5 shares、本机地址残留 0、jar/公告/天神残留 无）/build-hub（hub、nospider 各 526 bytes、sites=1、spider=empty）/strip-jar（清理 3 文件 warningText=3 处）→ sanitize.py 处理 0 个文件 → 检测到变更 2 文件 13 行新增（记录类文件）→ 提交 1c135be → gh-api-sync.py 同步 2 个 blob，1c135be2 映射远端 90ce922a，refs/heads/main 更新至 90ce922a3ee7c56b4138e0d1bcc62ff894dfc49e → 刷新 jsDelivr 缓存。日志尾行「[2026-11-15 04:03:13] 已刷新 jsDelivr 缓存（云端订阅 / 插件）」。
+- 编译/生成/脱敏/同步均无失败；本次新增日志段无 失败/401/403/Bad credentials/失效/设备授权/推送失败/Traceback/Error/git push 关键字；用 GET /git/ref/heads/main 独立复核 HTTP 200 且 sha 与日志及 gh-sha-map 一致，.gh-token 有效，无需 bash scripts/gh-device-poll.sh 或重新发起设备授权。
+- 运行前后 .gh-token / .gh-device.json / output/pan/cookies.json 的 sha256（78cff3d0… / 7db88f1e… / 614cbdab…）与 mtime（均 11-06 19:03~19:10）完全一致，三者均未被 git 跟踪；Cookie 值未改动，未修改任何凭据文件。
+- 备注：远端复核首次用 /tmp 临时文件在 Git Bash 下路径未映射导致解析失败（HTTP 200 已返回），改用工作区相对路径一次取回 sha，属复核命令修正，非主流程重试。
+- 环境事实：本地 HEAD 1c135be，提交后工作区干净；订阅类产物内容与 HEAD 一致，触发提交的唯一变更仍是记录类文件；本次写入该记录会留下未提交变更，供下次运行触发一次 API 同步提交。
